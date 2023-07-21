@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int x = get_int();
+    int x = get_int("Write Case: ");
     switch(x)
     {
         case 1:
