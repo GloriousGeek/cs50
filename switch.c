@@ -4,17 +4,16 @@
 int main(void)
 {
     int x = get_int("Write Case: ");
-    switch(x)
+    switch (x)
     {
         case 1:
-        printf("One!\n");
-        break;
+            printf("One!\n");
+            break;
         case 2:
-        printf("Two!\n");
-        break;
+            printf("Two!\n");
+            break;
         case 3:
-        printf("Three!\n");
-        break;
+            printf("Three!\n");
+            break;
     }
-
 }
