@@ -42,7 +42,7 @@ int main(void)
     {
         annual_pop = annual_pop + (annual_pop/3) - (annual_pop/4);
 
-        //printf("Years: %i\n", year);
+        printf("Pop: %i\n", annual_pop);
     }
 
    printf("Years: %i\n", year);
