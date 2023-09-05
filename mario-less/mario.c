@@ -20,6 +20,10 @@ int main(void)
     for(int i = 0; i < input; i++)
     {
         printf(".");
+        for (int k = 0; k < i; k++)
+        {
+            print(".");
+        }
 
          for (int j = 0; j < i + 1; j++)
         {
