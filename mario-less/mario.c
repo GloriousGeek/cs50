@@ -15,13 +15,15 @@ int main(void)
     //making pyramid with # symbol
     char symbol;
     symbol = '#';
+
+    //using nested for loop
     for(int i = 0; i < input; i++)
     {
         printf(".");
 
          for (int j = 0; j < input; j++)
         {
-            
+
         printf("#");
 
 
