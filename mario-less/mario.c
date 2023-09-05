@@ -20,7 +20,7 @@ int main(void)
     for(int i = 0; i < input; i++)
     {
         printf(".");
-        for (int k = 0; k < (input - 1); k--)
+        for (int k = 0; k (input - 1); k--)
         {
             printf(".");
         }
