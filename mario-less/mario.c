@@ -13,10 +13,10 @@ int main(void)
     while (input >= 1 && input <= 8);
 
     //making pyramid with # symbol
-    for(int i = 0; i == input; i++)
-    {
+    // for(int i = 0; i == input; i++)
+    // {
 
-        printf("#\n");
-    }
+    //     printf("#\n");
+    // }
 
 }
