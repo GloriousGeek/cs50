@@ -15,7 +15,7 @@ int main(void)
     //making pyramid with # symbol
     for(int i = 0; input < 1 || input > 8; i++)
     {
-        
+        input++;
         printf("#\n");
     }
 
