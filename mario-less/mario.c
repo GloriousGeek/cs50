@@ -12,12 +12,12 @@ int main(void)
 
     while (input < 1 || input > 8);
 
-    
+
 
     //using nested for loop
     for(int i = 0; i < input; i++)
     {
-        for (int k = (input - 1) ; k > 1; k--)
+        for (int k = (input - 1) ; k > i; k--)
         {
             printf(".");
         }
