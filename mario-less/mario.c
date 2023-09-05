@@ -19,7 +19,7 @@ int main(void)
     //using nested for loop
     for(int i = 0; i < input; i++)
     {
-        for (int k = input - 1 ; k < ; k--)
+        for (int k = (input - 1) ; k > 1; k--)
         {
             printf(".");
         }
