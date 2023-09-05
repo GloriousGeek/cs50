@@ -12,9 +12,7 @@ int main(void)
 
     while (input < 1 || input > 8);
 
-    //making pyramid with # symbol
-    char symbol;
-    symbol = '#';
+    
 
     //using nested for loop
     for(int i = 0; i < input; i++)
