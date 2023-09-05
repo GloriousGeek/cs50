@@ -14,7 +14,7 @@ int main(void)
 
     //making pyramid with # symbol
     char symbol;
-    symbol = "#";
+    symbol = '#';
     for(int i = 0; i < input; i++)
     {
         printf(".");
