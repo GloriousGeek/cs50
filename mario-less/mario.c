@@ -20,9 +20,11 @@ int main(void)
          for (int j = 0; j < input; j++)
         {
 
-        printf("%s*#", input);
-        break;
+        printf("#");
+
         }
+
+        printf("\n");
     }
 
 }
