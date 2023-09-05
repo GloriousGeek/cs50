@@ -21,10 +21,10 @@ int main(void)
     {
         printf(".");
 
-         for (int j = 0; j < input; j++)
+         for (int j = 0; j <i + 2; j++)
         {
 
-        printf("#");
+        printf("#"); 
 
 
         }
