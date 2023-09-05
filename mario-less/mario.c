@@ -16,6 +16,7 @@ int main(void)
     for(int i = 0; i < input; i++)
     {
         printf(".");
+        
          for (int j = 0; input > 0 && input < 9; j++)
         {
 
