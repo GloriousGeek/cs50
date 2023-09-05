@@ -20,7 +20,7 @@ int main(void)
          for (int j = 0; j < input; j++)
         {
 
-        printf("#\n");
+        printf("%s*#", input);
         break;
         }
     }
