@@ -13,9 +13,9 @@ int main(void)
     while (input < 1 || input > 8);
 
     //making pyramid with # symbol
-    for(int i = 0; input < 9; i++)
+    for(int i = 0; input < 1 || input > 8; i++)
     {
-        i = input;
+        
         printf("#\n");
     }
 
