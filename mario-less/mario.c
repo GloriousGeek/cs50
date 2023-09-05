@@ -19,7 +19,7 @@ int main(void)
     {
         for (int k = (input - 1) ; k > i; k--)
         {
-            printf(".");
+            printf(" ");
         }
 
          for (int j = 0; j < i + 1; j++)
