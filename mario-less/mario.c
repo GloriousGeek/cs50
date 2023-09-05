@@ -13,6 +13,7 @@ int main(void)
     while (input < 1 || input > 8);
 
     //making pyramid with # symbol
+    char lol = "a";
     for(int i = 0; i < input; i++)
     {
         printf(".");
@@ -21,6 +22,7 @@ int main(void)
         {
 
         printf("#");
+
 
         }
 
