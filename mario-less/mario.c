@@ -21,7 +21,7 @@ int main(void)
 
          for (int j = 0; j < input; j++)
         {
-
+            symbol + (input-1)
         printf("#");
 
 
