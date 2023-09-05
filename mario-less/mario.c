@@ -10,7 +10,7 @@ int main(void)
         input = get_int("Height: \n");
     }
 
-    while (input =<1 && input >= 8);
+    while (input >= 1 && input <= 8);
 
     //making pyramid with # symbol
     for(int i = 0; i == input; i++)
@@ -18,5 +18,5 @@ int main(void)
 
         printf("#\n");
     }
-        
+
 }
