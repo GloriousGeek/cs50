@@ -15,7 +15,7 @@ int main(void)
     //using nested for loop
     for(int i = 0; i < input; i++) //to print number of rows based on input
     {
-        for (int j = (input - 1) ; j > i; j--) //to give space b/w #
+        for (int j = (input - 1) ; j > i; j--) //to give space b/w # based on rows
         {
             printf(" ");
         }
