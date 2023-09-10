@@ -10,23 +10,19 @@ int main(void)
         input = get_int("Height: \n");
     }
 
-    while (input < 1 || input > 8);
-
-
+    while (input < 1 || input > 8); //when its true, it would keep prompting the user
 
     //using nested for loop
-    for(int i = 0; i < input; i++)
+    for(int i = 0; i < input; i++) //to print number of rows based on input
     {
-        for (int k = (input - 1) ; k > i; k--)
+        for (int j = (input - 1) ; j > i; j--) //to give space b/w #
         {
             printf(" ");
         }
 
-         for (int j = 0; j < i + 1; j++)
+         for (int k = 0; k < i + 1; k++) //to put a hash #
         {
-
-        printf("#");
-
+            printf("#");
         }
 
         printf("\n");
