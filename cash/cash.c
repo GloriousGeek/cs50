@@ -44,6 +44,8 @@ int get_cents(void)
         n = get_int("Cents: ");
     }
     while (n < 0);
+
+    printf("%s", n);
     return n;
 }
 
