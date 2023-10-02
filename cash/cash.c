@@ -44,8 +44,8 @@ int get_cents(void)
         cents = get_int("Cents: ");
     }
     while (cents < 0);
-    
-    printf("%d", cents);
+
+    return cents;
 }
 
 int calculate_quarters(int cents)
@@ -57,7 +57,7 @@ int calculate_quarters(int cents)
         x = (cents/25);
     }
     while (cents <= 25);
-    return cents;
+    return x;
 }
 
 int calculate_dimes(int cents)
