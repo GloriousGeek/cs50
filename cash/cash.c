@@ -37,7 +37,8 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
+    // Prompt user for number of cents and return the same number
+    
     return 0;
 }
 
