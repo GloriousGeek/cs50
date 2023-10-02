@@ -54,9 +54,10 @@ int calculate_quarters(int cents)
     int x;
     do
     {
+        cents = n;
         x = (cents/25);
     }
-    while (cents >= 25);
+    while (cents <= 25);
     return x;
 }
 
