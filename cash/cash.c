@@ -38,14 +38,14 @@ int main(void)
 int get_cents(void)
 {
     // Prompt user for number of cents and return the same number
-    int n;
+    int cents;
     do
     {
-        n = get_int("Cents: ");
+        cents = get_int("Cents: ");
     }
-    while (n < 0);
+    while (cents < 0);
 
-    return n;
+    return cents;
 }
 
 int calculate_quarters(int cents)
@@ -54,7 +54,7 @@ int calculate_quarters(int cents)
     int x;
     do
     {
-        cents = n;
+        cents;
         x = (cents/25);
     }
     while (cents <= 25);
