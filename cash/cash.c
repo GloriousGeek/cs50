@@ -50,7 +50,11 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    // TODO
+    // Calculate and return the number of quarters based on the cents owed
+    do
+    {
+        
+    }
     return 0;
 }
 
