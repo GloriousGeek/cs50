@@ -38,7 +38,12 @@ int main(void)
 int get_cents(void)
 {
     // Prompt user for number of cents and return the same number
-    
+    int n
+    do
+    {
+        n = get_int("Cents: \n")
+    }
+    while ()
     return 0;
 }
 
