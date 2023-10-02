@@ -45,7 +45,7 @@ int get_cents(void)
     }
     while (n < 0);
 
-    printf("%s", n);
+    printf("%d", n);
     return n;
 }
 
