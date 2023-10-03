@@ -61,35 +61,29 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     // Calculate and return the number of dimes based on cents owed
-    int d;
-    do
+    for (int d = 0; cents >= 10; d++);
     {
-        d = (cents/10);
+        cents -= 10;
     }
-    while (cents < 10);
     return d;
 }
 
 int calculate_nickels(int cents)
 {
     // Calculate and return the number of nikels based on cents owed
-    int n;
-    do
+    for (int n = 0; cents >= 5; n++);
     {
-        n = (cents/5);
+        cents -= 5;
     }
-    while (cents < 5);
     return n;
 }
 
 int calculate_pennies(int cents)
 {
     // Calculate and return the number of pennies based on the cents owed
-    int p;
-    do
+    for (int p = 0; cents >= 1; p++);
     {
-        p = (cents/1);
+        cents -= 1;
     }
-    while (cents < 1);
     return p;
 }
