@@ -41,7 +41,7 @@ int get_cents(void)
     int cents;
     do
     {
-        cents = get_int("Cents: ");
+        cents = get_int("Change owed: ");
     }
     while (cents < 0);
 
@@ -74,12 +74,24 @@ int calculate_dimes(int cents)
 
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    // Calculate and return the number of nikels based on cents owed
+    int n;
+    do
+    {
+        n = (cents/5);
+    }
+    while (cents < 5);
+    return n;
 }
 
 int calculate_pennies(int cents)
 {
-    // TODO
-    return 0;
+    // Calculate and return the number of pennies based on the cents owed
+    int p;
+    do
+    {
+        p = (cents/1);
+    }
+    while (cents < 1);
+    return p;
 }
