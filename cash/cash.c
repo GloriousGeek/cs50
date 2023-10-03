@@ -51,25 +51,25 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // Calculate and return the number of quarters based on the cents owed
-    int quarters;
+    int q;
     do
     {
-        quarters = (cents/25);
+        q = (cents/25);
     }
     while (cents >= 25);
-    return quarters;
+    return q;
 }
 
 int calculate_dimes(int cents)
 {
     // Calculate and return the number of dimes based on cents owed
-    int dimes;
+    int d;
     do
     {
-        dimes = (cents/10);
+        d = (cents/10);
     }
     while (cents < 10);
-    return dimes;
+    return d;
 }
 
 int calculate_nickels(int cents)
