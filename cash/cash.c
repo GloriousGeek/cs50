@@ -62,7 +62,8 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
-    // TODO
+    // Calculate and return the number of dimes based on cents owed
+    
     return 0;
 }
 
