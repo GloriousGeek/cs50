@@ -37,7 +37,7 @@ int main(void)
 
 int get_cents(void)
 {
-    // Prompt user for number of cents and return the same number
+    // Prompt user for number of cents (positive) and return the same number
     int cents;
     do
     {
