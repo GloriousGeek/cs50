@@ -51,14 +51,11 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // Calculate and return the number of quarters based on the cents owed
-    int q=0;
-    while
-    {
-        q
-    }
+    int q;
     do
     {
         q = (cents/25);
+        cents -= 25;
     }
     while (cents < 25);
     return q;
