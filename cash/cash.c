@@ -51,7 +51,8 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // Calculate and return the number of quarters based on the cents owed
-    for (int q = 0; cents >= 25; q++)
+    int q;
+    for (q = 0; cents >= 25; q++)
     {
         cents -= 25;
     }
@@ -61,7 +62,8 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     // Calculate and return the number of dimes based on cents owed
-    for (int d = 0; cents >= 10; d++)
+    int d;
+    for (d = 0; cents >= 10; d++)
     {
         cents -= 10;
     }
@@ -71,7 +73,8 @@ int calculate_dimes(int cents)
 int calculate_nickels(int cents)
 {
     // Calculate and return the number of nikels based on cents owed
-    for (int n = 0; cents >= 5; n++)
+    int n;
+    for (n = 0; cents >= 5; n++)
     {
         cents -= 5;
     }
@@ -81,7 +84,8 @@ int calculate_nickels(int cents)
 int calculate_pennies(int cents)
 {
     // Calculate and return the number of pennies based on the cents owed
-    for (int p = 0; cents >= 1; p++)
+    int p;
+    for (p = 0; cents >= 1; p++)
     {
         cents -= 1;
     }
