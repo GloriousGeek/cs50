@@ -69,7 +69,7 @@ int calculate_dimes(int cents)
         d = (cents/10);
     }
     while (cents < 10);
-    return 0;
+    return d;
 }
 
 int calculate_nickels(int cents)
