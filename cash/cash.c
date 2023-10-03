@@ -63,13 +63,13 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     // Calculate and return the number of dimes based on cents owed
-    int d;
+    int dimes;
     do
     {
-        d = (cents/10);
+        dimes = (cents/10);
     }
     while (cents < 10);
-    return d;
+    return dimes;
 }
 
 int calculate_nickels(int cents)
