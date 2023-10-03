@@ -53,8 +53,7 @@ int calculate_quarters(int cents)
     // Calculate and return the number of quarters based on the cents owed
     for (int q = 0; cents >= 25; q++);
     {
-        q = (cents/25);
-        
+        cents -= 25;
     }
 }
 
