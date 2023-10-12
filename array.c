@@ -25,6 +25,6 @@ int dynamic_array[length]
         int dynamic_array[i] = 1;
         printf("%i\n", dynamic_array);
 
-        
+        dynamic_array *= 2;
     }
 }
