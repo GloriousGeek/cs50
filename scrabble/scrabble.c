@@ -52,7 +52,7 @@ int compute_score(string word)
             int index = uppercase_letter - 'A';
 
             // Adding score of each character of the user input
-            score += POINTS[index];
+            score += POINTS[words[i]];
         }
     }
     return score;
