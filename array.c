@@ -20,13 +20,16 @@ int main(void)
 }
 
 // Defining the function
-int dynamic_array[]
+int dynamic_array[];
 {
+    // Initial value of array should be 1
+    dynamic_array[0] = 1;
+
+    printf("%i\n", dynamic_array[0]);
 
     for (i = 0; i < length, i++)
     {
-        // Initial value of array should be 1
-        int dynamic_array[i] = 1;
+        dynamic_array[i];
 
         // Printing the value
         printf("%i\n", dynamic_array[i]);
