@@ -18,12 +18,12 @@ int main(void)
 
     printf("%i\n", dynamic_array[0]);
 
-    for (int i = 0; i < length, i++)
+    for (int i = 1; i < length, i++)
     {
-        // Give 2 times the previous value
+        // Give 2 times the previous element
         dynamic_array[i] = 2 * dynamic_array[i -1];
 
-        // Printing the value
+        // Printing the current element
         printf("%i\n", dynamic_array[i]);
     }
 
