@@ -43,7 +43,7 @@ int compute_score(string word)
 
     for (int i = 0; i < length; i++)
     {
-        int score = score + POINTS[i];
-        return score;
+        int score += POINTS[i];
     }
+    return score;
 }
