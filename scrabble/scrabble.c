@@ -46,7 +46,7 @@ int compute_score(string word)
         if (isalpha(word[i]))
         {
             // Convert the letter to uppercase
-            char toupper(char word[i] - 'A');
+            char toupper(char word[i]) - 'A';
 
             // Adding score of each character of the user input
             score += POINTS[word[i]];
