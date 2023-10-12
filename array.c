@@ -16,7 +16,7 @@ int main(void)
     while (length < 1);
 
     // Calling the function
-    int array = dynamic_array[length];
+    int dynamic_array[length];
 }
 
 // Defining the function
@@ -29,12 +29,10 @@ int dynamic_array[];
 
     for (i = 0; i < length, i++)
     {
-        dynamic_array[i];
+        // Give 2 times the previous value
+        dynamic_array[i] = 2 * dynamic_array[i -1];
 
         // Printing the value
         printf("%i\n", dynamic_array[i]);
-
-        // Give 2 times the previous value
-        int dynamic_array[i] *= 2;
     }
 }
