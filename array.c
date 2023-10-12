@@ -4,9 +4,11 @@
 // Declaring the function
 int dynamic_array[];
 
+// Declaring a global variable
+int length;
+
 int main(void)
 {
-    int length
     do
     {
         length = get_int("Length: ");
@@ -26,6 +28,7 @@ int dynamic_array[]
         // Initial value of array should be 1
         int dynamic_array[i] = 1;
 
+        // Printing the value
         printf("%i\n", dynamic_array[i]);
 
         // Give 2 times the previous value
