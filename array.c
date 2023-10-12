@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int dynamic_Array[length];
+
 int main(void)
 {
     int length
@@ -9,6 +11,8 @@ int main(void)
         length = get_int("Length: ");
     }
     while (length < 1);
+
+    
 }
 
 int dynamic_array[length]
