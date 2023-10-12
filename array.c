@@ -10,6 +10,7 @@ int main(void)
     }
     while (length < 1);
 
+    // Declare our array
     int dynamic_array[length];
 
     // Initial value of array should be 1
