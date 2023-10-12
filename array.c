@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int dynamic_array[length];
+// Declaring the function
+int dynamic_array[];
 
 int main(void)
 {
@@ -12,12 +13,12 @@ int main(void)
     }
     while (length < 1);
 
+    // Calling the function
     int array = dynamic_array[length];
-    
-
 }
 
-int dynamic_array[length]
+// Defining the function
+int dynamic_array[]
 {
 
     for (i = 0; i < length, i++)
@@ -27,6 +28,7 @@ int dynamic_array[length]
 
         printf("%i\n", dynamic_array[i]);
 
+        // Give 2 times the previous value
         dynamic_array[i] *= 2;
     }
 }
