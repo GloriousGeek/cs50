@@ -17,5 +17,6 @@ int dynamic_array[length]
     {
        int dynamic_array[0] = 1;
        
+
     }
 }
