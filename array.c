@@ -32,6 +32,6 @@ int dynamic_array[]
         printf("%i\n", dynamic_array[i]);
 
         // Give 2 times the previous value
-        dynamic_array[i] *= 2;
+        int dynamic_array[i] *= 2;
     }
 }
