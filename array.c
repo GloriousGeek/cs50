@@ -15,6 +15,6 @@ int dynamic_array[length]
 {
     for (i = 0; i < length, i++)
     {
-        
+        2 * 
     }
 }
