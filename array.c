@@ -12,6 +12,7 @@ int main(void)
     }
     while (length < 1);
 
+    int array = dynamic_array[length];
     
 
 }
