@@ -11,4 +11,4 @@ int main(void)
     while (length < 1);
 }
 
-int dynamic_array[]
+int dynamic_array[length] = {}
