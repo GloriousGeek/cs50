@@ -37,7 +37,11 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int score = 0;
-    for (int i = 0; i < word; i++)
+
+    // Get the length of the string
+    int length = strlen(word);
+
+    for (int i = 0; i < length; i++)
     {
         int score += POINTS[i];
         return score;
