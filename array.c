@@ -11,4 +11,10 @@ int main(void)
     while (length < 1);
 }
 
-int dynamic_array[length] = {}
+int dynamic_array[length]
+{
+    for (i = 0; i < length, i++)
+    {
+        
+    }
+}
