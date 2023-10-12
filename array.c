@@ -16,11 +16,11 @@ int main(void)
     while (length < 1);
 
     // Calling the function
-    int dynamic_array[length];
+    int array = dynamic_array[length];
 }
 
 // Defining the function
-int dynamic_array[];
+int dynamic_array[]
 {
     // Initial value of array should be 1
     dynamic_array[0] = 1;
