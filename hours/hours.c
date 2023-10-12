@@ -40,6 +40,7 @@ float calc_hours(int hours[], int weeks, char output)
             return total_hours;
     }
 
+    // This part of the program is not working. Need to work on it
     else if (output == 'A')
     {
         float average = total_hours / weeks;
