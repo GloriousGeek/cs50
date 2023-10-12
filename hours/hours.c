@@ -27,10 +27,12 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
+    // Start value
     int total_hours = 0;
 
     if (output == 'T')
     {
+        // Adding each value of array to the variable
         for (int i = 0; i < weeks; i++)
         {
             total_hours += hours[i];
