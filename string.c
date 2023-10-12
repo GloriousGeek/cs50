@@ -10,7 +10,7 @@ int main(void)
 
     for (int i = 0; i < length - 1; i++)
     {
-        if name[i] > name[i+1]
+        if (name[i] > name[i+1])
         {
             printf("No\n");
             return 0;
