@@ -15,8 +15,6 @@ int main(void)
     }
     while (length < 1);
 
-    int dynamic_array[];
-    {
     // Initial value of array should be 1
     dynamic_array[0] = 1;
 
@@ -29,11 +27,6 @@ int main(void)
 
         // Printing the value
         printf("%i\n", dynamic_array[i]);
-    }
-
-    // Calling the function
-    int array = dynamic_array[length];
-    }
 
 // Defining the function
 int dynamic_array[]
