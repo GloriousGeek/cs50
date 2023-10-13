@@ -26,11 +26,12 @@ int count_letters(string letter)
 
     for (int i = 0; i < letter_length; i++)
         {
-            if (isalpha(letter[i]) || isupper(letter[i]) || islower(letter[i]))
+            // Check if the character is an alphabet
+            if (isalpha(letter[i]))
             {
                 letter_count ++;
             }
         }
-        
+
         return letter_count;
 }
