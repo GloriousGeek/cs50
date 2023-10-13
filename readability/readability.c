@@ -35,5 +35,4 @@ int count_letters(string letter)
         }
 
         return letter_count;
-        printf letter_length;
 }
