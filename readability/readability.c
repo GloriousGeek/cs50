@@ -22,9 +22,9 @@ int count_letters(string letter)
             if (isupper(letter) || islower(letter))
             {
                 int letter_length = strlen(letter);
-
-                return letter_length;
             }
+
+            return letter_length;
         }
 
 }
