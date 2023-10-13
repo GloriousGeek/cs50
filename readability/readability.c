@@ -29,11 +29,13 @@ int main(void)
 
     //
     int L = (letter_count / word_count) * 100;
+    printf("L: %i\n", L);
 
     //
     int S = (sentence_count / word_count) * 100;
+    printf("S: %i\n", S);
 
-    int index = 0.0588*L - 0.296*S - 15.8;
+    int index = 0.0588 * L - 0.296 * S - 15.8;
     printf("Grade %i\n", index);
 }
 
