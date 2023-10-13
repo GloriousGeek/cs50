@@ -1,10 +1,10 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 #include <math.h>
+#include <stdio.h>
+#include <string.h>
 
-//Declaring Functions
+// Declaring Functions
 int count_letters(string letter);
 int count_words(string word);
 int count_sentences(string sentence);
@@ -61,16 +61,16 @@ int count_letters(string letter)
     int letter_length = strlen(letter);
 
     for (int i = 0; i < letter_length; i++)
+    {
+        // Check if the character is an alphabet
+        if (isalpha(letter[i]))
         {
-            // Check if the character is an alphabet
-            if (isalpha(letter[i]))
-            {
-                // Only includes alphabets.
-                letter_count ++;
-            }
+            // Only includes alphabets.
+            letter_count++;
         }
+    }
 
-        return letter_count;
+    return letter_count;
 }
 
 // Defining word count function
@@ -87,7 +87,7 @@ int count_words(string word)
         // function argument is an alphabet and has a space
         if (isspace(word[i]))
         {
-            word_count ++;
+            word_count++;
         }
     }
 
@@ -110,12 +110,10 @@ int count_sentences(string sentence)
         if (sentence[i] == '.' || sentence[i] == '!' || sentence[i] == '?')
         {
             // Updating sentence count
-            sentence_count ++;
+            sentence_count++;
         }
     }
 
     // Returning sentence count value for non-void function
     return sentence_count;
 }
-
-
