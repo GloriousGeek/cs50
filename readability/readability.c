@@ -13,6 +13,11 @@ int count_letters(string letter)
 {
     if (isalpha(letter) || isupper(letter) || islower(letter))
     {
-        
+        int letter_length = strlen(letter);
+
+        for (int i = 0; i < letter_length; i++)
+        {
+            
+        }
     }
 }
