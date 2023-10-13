@@ -6,6 +6,7 @@
 //Declaring Functions
 int count_letters(string letter);
 int count_words(string word);
+int count_senteces(string sentence);
 
 int main(void)
 {
@@ -63,4 +64,10 @@ int count_words(string word)
 
     // Returning a value for the non-void function
     return word_count;
+}
+
+// Defining sentence count function
+int count_senteces(string sentence)
+{
+    
 }
