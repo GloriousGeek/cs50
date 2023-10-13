@@ -27,9 +27,14 @@ int main(void)
 
     // Coleman-Liau index formula
 
-    int index = 0.0588*letter_count - 0.296*sentence_count - 15.8
+    //
+    int L = (letter_count / word_count) * 100;
 
-    int L = letter_count / 
+    //
+    int S = (sentence_count / word_count) * 100;
+
+    int index = 0.0588*L - 0.296*S - 15.8;
+    printf("Grade %i\n", index);
 }
 
 // Letter count function
@@ -99,7 +104,4 @@ int count_sentences(string sentence)
     return sentence_count;
 }
 
-int formula(void)
-{
-    int index = 0.0588*letter_length - 0.296*sentence_length - 15.8
-}
+
