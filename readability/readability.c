@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 //Declaring Functions
 int count_letters(string letter);
@@ -28,14 +29,14 @@ int main(void)
     // Coleman-Liau index formula
 
     //
-    float L = (letter_count / word_count) * 100;
-    printf("L: %f\n", L);
+    int L = round((letter_count / word_count) * 100);
+    printf("L: %i\n", L);
 
     //
-    float S = (sentence_count / word_count) * 100;
-    printf("S: %f\n", S);
+    int S = round((sentence_count / word_count) * 100);
+    printf("S: %i\n", S);
 
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    int index = round(0.0588 * L - 0.296 * S - 15.8);
     printf("Grade %i\n", index);
 }
 
