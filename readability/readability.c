@@ -17,15 +17,14 @@ int main(void)
 
 int count_letters(string letter)
 {
-    if (isupper(letter) || islower(letter))
-    {
-        int letter_length = strlen(letter);
+    for (int i = 0; i < letter_length; i++)
+        {
+            if (isupper(letter) || islower(letter))
+            {
+                int letter_length = strlen(letter);
 
-        return letter_length;
+                return letter_length;
+            }
+        }
 
-        // for (int i = 0; i < letter_length; i++)
-        // {
-
-        // }
-    }
 }
