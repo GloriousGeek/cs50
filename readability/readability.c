@@ -49,8 +49,8 @@ int count_words(string word)
     // String length
     int length = strlen(word);
 
-    // Starting a variable to count words
-    int word_count = 0;
+    // Starting a variable to count words from 1 because space(isspace) does not count the last word
+    int word_count = 1;
 
     for (int i = 0; i < length; i++)
     {
