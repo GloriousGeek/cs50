@@ -9,7 +9,10 @@ int main(void)
     string text = get_string("Text: \n");
 }
 
-int count_letters(letter)
+int count_letters(string letter)
 {
-    if (isalpha(letters) || )
+    if (isalpha(letter) || isupper(letter) || islower(letter))
+    {
+        
+    }
 }
