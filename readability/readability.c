@@ -26,8 +26,6 @@ int main(void)
     int sentence_count = count_sentences(text);
     printf("%i sentences\n", sentence_count);
 
-    // Coleman-Liau index formula
-
     // Average number of letters per 100 words
     int L = round((letter_count / (float) word_count) * 100);
     printf("L: %i\n", L);
@@ -36,8 +34,21 @@ int main(void)
     int S = round((sentence_count / (float) word_count) * 100);
     printf("S: %i\n", S);
 
+    // Coleman-Liau index formula
     int index = round(0.0588 * L - 0.296 * S - 15.8);
-    printf("Grade %i\n", index);
+
+    if (index >= 16)
+    {
+        printf("Grade 16+");
+    }
+    else if (index < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else
+    {
+        printf("Grade %i\n", index);
+    }
 }
 
 // Letter count function
