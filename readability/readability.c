@@ -24,6 +24,8 @@ int main(void)
     // Sentence count function
     int sentence_count = count_sentences(text);
     printf("%i sentences\n", sentence_count);
+
+    int index = 0.0588*letter_length - 0.296*
 }
 
 // Letter count function
@@ -93,3 +95,7 @@ int count_sentences(string sentence)
     return sentence_count;
 }
 
+int formula(void)
+{
+    int index = 0.0588*letter_length - 0.296*
+}
