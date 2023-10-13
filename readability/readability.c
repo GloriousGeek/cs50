@@ -3,5 +3,6 @@
 
 int main(void)
 {
-    string 
+    // Prompt user for input
+    string text = get_string("Text: \n");
 }
