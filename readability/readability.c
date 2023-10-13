@@ -21,7 +21,7 @@ int count_letters(string letter)
     // Start counter by zero
     int letter_count = 0;
 
-    // Calculate letter_length
+    // Calculate letter_length. it includes spaces, periods etc.
     int letter_length = strlen(letter);
 
     for (int i = 0; i < letter_length; i++)
@@ -29,8 +29,8 @@ int count_letters(string letter)
             // Check if the character is an alphabet
             if (isalpha(letter[i]))
             {
+                // Only includes alphabets.
                 letter_count ++;
-
             }
         }
 
