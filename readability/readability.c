@@ -42,5 +42,6 @@ int count_letters(string letter)
 // Defining word count function
 int count_words(string word)
 {
+    int length = strlen(word);
     
 }
