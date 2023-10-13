@@ -71,7 +71,7 @@ int count_words(string word)
 }
 
 // Defining sentence count function
-int count_senteces(string sentence)
+int count_sentences(string sentence)
 {
     // String length
     int length = strlen(sentence);
@@ -92,3 +92,4 @@ int count_senteces(string sentence)
     // Returning sentence count value for non-void function
     return sentence_count;
 }
+
