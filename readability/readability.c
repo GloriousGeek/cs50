@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int count_letters(letter);
+int count_letters(string letter);
 
 int main(void)
 {
