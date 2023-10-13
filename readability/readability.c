@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
-
+#include <string.h>
 
 int count_letters(string letter);
 
@@ -18,15 +18,16 @@ int main(void)
 
 int count_letters(string letter)
 {
-    int letter_length = strlen(letter);
+    int letter_length = 0;
+    letter_length = strlen(letter);
 
     for (int i = 0; i < letter_length; i++)
         {
-            if (isupper(letter) || islower(letter))
+            if (isupper(letter[i]) || islower(letter[i]))
             {
-                return i;
+                letter_length ++;
             }
 
         }
-
+        return letter_length;
 }
