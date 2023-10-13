@@ -1,1 +1,8 @@
 longer words probably correlate with higher reading levels. Likewise, longer sentences probably correlate with higher reading levels, too
+Coleman-Liau index of a text:
+index = 0.0588 * L - 0.296 * S - 15.8
+L = the average number of letters / 100 words
+S = the average number of sentences / 100 words in the text
+
+Program Specification:
+program must prompt the user for a string of text using get_string
