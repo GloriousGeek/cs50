@@ -59,7 +59,8 @@ int count_words(string word)
         {
             word_count ++;
         }
-
-        return word_count;
     }
+
+    // Returning a value for the non-void function
+    return word_count;
 }
