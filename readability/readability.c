@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
+
 int count_letters(string letter);
 
 int main(void)
@@ -23,10 +24,9 @@ int count_letters(string letter)
         {
             if (isupper(letter) || islower(letter))
             {
-                
+                return i;
             }
 
-            return letter_length;
         }
 
 }
