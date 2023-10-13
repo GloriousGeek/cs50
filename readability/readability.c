@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int count_letters(void);
+int count_letters(letter);
 
 int main(void)
 {
@@ -9,7 +9,7 @@ int main(void)
     string text = get_string("Text: \n");
 }
 
-int count_letters(void)
+int count_letters(letter)
 {
     
 }
