@@ -17,7 +17,7 @@ int main(void)
 
 int count_letters(string letter)
 {
-    if (isalpha(letter[]) || isupper(letter[]) || islower(letter[]))
+    if (isalpha(letter) || isupper(letter) || islower(letter))
     {
         int letter_length = strlen(letter);
 
