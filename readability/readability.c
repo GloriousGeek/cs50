@@ -8,7 +8,7 @@ int count_letters(string letter);
 int main(void)
 {
     // Prompt user for input
-    string text = get_string("Text: \n");
+    string text = get_string("Text: ");
 
     // Calling function
     int letter_length = count_letters(text);
