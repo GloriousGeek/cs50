@@ -30,8 +30,10 @@ int count_letters(string letter)
             if (isalpha(letter[i]))
             {
                 letter_count ++;
+
             }
         }
 
         return letter_count;
+        printf letter_length;
 }
