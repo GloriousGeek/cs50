@@ -14,8 +14,8 @@ int main(void)
     string text = get_string("Text: ");
 
     // Calling function for letter
-    int letter_length = count_letters(text);
-    printf("%i letters\n", letter_length);
+    int letter_count = count_letters(text);
+    printf("%i letters\n", letter_count);
 
     // Word count function
     int word_count = count_words(text);
@@ -25,7 +25,11 @@ int main(void)
     int sentence_count = count_sentences(text);
     printf("%i sentences\n", sentence_count);
 
-    int index = 0.0588*letter_length - 0.296*
+    // Coleman-Liau index formula
+
+    int index = 0.0588*letter_count - 0.296*sentence_count - 15.8
+
+    int L = letter_count / 
 }
 
 // Letter count function
@@ -97,5 +101,5 @@ int count_sentences(string sentence)
 
 int formula(void)
 {
-    int index = 0.0588*letter_length - 0.296*
+    int index = 0.0588*letter_length - 0.296*sentence_length - 15.8
 }
