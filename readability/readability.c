@@ -69,5 +69,14 @@ int count_words(string word)
 // Defining sentence count function
 int count_senteces(string sentence)
 {
-    
+    // String length
+    int length = strlen(sentence);
+
+    // Variable to count sentences
+    int sentence_count = 0;
+
+    for (int i = 0; i < length; i++)
+    {
+        if ()
+    }
 }
