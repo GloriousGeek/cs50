@@ -29,11 +29,11 @@ int main(void)
     // Coleman-Liau index formula
 
     //
-    int L = round((letter_count / word_count) * 100);
+    int L = round((letter_count / (float) word_count) * 100);
     printf("L: %i\n", L);
 
     //
-    int S = round((sentence_count / word_count) * 100);
+    int S = round((sentence_count / (float) word_count) * 100);
     printf("S: %i\n", S);
 
     int index = round(0.0588 * L - 0.296 * S - 15.8);
