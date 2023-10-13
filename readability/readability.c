@@ -6,7 +6,7 @@
 //Declaring Functions
 int count_letters(string letter);
 int count_words(string word);
-int count_senteces(string sentence);
+int count_sentences(string sentence);
 
 int main(void)
 {
@@ -20,6 +20,10 @@ int main(void)
     // Word count function
     int word_count = count_words(text);
     printf("%i words\n", word_count);
+
+    // Sentence count function
+    int sentence_count = count_sentences(text);
+    printf("%i sentences\n", sentence_count);
 }
 
 // Letter count function
@@ -77,6 +81,14 @@ int count_senteces(string sentence)
 
     for (int i = 0; i < length; i++)
     {
-        if (sentence == '.' || sentence)
+        // Condition to indicate end of a sentence
+        if (sentence[i] == '.' || sentence[i] == '!' || sentence[i] == '?')
+        {
+            // Updating sentence count
+            sentence_count ++;
+        }
     }
+
+    // Returning sentence count value for non-void function
+    return sentence_count;
 }
