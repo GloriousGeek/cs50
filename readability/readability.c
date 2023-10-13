@@ -28,11 +28,11 @@ int main(void)
 
     // Coleman-Liau index formula
 
-    //
+    // Average number of letters per 100 words
     int L = round((letter_count / (float) word_count) * 100);
     printf("L: %i\n", L);
 
-    //
+    // Average number of sentences per 100 words
     int S = round((sentence_count / (float) word_count) * 100);
     printf("S: %i\n", S);
 
