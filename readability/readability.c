@@ -43,5 +43,9 @@ int count_letters(string letter)
 int count_words(string word)
 {
     int length = strlen(word);
-    
+
+    for (int i = 0; i < length; i++)
+    {
+        if ()
+    }
 }
