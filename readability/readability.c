@@ -18,15 +18,19 @@ int main(void)
 
 int count_letters(string letter)
 {
-    int letter_length = 0;
-    letter_length = strlen(letter);
+    // Start counter by zero
+    int letter_count = 0;
+
+    // Calculate letter_length
+    int letter_length = strlen(letter);
 
     for (int i = 0; i < letter_length; i++)
         {
-            if (isupper(letter[i]) || islower(letter[i]))
+            if (isalpha(letter[i]) || isupper(letter[i]) || islower(letter[i]))
             {
-                letter_length ++;
+                letter_count ++;
             }
         }
-        return letter_length;
+        
+        return letter_count;
 }
