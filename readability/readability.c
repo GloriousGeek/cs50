@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 
+//Declaring Functions
 int count_letters(string letter);
 int count_words(string word);
 
@@ -14,9 +15,9 @@ int main(void)
     // Calling function
     int letter_length = count_letters(text);
     printf("%i letters\n", letter_length);
-
 }
 
+// Letter count function
 int count_letters(string letter)
 {
     // Start counter by zero
@@ -36,4 +37,10 @@ int count_letters(string letter)
         }
 
         return letter_count;
+}
+
+// Defining word count function
+int count_words(string word)
+{
+    
 }
