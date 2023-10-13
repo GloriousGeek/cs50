@@ -55,7 +55,7 @@ int count_words(string word)
     for (int i = 0; i < length; i++)
     {
         // function argument is an alphabet and has a space
-        if (isalpha(word[i]))
+        if (isspace(word[i]))
         {
             word_count ++;
         }
