@@ -7,6 +7,11 @@ int main(void)
 {
     // Prompt user for input
     string text = get_string("Text: \n");
+
+    // Calling function
+    int letter_length = count_letters(text);
+    printf("%i letters\n", letter_length);
+
 }
 
 int count_letters(string letter)
@@ -15,9 +20,11 @@ int count_letters(string letter)
     {
         int letter_length = strlen(letter);
 
-        for (int i = 0; i < letter_length; i++)
-        {
-            
-        }
+        return letter_length;
+
+        // for (int i = 0; i < letter_length; i++)
+        // {
+
+        // }
     }
 }
