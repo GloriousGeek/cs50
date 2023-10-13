@@ -77,6 +77,6 @@ int count_senteces(string sentence)
 
     for (int i = 0; i < length; i++)
     {
-        if ()
+        if (sentence == ')
     }
 }
