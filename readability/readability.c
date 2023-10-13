@@ -16,23 +16,23 @@ int main(void)
 
     // Calling function for letter
     int letter_count = count_letters(text);
-    printf("%i letters\n", letter_count);
+    // printf("%i letters\n", letter_count);
 
     // Word count function
     int word_count = count_words(text);
-    printf("%i words\n", word_count);
+    // printf("%i words\n", word_count);
 
     // Sentence count function
     int sentence_count = count_sentences(text);
-    printf("%i sentences\n", sentence_count);
+    // printf("%i sentences\n", sentence_count);
 
     // Average number of letters per 100 words
-    float L = round((letter_count / (float) word_count) * 100);
-    printf("L: %f\n", L);
+    float L = (letter_count / (float) word_count) * 100;
+    // printf("L: %f\n", L);
 
     // Average number of sentences per 100 words
-    float S = round((sentence_count / (float) word_count) * 100);
-    printf("S: %f\n", S);
+    float S = (sentence_count / (float) word_count) * 100;
+    // printf("S: %f\n", S);
 
     // Coleman-Liau index formula
     int index = round(0.0588 * L - 0.296 * S - 15.8);
