@@ -8,7 +8,7 @@ const int BITS_IN_BYTE = 8;
 // const int N =
 
 void print_bulb(int bit);
-int string_to_decimal(string message);
+int* string_to_decimal(string message);
 
 int main(void)
 {
@@ -16,7 +16,7 @@ int main(void)
     string message = get_string("Message: ");
 
     // Call string function to get decimal. int* is a pointer not int
-    int decimal_values = string_to_decimal(message);
+    int* decimal_values = string_to_decimal(message);
 
     if (decimal_values == NULL)
     {
@@ -48,10 +48,19 @@ void print_bulb(int bit)
     }
 }
 
-int string_to_decimal(string message)
+int* string_to_decimal(string message)
 {
     // Length of string
     int length = strlen(message);
+
+    // Array. +1 for the null terminator (\0). malloc for dynamic memory
+    int* decimal_array = (int*)malloc((length + 1) * sizeof(int));
+
+    if (decimal_array == NULL)
+    {
+        // Memory allocation failed
+        return NULL;
+    }
 
     for (int i = 0; i < length; i++)
     {
