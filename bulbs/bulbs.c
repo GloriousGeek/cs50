@@ -48,7 +48,7 @@ int string_to_decimal(string message)
     {
         int decimal_array[i];
 
-        decimal = message[i];
+        decimal[i] = message[i];
         printf("%i\n", decimal);
 
     }
