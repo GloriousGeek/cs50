@@ -76,6 +76,6 @@ int decimal_to_binary(int decimal)
             printf("1");
         }
     }
-    
+
     return decimal;
 }
