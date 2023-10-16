@@ -5,7 +5,7 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int string_to_binary(string message);
+int string_to_decimal(string message);
 
 int main(void)
 {
@@ -13,7 +13,7 @@ int main(void)
     string message = get_string("Message: ");
 
     // Call string function to get decimal
-    int decimal = string_to_binary(message);
+    int decimal = string_to_decimal(message);
     printf("Decimal: %i\n", decimal);
 
 }
@@ -49,5 +49,5 @@ int string_to_decimal(string message)
 
     }
 
-    return decimal_array;
+    return decimal;
 }
