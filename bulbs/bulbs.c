@@ -27,7 +27,7 @@ int main(void)
     // // Print decimal values
     // for (int i = 0; decimal_values[i] != '\0'; i++)
     // {
-        printf("%i\n", decimal_values);
+        printf("Decimal: %i\n", decimal_values);
 }
 
 void print_bulb(int bit)
@@ -52,8 +52,9 @@ int string_to_decimal(string message)
 
     for (int i = 0; i < length; i++)
     {
-        int decimal_value = message[i];
+        decimal_value = message[i];
+        printf("%i", decimal_value);
     }
 
-    return decimal_array;
+    return decimal_value;
 }
