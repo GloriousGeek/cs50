@@ -15,8 +15,8 @@ int main(void)
     string message = get_string("Message: ");
 
     // Call string function to get decimal
-    int decimal = string_to_decimal(message);
-    printf("Decimal: %i\n", decimal);
+    int decimal_values = string_to_decimal(message);
+    printf("Decimal: %i\n", decimal_values);
 
 }
 
@@ -48,10 +48,10 @@ int string_to_decimal(string message)
     {
         int decimal_array[i];
 
-        decimal[i] = message[i];
-        printf("%i\n", decimal);
+        decimal_array[i] = message[i];
+        printf("%i\n", decimal_array);
 
     }
 
-    return decimal;
+    return decimal_array;
 }
