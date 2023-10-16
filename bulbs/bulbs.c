@@ -24,6 +24,9 @@ int main(void)
         // 1 means memory allocation failed
         printf("Null\n");
     }
+
+    int binary = decimal_to_binary(decimal_values);
+    
 }
 
 void print_bulb(int bit)
