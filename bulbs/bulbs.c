@@ -23,11 +23,6 @@ int main(void)
         // 1 means memory allocation failed
         printf("Null\n");
     }
-
-    // // Print decimal values
-    // for (int i = 0; decimal_values[i] != '\0'; i++)
-    // {
-        printf("Decimal: %i\n", decimal_values);
 }
 
 void print_bulb(int bit)
