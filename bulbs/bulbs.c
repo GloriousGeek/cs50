@@ -60,9 +60,10 @@ int string_to_decimal(string message)
 
 int decimal_to_binary(int decimal)
 {
-    //
+    // Updating the input by diving it to 2 (binary)
     for (; decimal > 0, decimal /= 2)
     {
+        // Using modulus operator
         if (decimal % 2 == 0)
         {
             printf("0");
@@ -71,15 +72,5 @@ int decimal_to_binary(int decimal)
         {
             printf("1");
         }
-    }
-
-    // Using Modulus operator
-    if (decimal % 2 == 0)
-    {
-        printf("0");
-    }
-    else if (decimal % 2 != 0)
-    {
-        printf("1");
     }
 }
