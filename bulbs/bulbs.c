@@ -61,6 +61,8 @@ int string_to_decimal(string message)
 int decimal_to_binary(int decimal)
 {
     for (int i = 0; )
+
+    // Using Modulus operator
     if (decimal % 2 == 0)
     {
         printf("0");
