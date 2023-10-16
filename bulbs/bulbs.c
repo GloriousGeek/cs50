@@ -8,7 +8,7 @@ const int BITS_IN_BYTE = 8;
 // const int N =
 
 void print_bulb(int bit);
-int string_to_decimal(string message);
+int* string_to_decimal(string message);
 
 int main(void)
 {
@@ -48,7 +48,7 @@ void print_bulb(int bit)
     }
 }
 
-int string_to_decimal(string message)
+int* string_to_decimal(string message)
 {
     // Length of string
     int length = strlen(message);
@@ -65,7 +65,7 @@ int string_to_decimal(string message)
     for (int i = 0; i < length; i++)
     {
         decimal_array[i] = (int)message[i];
-        printf("%i\n", decimal_array);
+        printf("Decimal: %i\n", decimal_array[i]);
 
     }
 
