@@ -65,15 +65,15 @@ int decimal_to_binary(int decimal)
 {
 
     // Updating the input by diving it to 2 (binary)
-    for (int i = 0; decimal > 0, i++)
+    for (int i = 0; decimal > 0;i++)
     {
         decimal /= 2;
         // Using modulus operator
-        if (decimal[i] % 2 == 0)
+        if (decimal % 2 == 0)
         {
             printf("0");
         }
-        else if (decimal[i] % 2 != 0)
+        else if (decimal % 2 != 0)
         {
             printf("1");
         }
