@@ -36,10 +36,6 @@ void print_bulb(int bit)
 
 int string_to_decimal(string message)
 {
-    int decimal;
-
-
-
     // Length of string
     int length = strlen(message);
 
