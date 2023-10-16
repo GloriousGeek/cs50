@@ -53,7 +53,7 @@ int string_to_decimal(string message)
     for (int i = 0; i < length; i++)
     {
         decimal_value = message[i];
-        printf("%i", decimal_value);
+        printf("%i\n", decimal_value);
     }
 
     return decimal_value;
