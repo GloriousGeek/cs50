@@ -43,10 +43,13 @@ int string_to_decimal(string message)
 {
     // Length of string
     int length = strlen(message);
+
+    // declaring a variable to use in a for loop and return in the function
     int decimal_value;
 
     for (int i = 0; i < length; i++)
     {
+        // Updating decimal_value w every iteration
         decimal_value = message[i];
         printf("%i\n", decimal_value);
     }
