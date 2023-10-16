@@ -61,11 +61,12 @@ int string_to_decimal(string message)
     return decimal_value;
 }
 
-int decimal_to_binary(int decimal)
+void decimal_to_binary(int decimal)
 {
     // Updating the input by diving it to 2 (binary)
-    for (; decimal > 0, decimal /= 2)
+    for (int i = 0; decimal > 0, i++)
     {
+        decimal /= 2;
         // Using modulus operator
         if (decimal % 2 == 0)
         {
@@ -77,5 +78,4 @@ int decimal_to_binary(int decimal)
         }
     }
 
-    return decimal;
 }
