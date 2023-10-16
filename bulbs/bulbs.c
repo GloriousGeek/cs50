@@ -4,7 +4,7 @@
 
 const int BITS_IN_BYTE = 8;
 
-const int N =
+// const int N =
 
 void print_bulb(int bit);
 int string_to_decimal(string message);
@@ -39,7 +39,7 @@ int string_to_decimal(string message)
     int decimal;
 
     // Defining an array
-    int decimal_array[N];
+    int decimal_array[];
 
     // Length of string
     int length = strlen(message);
