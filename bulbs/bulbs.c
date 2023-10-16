@@ -15,12 +15,12 @@ int main(void)
     // User input
     string message = get_string("Message: ");
 
-    // Call string function to get decimal
-    int decimal_values = string_to_decimal(message);
+    // Call string function to get decimal. int* is a pointer not int
+    int* decimal_values = string_to_decimal(message);
 
     if (decimal_values == NULL)
     {
-        return 1:
+        return NULL:
     }
 
     // Print decimal values
