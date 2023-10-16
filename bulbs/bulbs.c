@@ -27,7 +27,7 @@ int main(void)
     // Print decimal values
     for (int i = 0; decimal_values[i] != '\0'; i++)
     {
-        printf("Decimal: %i\n", decimal_values[i]);
+        printf("%i\n", decimal_values[i]);
     }
 
     // Free allocated memory
