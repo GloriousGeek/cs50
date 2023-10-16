@@ -60,11 +60,11 @@ int string_to_decimal(string message)
 
 int decimal_to_binary(int decimal)
 {
-    int value;
+    int value = decimal;
     for (int i = 0; value >= decimal, i++)
     {
-        value = decimal / 2;
-        
+        int update_value = value / 2;
+
 
     }
 
