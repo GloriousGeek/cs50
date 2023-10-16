@@ -60,14 +60,21 @@ int string_to_decimal(string message)
 
 int decimal_to_binary(int decimal)
 {
-    for (int i = 0; )
+    int value;
+    for (int i = 0; value >= decimal, i++)
     {
-        int value = decimal / 2;
+        value = decimal / 2;
+        
+
     }
 
     // Using Modulus operator
     if (decimal % 2 == 0)
     {
         printf("0");
+    }
+    else if (decimal % 2 != 0)
+    {
+        printf("1");
     }
 }
