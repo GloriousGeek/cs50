@@ -9,6 +9,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 int string_to_decimal(string message);
+int decimal_to_binary(int decimal);
 
 int main(void)
 {
@@ -57,4 +58,7 @@ int string_to_decimal(string message)
     return decimal_value;
 }
 
-int decimal_to_binary()
+int decimal_to_binary(int decimal)
+{
+    if ()
+}
