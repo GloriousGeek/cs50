@@ -41,7 +41,7 @@ int string_to_decimal(string message)
     int length = strlen(message);
 
     // Array. +1 for the null terminator (\0). malloc for dynamic memory
-    int decimal_array = (int)malloc((length + 1) * sizeof(int));
+    int* decimal_array = (int*)malloc((length + 1) * sizeof(int));
 
     if (decimal_array == NULL)
     {
