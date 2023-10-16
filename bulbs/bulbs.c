@@ -61,6 +61,9 @@ int string_to_decimal(string message)
 int decimal_to_binary(int decimal)
 {
     for (int i = 0; )
+    {
+        int value = decimal / 2;
+    }
 
     // Using Modulus operator
     if (decimal % 2 == 0)
