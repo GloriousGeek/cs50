@@ -18,17 +18,16 @@ int main(void)
     // Call string function to get decimal. int* is a pointer not int
     int decimal_values = string_to_decimal(message);
 
-    if (decimal_values == '\)
+    if (decimal_values == '\0')
     {
         // 1 means memory allocation failed
         printf("Null\n");
     }
 
-    // Print decimal values
-    for (int i = 0; decimal_values[i] != '\0'; i++)
-    {
-        printf("%i\n", decimal_values[i]);
-    }
+    // // Print decimal values
+    // for (int i = 0; decimal_values[i] != '\0'; i++)
+    // {
+        printf("%i\n", decimal_values);
 }
 
 void print_bulb(int bit)
@@ -53,7 +52,7 @@ int string_to_decimal(string message)
 
     for (int i = 0; i < length; i++)
     {
-        int decimal_value = message[i]
+        int decimal_value = message[i];
     }
 
     return decimal_array;
