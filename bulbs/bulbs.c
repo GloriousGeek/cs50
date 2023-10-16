@@ -9,7 +9,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 int string_to_decimal(string message);
-void decimal_to_binary(int decimal);
+int decimal_to_binary(int decimal);
 
 int main(void)
 {
@@ -61,7 +61,7 @@ int string_to_decimal(string message)
     return decimal_value;
 }
 
-void decimal_to_binary(int decimal)
+int decimal_to_binary(int decimal)
 {
 
     // Updating the input by diving it to 2 (binary)
@@ -78,5 +78,5 @@ void decimal_to_binary(int decimal)
             printf("1");
         }
     }
-
+    return 0;
 }
