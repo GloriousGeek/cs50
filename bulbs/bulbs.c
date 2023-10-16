@@ -4,6 +4,8 @@
 
 const int BITS_IN_BYTE = 8;
 
+const int N = 
+
 void print_bulb(int bit);
 int string_to_decimal(string message);
 
