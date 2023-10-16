@@ -60,5 +60,9 @@ int string_to_decimal(string message)
 
 int decimal_to_binary(int decimal)
 {
-    if ()
+    for (int i = 0; )
+    if (decimal % 2 == 0)
+    {
+        printf("0");
+    }
 }
