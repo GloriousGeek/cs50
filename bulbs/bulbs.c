@@ -56,3 +56,5 @@ int string_to_decimal(string message)
 
     return decimal_value;
 }
+
+int decimal_to_binary()
