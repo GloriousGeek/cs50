@@ -63,9 +63,9 @@ int string_to_decimal(string message)
 
 void decimal_to_binary(int decimal)
 {
-    
+
     // Updating the input by diving it to 2 (binary)
-    for (int i = 0; i < decimal, i++)
+    for (int i = 0; decimal < 0, i++)
     {
         decimal /= 2;
         // Using modulus operator
