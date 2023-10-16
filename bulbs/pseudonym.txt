@@ -1,0 +1,2 @@
+ask user for a message - input.
+program must then convert the given string into a series of 8-bit binary numbers, one for each character of the string = for loop.
