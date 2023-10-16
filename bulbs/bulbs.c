@@ -20,7 +20,8 @@ int main(void)
 
     if (decimal_values == NULL)
     {
-        return NULL;
+        // 1 means memory allocation failed
+        return 1;
     }
 
     // Print decimal values
@@ -63,7 +64,7 @@ int string_to_decimal(string message)
 
     for (int i = 0; i < length; i++)
     {
-        decimal_array[i] = int message[i];
+        decimal_array[i] = (int)message[i];
         printf("%i\n", decimal_array);
 
     }
