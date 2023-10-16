@@ -38,17 +38,19 @@ int string_to_decimal(string message)
 {
     int decimal;
 
-    // Defining an array
-    int decimal_array[];
+
 
     // Length of string
     int length = strlen(message);
+
+    // Array. +1 for the null terminator (\0). malloc for dynamic memory
+    int decimal_array = (int)malloc((length + 1) * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
         int decimal_array[i];
 
-        decimal_array[i] = message[i];
+        decimal_array[i] = int message[i];
         printf("%i\n", decimal_array);
 
     }
