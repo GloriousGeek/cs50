@@ -20,11 +20,11 @@ int main(void)
 
     if (decimal_values == NULL)
     {
-        return NULL:
+        return NULL;
     }
 
     // Print decimal values
-    for (int i = 0; decimal_values != 0; i++)
+    for (int i = 0; decimal_values[i] != 0; i++)
     {
         printf("Decimal: %i\n", decimal_values[i]);
     }
@@ -63,8 +63,6 @@ int string_to_decimal(string message)
 
     for (int i = 0; i < length; i++)
     {
-        int decimal_array[i];
-
         decimal_array[i] = int message[i];
         printf("%i\n", decimal_array);
 
