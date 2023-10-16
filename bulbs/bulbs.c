@@ -26,7 +26,7 @@ int main(void)
     }
 
     int binary = decimal_to_binary(decimal_values);
-    
+
 }
 
 void print_bulb(int bit)
@@ -76,4 +76,6 @@ int decimal_to_binary(int decimal)
             printf("1");
         }
     }
+    
+    return decimal;
 }
