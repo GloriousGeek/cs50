@@ -9,7 +9,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 int string_to_decimal(string message);
-int decimal_to_binary(int decimal);
+void decimal_to_binary(int decimal);
 
 int main(void)
 {
@@ -69,11 +69,11 @@ void decimal_to_binary(int decimal)
     {
         decimal /= 2;
         // Using modulus operator
-        if (decimal % 2 == 0)
+        if (decimal[i] % 2 == 0)
         {
             printf("0");
         }
-        else if (decimal % 2 != 0)
+        else if (decimal[i] % 2 != 0)
         {
             printf("1");
         }
