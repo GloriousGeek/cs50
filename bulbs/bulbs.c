@@ -55,7 +55,7 @@ int string_to_decimal(string message)
 
     for (int i = 0; i < length; i++)
     {
-        decimal_array[i] = (int)message[i];
+        decimal_value[i] = 
 
     }
 
