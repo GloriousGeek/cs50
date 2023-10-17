@@ -87,7 +87,7 @@ int decimal_to_binary(int decimal)
     }
     printf("\n");
 
-    for (int j = BITS_IN_BYTE; j > 0; j--)
+    for (int j = BITS_IN_BYTE - 1; j >=  0; j--)
     {
         printf("%i", binary[j]);
     }
