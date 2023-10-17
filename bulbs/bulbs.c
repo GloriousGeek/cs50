@@ -80,13 +80,13 @@ int decimal_to_binary(int decimal)
     {
         binary[i] = decimal % 2;
 
-        printf("%i", binary[i]);
+        printf("%i\n", binary[i]);
 
         // Updating variable
         decimal /= 2;
     }
 
-    for (int j = 8; j > 0; j--)
+    for (int j = BITS_IN_BYTE ; j > 0; j--)
     {
         printf("%i", binary[j]);
     }
