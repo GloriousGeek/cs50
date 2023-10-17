@@ -17,7 +17,7 @@ int main(void)
 
     // Call string function to get decimal. int* is a pointer not int
     int decimal_values = string_to_decimal(message);
-    printf("decimal values: %i %i %i\n", decimal_values);
+    printf("decimal values: %i\n", decimal_values);
 
     // for NULL - \0
     if (decimal_values == '\0')
@@ -71,15 +71,13 @@ int decimal_to_binary(int decimal)
         // Using modulus operator
         if (decimal % 2 == 0)
         {
-            int zero = "0";
-            printf("%i", zero);
-            binary2[i] = {zero};
+            printf("0");
         }
         else if (decimal % 2 != 0)
         {
             printf("1");
         }
-        binary2[i] = {zero};
+
         // Updating variable
         decimal /= 2;
     }
