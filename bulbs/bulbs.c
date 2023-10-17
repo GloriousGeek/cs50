@@ -15,6 +15,26 @@ int main(void)
     string message = get_string("Message: ");
 
     // Call string function to get decimal. int* is a pointer not int
+    int string_to_decimal(string message)
+    {
+        // Length of string
+        int length = strlen(message);
+
+        // declaring a variable to use in a for loop and return in the function
+        int decimal_value;
+
+
+        for (int i = 0; i < length; i++)
+            {
+                // Updating decimal_value w every iteration
+                decimal_value = message[i];
+                printf("%i\n", decimal_value);
+                printf("%i\n", i);
+            }
+
+        return decimal_value;
+    }
+
     int decimal_values = string_to_decimal(message);
     printf("decimal values: %i\n", decimal_values);
 
