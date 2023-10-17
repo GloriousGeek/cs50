@@ -54,6 +54,7 @@ int string_to_decimal(string message)
         // Updating decimal_value w every iteration
         decimal_value = message[i];
         printf("%i\n", decimal_value);
+        printf("%i\n", i);
     }
 
     return decimal_value;
