@@ -8,6 +8,7 @@ const int BITS_IN_BYTE = 8;
 void print_bulb(int bit);
 int string_to_decimal(string message);
 int decimal_to_binary(int decimal);
+int binary2[] = {0,0,0,0,0,0,0,0};
 
 int main(void)
 {
@@ -76,7 +77,7 @@ int decimal_to_binary(int decimal)
         {
             printf("1");
         }
-
+        binary2[i] = 
         // Updating variable
         decimal /= 2;
     }
