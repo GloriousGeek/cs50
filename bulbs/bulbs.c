@@ -58,7 +58,7 @@ int string_to_decimal(string message)
         printf("%i\n", i);
     }
 
-    return decimal_value;
+    return 0;
 }
 
 int decimal_to_binary(int decimal)
