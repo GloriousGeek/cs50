@@ -76,7 +76,7 @@ int decimal_to_binary(int decimal)
     int binary[BITS_IN_BYTE];
 
     // Updating the input by diving it to 2 (coz its binary)
-    for (int i = 0; decimal > 0; i++)
+    for (int i = BITS_IN_BYTE; decimal > 0; i--)
     {
         binary[i] = decimal % 2;
 
