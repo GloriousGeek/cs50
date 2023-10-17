@@ -73,7 +73,7 @@ int string_to_decimal(string message)
 
 int decimal_to_binary(int decimal)
 {
-    int binary[BITS_IN_BYTE];
+    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
     // Updating the input by diving it to 2 (coz its binary)
     for (int i = 0; decimal > 0; i++)
