@@ -16,10 +16,10 @@ int main(void)
 
     // Call string function to get decimal. int* is a pointer not int
 
-    int decimal_values = string_to_decimal(message);
+    string_to_decimal(message);
     printf("decimal values: %i\n", decimal_values);
 
-    int binary = decimal_to_binary(decimal_values);
+    int binary = decimal_to_binary(string_to_decimal(message));
     printf("binary: %i\n", binary);
 }
 
