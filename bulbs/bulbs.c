@@ -73,12 +73,13 @@ int decimal_to_binary(int decimal)
         {
             int zero = "0";
             printf("%i", zero);
+            binary2[i] = {zero};
         }
         else if (decimal % 2 != 0)
         {
             printf("1");
         }
-        binary2[i] = [zero]
+        binary2[i] = {zero};
         // Updating variable
         decimal /= 2;
     }
