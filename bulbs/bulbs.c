@@ -15,14 +15,11 @@ int main(void)
     string message = get_string("Message: ");
 
     // Call string function to get decimal. int* is a pointer not int
-    int string_to_decimal(string message)
-    {
         // Length of string
         int length = strlen(message);
 
         // declaring a variable to use in a for loop and return in the function
         int decimal_value;
-
 
         for (int i = 0; i < length; i++)
             {
@@ -32,20 +29,18 @@ int main(void)
                 printf("%i\n", i);
             }
 
-        return decimal_value;
-    }
 
     // int decimal_values = string_to_decimal(message);
     // printf("decimal values: %i\n", decimal_values);
 
     // for NULL - \0
-    if (decimal_values == '\0')
-    {
-        // 1 means memory allocation failed
-        printf("Null\n");
-    }
+    // if (decimal_values == '\0')
+    // {
+    //     // 1 means memory allocation failed
+    //     printf("Null\n");
+    // }
 
-    int binary = decimal_to_binary(decimal_values);
+    int binary = decimal_to_binary(decimal_value);
     printf("binary: %i\n", binary);
 }
 
