@@ -69,19 +69,22 @@ int decimal_to_binary(int decimal)
     // Updating the input by diving it to 2 (coz its binary)
     for (int i = 0; decimal > 0; i++)
     {
-        // Using modulus operator
-        if (decimal % 2 == 0)
-        {
-            printf("0");
-        }
-        else if (decimal % 2 != 0)
-        {
-            printf("1");
-        }
+        // // Using modulus operator
+        // if (decimal % 2 == 0)
+        // {
+        //     printf("0");
+        // }
+        // else if (decimal % 2 != 0)
+        // {
+        //     printf("1");
+        // }
         binary[i] = decimal % 2;
+
+        printf(")
 
         // Updating variable
         decimal /= 2;
+
     }
 
     // Neatness
