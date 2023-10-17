@@ -19,19 +19,7 @@ int main(void)
     int decimal_values = string_to_decimal(message);
     printf("decimal values: %i\n", decimal_values);
 
-        // Length of string
-        // int length = strlen(message);
-
-        // // declaring a variable to use in a for loop and return in the function
-        // int decimal_value;
-
-        // for (int i = 0; i < length; i++)
-        //     {
-        //         // Updating decimal_value w every iteration
-        //         decimal_value = message[i];
-        //         printf("%i\n", decimal_value);
-        //         printf("%i\n", i);
-        //     }
+     for (int i = 0; )
 
     int binary = decimal_to_binary(decimal_values);
     printf("binary: %i\n", binary);
