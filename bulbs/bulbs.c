@@ -85,11 +85,12 @@ int decimal_to_binary(int decimal)
         // Updating variable
         decimal /= 2;
     }
+    
 
-    // for (int j = BITS_IN_BYTE ; j > 0; j--)
-    // {
-    //     printf("%i", binary);
-    // }
+    for (int j = BITS_IN_BYTE; j > 0; j--)
+    {
+        print_bulb(binary[j]);
+    }
 
     // Neatness
     printf("\n");
