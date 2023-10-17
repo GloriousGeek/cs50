@@ -71,12 +71,15 @@ int decimal_to_binary(int decimal)
         // Using modulus operator
         if (decimal % 2 == 0)
         {
-            printf("0\n");
+            printf("0");
         }
         else if (decimal % 2 != 0)
         {
-            printf("1\n");
+            printf("1");
         }
     }
+
+    // Neatness
+    printf("\n");
     return 0;
 }
