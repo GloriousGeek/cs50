@@ -82,5 +82,6 @@ int decimal_to_binary(int decimal)
 
     // Neatness
     printf("\n");
+    
     return decimal;
 }
