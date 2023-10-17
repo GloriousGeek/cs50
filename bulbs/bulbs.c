@@ -67,6 +67,7 @@ int decimal_to_binary(int decimal)
     for (int i = 0; decimal > 0; i++)
     {
         decimal /= 2;
+
         // Using modulus operator
         if (decimal % 2 == 0)
         {
