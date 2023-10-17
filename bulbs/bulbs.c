@@ -78,6 +78,7 @@ int decimal_to_binary(int decimal)
         {
             printf("1");
         }
+        binary[i] = decimal % 2;
 
         // Updating variable
         decimal /= 2;
