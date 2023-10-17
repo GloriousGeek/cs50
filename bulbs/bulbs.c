@@ -87,6 +87,7 @@ int decimal_to_binary(int decimal)
     }
     printf("\n");
 
+    // Inverting the binary value from right to left
     for (int j = BITS_IN_BYTE - 1; j >=  0; j--)
     {
         printf("%i", binary[j]);
