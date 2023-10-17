@@ -90,8 +90,10 @@ int decimal_to_binary(int decimal)
     // Inverting the binary value from right to left
     for (int j = BITS_IN_BYTE - 1; j >=  0; j--)
     {
-        printf("%i", binary[j]);
+        // printf("%i", binary[j]);
+        print_bulb(binary[j]);
     }
+
 
     // Neatness
     printf("\n");
