@@ -58,7 +58,7 @@ int string_to_decimal(string message)
         printf("%i\n", i);
     }
 
-    return 0;
+    return decimal_value;
 }
 
 int decimal_to_binary(int decimal)
@@ -82,5 +82,5 @@ int decimal_to_binary(int decimal)
 
     // Neatness
     printf("\n");
-    return 0;
+    return decimal;
 }
