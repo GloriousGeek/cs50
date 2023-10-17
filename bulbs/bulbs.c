@@ -26,6 +26,7 @@ int main(void)
     }
 
     int binary = decimal_to_binary(decimal_values);
+    printf("binary: %i\n", binary);
 }
 
 void print_bulb(int bit)
