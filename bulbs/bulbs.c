@@ -19,11 +19,11 @@ int main(void)
     printf("decimal values: %li %li %li\n", decimal_values, decimal_values, decimal_values );
 
     // for NULL - \0
-    if (decimal_values == '\0')
-    {
-        // 1 means memory allocation failed
-        printf("Null\n");
-    }
+    // if (decimal_values == '\0')
+    // {
+    //     // 1 means memory allocation failed
+    //     printf("Null\n");
+    // }
 
     int binary = decimal_to_binary(decimal_values);
 }
