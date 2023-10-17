@@ -71,13 +71,14 @@ int decimal_to_binary(int decimal)
         // Using modulus operator
         if (decimal % 2 == 0)
         {
-            printf("0");
+            int zero = "0";
+            printf("%i", zero);
         }
         else if (decimal % 2 != 0)
         {
             printf("1");
         }
-        binary2[i] = 
+        binary2[i] = [zero]
         // Updating variable
         decimal /= 2;
     }
