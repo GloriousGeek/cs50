@@ -67,8 +67,6 @@ int decimal_to_binary(int decimal)
     // Updating the input by diving it to 2 (coz its binary)
     for (int i = 0; decimal > 0; i++)
     {
-        decimal /= 2;
-
         // Using modulus operator
         if (decimal % 2 == 0)
         {
@@ -78,10 +76,13 @@ int decimal_to_binary(int decimal)
         {
             printf("1");
         }
+
+        // Updating variable
+        decimal /= 2;
     }
 
     // Neatness
     printf("\n");
-    
+
     return decimal;
 }
