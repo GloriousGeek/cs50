@@ -8,7 +8,6 @@ const int BITS_IN_BYTE = 8;
 void print_bulb(int bit);
 int string_to_decimal(string message);
 int decimal_to_binary(int decimal);
-int binary[BITS_IN_BYTE];
 
 int main(void)
 {
