@@ -51,7 +51,7 @@ int string_to_decimal(string message)
     // declaring a variable to use in a for loop and return in the function
     int decimal_value;
 
-    int decimal_value = string_to_decimal(message[i])
+    int decimal_value = string_to_decimal(message[i]);
 
     for (int i = 0; i < length; i++)
     {
