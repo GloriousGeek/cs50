@@ -80,7 +80,7 @@ int decimal_to_binary(int decimal)
     {
         binary[i] = decimal % 2;
 
-        printf("%i", binary[i])
+        printf("%i", binary[i]);
 
         // Updating variable
         decimal /= 2;
@@ -88,7 +88,7 @@ int decimal_to_binary(int decimal)
 
     for (int j = 8; j > 0; j--)
     {
-        
+        print_bulb(binary);
     }
 
     // Neatness
