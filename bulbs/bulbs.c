@@ -5,8 +5,6 @@
 
 const int BITS_IN_BYTE = 8;
 
-// const int N =
-
 void print_bulb(int bit);
 int string_to_decimal(string message);
 int decimal_to_binary(int decimal);
@@ -19,6 +17,7 @@ int main(void)
     // Call string function to get decimal. int* is a pointer not int
     int decimal_values = string_to_decimal(message);
 
+    // for NULL - \0
     if (decimal_values == '\0')
     {
         // 1 means memory allocation failed
@@ -26,7 +25,6 @@ int main(void)
     }
 
     int binary = decimal_to_binary(decimal_values);
-
 }
 
 void print_bulb(int bit)
