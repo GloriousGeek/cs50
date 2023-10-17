@@ -88,7 +88,7 @@ int decimal_to_binary(int decimal)
 
     for (int j = 8; j > 0; j--)
     {
-        print_bulb(binary);
+        printf("%i", binary[j]);
     }
 
     // Neatness
