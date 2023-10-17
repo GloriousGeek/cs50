@@ -19,8 +19,6 @@ int main(void)
     int decimal_values = string_to_decimal(message);
     printf("decimal values: %i\n", decimal_values);
 
-     for (int i = 0; )
-
     int binary = decimal_to_binary(decimal_values);
     printf("binary: %i\n", binary);
 }
