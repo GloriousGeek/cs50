@@ -35,8 +35,8 @@ int main(void)
         return decimal_value;
     }
 
-    int decimal_values = string_to_decimal(message);
-    printf("decimal values: %i\n", decimal_values);
+    // int decimal_values = string_to_decimal(message);
+    // printf("decimal values: %i\n", decimal_values);
 
     // for NULL - \0
     if (decimal_values == '\0')
@@ -63,25 +63,25 @@ void print_bulb(int bit)
     }
 }
 
-int string_to_decimal(string message)
-{
-    // Length of string
-    int length = strlen(message);
+// int string_to_decimal(string message)
+// {
+//     // Length of string
+//     int length = strlen(message);
 
-    // declaring a variable to use in a for loop and return in the function
-    int decimal_value;
+//     // declaring a variable to use in a for loop and return in the function
+//     int decimal_value;
 
 
-    for (int i = 0; i < length; i++)
-    {
-        // Updating decimal_value w every iteration
-        decimal_value = message[i];
-        printf("%i\n", decimal_value);
-        printf("%i\n", i);
-    }
+//     for (int i = 0; i < length; i++)
+//     {
+//         // Updating decimal_value w every iteration
+//         decimal_value = message[i];
+//         printf("%i\n", decimal_value);
+//         printf("%i\n", i);
+//     }
 
-    return decimal_value;
-}
+//     return decimal_value;
+// }
 
 int decimal_to_binary(int decimal)
 {
