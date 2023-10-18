@@ -7,7 +7,6 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 int string_to_binary(string message);
-int decimal_to_binary(int decimal);
 
 int main(void)
 {
@@ -65,15 +64,15 @@ int string_to_binary(string message)
         // Updating variable
         decimal_value /= 2;
     }
+
     printf("\n");
 
     // Inverting the binary value from right to left
     for (int j = BITS_IN_BYTE - 1; j >=  0; j--)
     {
-        // printf("%i", binary[j]);
+        // Calling print_bulb func
         print_bulb(binary[j]);
     }
-
 
     // Neatness
     printf("\n");
@@ -81,32 +80,3 @@ int string_to_binary(string message)
     return decimal_value;
 }
 
-int decimal_to_binary(int decimal)
-{
-    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
-
-    // Updating the input by diving it to 2 (coz its binary)
-    for (int i = 0; decimal > 0; i++)
-    {
-        binary[i] = decimal % 2;
-
-        printf("%i", binary[i]);
-
-        // Updating variable
-        decimal /= 2;
-    }
-    printf("\n");
-
-    // Inverting the binary value from right to left
-    for (int j = BITS_IN_BYTE - 1; j >=  0; j--)
-    {
-        // printf("%i", binary[j]);
-        print_bulb(binary[j]);
-    }
-
-
-    // Neatness
-    printf("\n");
-
-    return decimal;
-}
