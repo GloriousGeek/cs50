@@ -72,7 +72,7 @@ int string_to_binary(string message)
     // Neatness
     printf("\n");
 
-    return decimal_value;
+    return ;
 
 
 
