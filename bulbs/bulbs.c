@@ -48,17 +48,15 @@ int string_to_binary(string message)
     {
         // Updating decimal_value w every iteration
         decimal_value = message[i];
-        printf("%i\n", decimal_value);
-        printf("%i\n", i);
 
         for (int j = 0; j < BITS_IN_BYTE; j++)
         {
             binary[j] = decimal_value % 2;
-            printf("%i", binary[j]);
 
             // Updating variable
             decimal_value /= 2;
         }
+
         printf("\n");
 
         // Inverting the binary value from right to left
@@ -72,24 +70,6 @@ int string_to_binary(string message)
     // Neatness
     printf("\n");
 
-    return ;
-
-
-
-    // // Updating the input by diving it to 2 (coz its binary)
-    // for (int i = 0; decimal_value > 0; i++)
-    // {
-    //     decimal_value = message[i];
-
-    //     // Updating binary array with modulous
-    //     binary[i] = decimal_value % 2;
-
-    //     printf("%i", binary[i]);
-
-
-    // }
-
-    // printf("\n");
-
+    return 0;
 }
 
