@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 const int BITS_IN_BYTE = 8;
 
@@ -57,10 +57,10 @@ int string_to_binary(string message)
             decimal_value /= 2;
         }
 
-       printf("\n");
+        printf("\n");
 
         // Inverting the binary value from right to left
-        for (int k = BITS_IN_BYTE - 1; k >=  0; k--)
+        for (int k = BITS_IN_BYTE - 1; k >= 0; k--)
         {
             // Calling print_bulb func
             print_bulb(binary[k]);
@@ -68,8 +68,7 @@ int string_to_binary(string message)
     }
 
     // Neatness
-   printf("\n");
+    printf("\n");
 
     return 0;
 }
-
