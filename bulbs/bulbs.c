@@ -50,31 +50,20 @@ int string_to_binary(string message)
         printf("%i\n", i);
 
         for (int j = 0; j < BITS_IN_BYTE; j++)
+
+        // Size 8 array initializing at 0 values
+        int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
+
         {
-            
+            binary[j] = decimal % 2;
+            printf("%i", binary[j]);
+
+            // Updating variable
+            decimal_value /= 2;
         }
-
+        printf("\n");
     }
-
-    // Size 8 array initializing at 0 values
-    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
-
-    // Updating the input by diving it to 2 (coz its binary)
-    for (int i = 0; decimal_value > 0; i++)
-    {
-        decimal_value = message[i];
-
-        // Updating binary array with modulous
-        binary[i] = decimal_value % 2;
-
-        printf("%i", binary[i]);
-
-        // Updating variable
-        decimal_value /= 2;
-    }
-
-    printf("\n");
-
+    
     // Inverting the binary value from right to left
     for (int k = BITS_IN_BYTE - 1; k >=  0; k--)
     {
@@ -86,5 +75,23 @@ int string_to_binary(string message)
     printf("\n");
 
     return decimal_value;
+
+
+
+    // // Updating the input by diving it to 2 (coz its binary)
+    // for (int i = 0; decimal_value > 0; i++)
+    // {
+    //     decimal_value = message[i];
+
+    //     // Updating binary array with modulous
+    //     binary[i] = decimal_value % 2;
+
+    //     printf("%i", binary[i]);
+
+
+    // }
+
+    // printf("\n");
+
 }
 
