@@ -68,7 +68,7 @@ int string_to_binary(string message)
     }
 
     // Neatness
-    printf("\n");
+   printf("\n");
 
     return 0;
 }
