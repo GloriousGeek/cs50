@@ -41,6 +41,8 @@ int string_to_binary(string message)
     // declaring a variable to use in a for loop and return in the function
     int decimal_value;
 
+    // Size 8 array initializing at 0 values
+    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
     for (int i = 0; i < length; i++)
     {
@@ -50,12 +52,8 @@ int string_to_binary(string message)
         printf("%i\n", i);
 
         for (int j = 0; j < BITS_IN_BYTE; j++)
-
-        // Size 8 array initializing at 0 values
-        int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
-
         {
-            binary[j] = decimal % 2;
+            binary[j] = decimal_value % 2;
             printf("%i", binary[j]);
 
             // Updating variable
@@ -63,12 +61,12 @@ int string_to_binary(string message)
         }
         printf("\n");
     }
-    
+
     // Inverting the binary value from right to left
     for (int k = BITS_IN_BYTE - 1; k >=  0; k--)
     {
         // Calling print_bulb func
-        print_bulb(binary[j]);
+        print_bulb(binary[k]);
     }
 
     // Neatness
