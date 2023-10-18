@@ -50,18 +50,20 @@ int string_to_binary(string message)
         printf("%i\n", decimal_value);
         printf("%i\n", i);
     }
-    
+
+    // Size 8 array initializing at 0 values
     int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
     // Updating the input by diving it to 2 (coz its binary)
-    for (int i = 0; decimal > 0; i++)
+    for (int i = 0; decimal_value > 0; i++)
     {
-        binary[i] = decimal % 2;
+        // Updating binary array with modulous
+        binary[i] = decimal_value % 2;
 
         printf("%i", binary[i]);
 
         // Updating variable
-        decimal /= 2;
+        decimal_value /= 2;
     }
     printf("\n");
 
