@@ -48,6 +48,12 @@ int string_to_binary(string message)
         decimal_value = message[i];
         printf("%i\n", decimal_value);
         printf("%i\n", i);
+
+        for (int j = 0; j < BITS_IN_BYTE; j++)
+        {
+            
+        }
+
     }
 
     // Size 8 array initializing at 0 values
@@ -70,7 +76,7 @@ int string_to_binary(string message)
     printf("\n");
 
     // Inverting the binary value from right to left
-    for (int j = BITS_IN_BYTE - 1; j >=  0; j--)
+    for (int k = BITS_IN_BYTE - 1; k >=  0; k--)
     {
         // Calling print_bulb func
         print_bulb(binary[j]);
