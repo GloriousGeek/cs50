@@ -57,6 +57,7 @@ int string_to_binary(string message)
     for (int i = 0; decimal_value > 0; i++)
     {
         int decimal_value = message[i];
+        
         // Updating binary array with modulous
         binary[i] = decimal_value % 2;
 
