@@ -50,6 +50,31 @@ int string_to_binary(string message)
         printf("%i\n", decimal_value);
         printf("%i\n", i);
     }
+    
+    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
+
+    // Updating the input by diving it to 2 (coz its binary)
+    for (int i = 0; decimal > 0; i++)
+    {
+        binary[i] = decimal % 2;
+
+        printf("%i", binary[i]);
+
+        // Updating variable
+        decimal /= 2;
+    }
+    printf("\n");
+
+    // Inverting the binary value from right to left
+    for (int j = BITS_IN_BYTE - 1; j >=  0; j--)
+    {
+        // printf("%i", binary[j]);
+        print_bulb(binary[j]);
+    }
+
+
+    // Neatness
+    printf("\n");
 
     return decimal_value;
 }
