@@ -57,7 +57,7 @@ int string_to_binary(string message)
             decimal_value /= 2;
         }
 
-        printf("\n");
+       printf("\n");
 
         // Inverting the binary value from right to left
         for (int k = BITS_IN_BYTE - 1; k >=  0; k--)
