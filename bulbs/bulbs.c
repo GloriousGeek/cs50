@@ -49,6 +49,7 @@ int string_to_binary(string message)
         // Updating decimal_value w every iteration
         decimal_value = message[i];
 
+        // 8 iterations per character
         for (int j = 0; j < BITS_IN_BYTE; j++)
         {
             binary[j] = decimal_value % 2;
