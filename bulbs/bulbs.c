@@ -38,7 +38,7 @@ int string_to_binary(string message)
     // Length of string
     int length = strlen(message);
 
-    // declaring a variable to use in a for loop and return in the function
+    // declaring a variable to use in the loop
     int decimal_value;
 
     // Size 8 array initializing at 0 values
