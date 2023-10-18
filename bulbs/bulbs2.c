@@ -6,7 +6,7 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int string_to_binary(string message);
+int string_to_decimal(string message);
 int decimal_to_binary(int decimal);
 
 int main(void)
@@ -16,8 +16,11 @@ int main(void)
 
     // Call string function to get decimal. int* is a pointer not int
 
-    string_to_binary(message);
+    string_to_decimal(message);
     // printf("decimal values: %i\n", decimal_values);
+
+    int binary = decimal_to_binary(string_to_decimal(message));
+    printf("binary: %i\n", binary);
 }
 
 void print_bulb(int bit)
@@ -34,7 +37,7 @@ void print_bulb(int bit)
     }
 }
 
-int string_to_binary(string message)
+int string_to_decimal(string message)
 {
     // Length of string
     int length = strlen(message);
