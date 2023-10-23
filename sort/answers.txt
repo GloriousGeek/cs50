@@ -4,7 +4,7 @@ How do you know?: TODO
 
 sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: Fastest sorting run time for random
 
 sort3 uses: TODO
 
