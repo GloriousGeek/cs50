@@ -21,7 +21,7 @@ int main(void)
 
 candidate get_candidate(string prompt)
 {
-    printf("%s\n", prompt);
+    // printf("%s\n", prompt);
 
 
     candidate c;
