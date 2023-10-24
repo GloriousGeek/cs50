@@ -11,3 +11,4 @@ for all votes
             return false;
         }
 
+candidate with most votes
