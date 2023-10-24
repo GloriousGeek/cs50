@@ -10,3 +10,4 @@ for all votes
             printf("Invalid ballot\n");
             return false;
         }
+
