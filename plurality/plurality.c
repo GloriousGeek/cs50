@@ -70,7 +70,7 @@ bool vote(string name)
     {
         if (name == candidates[i].name)
             {
-                candidates[i].vote++;
+                candidates[i].votes++;
                 return true;
             }
 
