@@ -1,1 +1,4 @@
-if name == 
+if name == candidate.name
+    {
+        candidate.vote ++;
+    }
