@@ -68,13 +68,13 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (name == candidate[i].name)
+        if (name == candidates[i].name)
             {
-                candidate[i].vote++;
+                candidates[i].vote++;
                 return true;
             }
 
-        else if (name != candidate[i].name)
+        else if (name != candidates[i].name)
             {
                 printf("Invalid ballot\n");
                 return false;
