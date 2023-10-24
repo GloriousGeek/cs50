@@ -73,15 +73,9 @@ bool vote(string name)
                 candidates[i].votes++;
                 return true;
             }
-
-        else if (name != candidates[i].name)
-            {
-                printf("Invalid ballot\n");
-                return false;
-            }
     }
 
-    return 0;
+    return false;
 }
 
 // Print the winner (or winners) of the election
