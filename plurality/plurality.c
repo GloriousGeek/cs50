@@ -66,8 +66,20 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
-    return false;
+    for (int i = 0; i < MAX; i++)
+    {
+        if (name == candidate[i].name)
+            {
+                candidate[i].vote++;
+                return true;
+            }
+
+        else if (name != candidate[i].name)
+            {
+                printf("Invalid ballot\n");
+                return false;
+            }
+    }
 }
 
 // Print the winner (or winners) of the election
