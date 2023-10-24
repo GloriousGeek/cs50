@@ -1,4 +1,12 @@
-if name == candidate.name
-    {
-        candidate.vote ++;
-    }
+for all votes
+    if name == candidate.name
+        {
+            update candidate vote count
+            return true;
+        }
+
+    else if(name != candidate.name)
+        {
+            printf("Invalid ballot\n");
+            return false;
+        }
