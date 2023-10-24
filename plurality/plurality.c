@@ -93,7 +93,7 @@ void print_winner(void)
             max_candidate = candidates[i];
         }
 
-        printf("%s\n", max_candidate);
+        printf("%s.name\n", max_candidate);
     }
 
     return;
