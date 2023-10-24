@@ -85,6 +85,7 @@ void print_winner(void)
     // Find max no of votes
     for (int i = 0; i < candidate_count; i++)
     {
+        // Crucial for finding the candidate with max votes by keeping a counter (max_votes)
         if (candidates[i].votes > max_votes)
         {
             max_votes = candidates[i].votes;
