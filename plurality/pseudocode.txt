@@ -12,3 +12,5 @@ for all votes
         }
 
 candidate with most votes
+
+if candidates 
