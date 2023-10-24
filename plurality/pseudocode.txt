@@ -13,4 +13,7 @@ for all votes
 
 candidate with most votes
 
-if candidates 
+if multiple candidates == max votes
+    {
+        printf("candidates.names)
+    }
