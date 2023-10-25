@@ -1,0 +1,9 @@
+if (candidate[i] > 50% of first preference vote)
+    {
+        printf("Winner: %s\n", candidate[i].name)
+    }
+
+if (candidate[i] <= 50% of vote)
+    {
+        candidate[i] lowest votes eliminated
+    }
