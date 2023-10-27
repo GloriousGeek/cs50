@@ -127,10 +127,10 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
+    voter = get_int("Number of Voters: \n");
+
     for(int i = 0; i < voter_count; i++)
     {
-        voter[i] = get_int("Number of Voters: \n");
-
         for (int j = 1; j < 4; j++)
         {
             name[j] = get_string("Rank%i: %s\n", j, name);
