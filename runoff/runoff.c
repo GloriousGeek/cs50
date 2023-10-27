@@ -133,7 +133,7 @@ bool vote(int voter, int rank, string name)
     {
         for (int j = 1; j < 4; j++)
         {
-            name[j] = get_string("Rank%i: %s\n", j, name);
+            name[j] = get_string("Rank%i: %s\n", (j, name));
 
             if (strcmp(name, candidate[i].name == 0))
             {
