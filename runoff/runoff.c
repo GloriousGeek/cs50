@@ -134,11 +134,12 @@ bool vote(int voter, int rank, string name)
         for (int j = 1; j < 4; j++)
         {
             int rank[j] = get_int("Rank%i: \n", j);
+            string name[j] = get_string(")
         }
 
         if(strcmp(name, candidate[i].name == 0))
         {
-            
+            int preference[i][j]
         }
     }
     return false;
