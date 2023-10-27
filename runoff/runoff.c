@@ -129,16 +129,12 @@ bool vote(int voter, int rank, string name)
 {
     voter = get_int("Number of Voters: \n");
 
-    for(int i = 0; i < voter_count; i++)
+    for(int i = 0; i < candidate_count; i++)
     {
-        for (int j = 1; j < 4; j++)
-        {
-            name[j] = get_string("");
-            printf("Rank %i: %s\n", (j, name));
-
-            if (strcmp(name, candidate[i].name == 0))
+            if (strcmp(name, candidates[i].name == 0))
             {
-                preference[i][j];
+                preference[voter][rank] = i;
+
                 return true;
             }
 
