@@ -135,6 +135,11 @@ bool vote(int voter, int rank, string name)
         {
             int rank[j] = get_int("Rank%i: \n", j);
         }
+
+        if(strcmp(name, candidate[i].name == 0))
+        {
+            
+        }
     }
     return false;
 }
