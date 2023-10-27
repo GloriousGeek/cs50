@@ -129,8 +129,9 @@ bool vote(int voter, int rank, string name)
 {
     for(int i = 0; i < MAX_CANDIDATES; i++)
     {
-        int voter == get_int("Number of Voters: \n");
-        
+        int voter = get_int("Number of Voters: \n");
+
+        int rank[i] = 
     }
     return false;
 }
