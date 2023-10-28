@@ -170,7 +170,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // Iterate through each voter
-    for (int i = 0; i < voter_count, i++)
+    for (int i = 0; i < voter_count; i++)
     {
         // if candidate has more than half of the votes
         if (candidates[i].votes > (voter_count/2))
