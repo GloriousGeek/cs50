@@ -172,7 +172,7 @@ bool print_winner(void)
     // Iterate through each voter
     for (int i = 0; i < voter_count, i++)
     {
-        if ()
+        if (candidates[i].votes > (0.5 * ))
     }
     return false;
 }
