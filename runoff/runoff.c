@@ -218,8 +218,8 @@ bool is_tie(int min)
         // Check if candidate is not eliminated
         if (!candidates[i].eliminated)
         {
-            
-            if (candidates[i].votes < min)
+
+            if (candidates[i].votes <= min)
             {
                 // Update min votes
                 min = candidates[i].votes;
