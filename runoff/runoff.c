@@ -215,7 +215,11 @@ bool is_tie(int min)
     // Iterate through candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        // Check if candidate is not eliminated
+        if (!candidates[i].eliminated)
+        {
+            min = candidates[i].votes;
+        }
     }
     // TODO
     return false;
