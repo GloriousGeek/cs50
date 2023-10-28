@@ -15,8 +15,7 @@ typedef struct
     string name;
     int votes;
     bool eliminated;
-}
-candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -128,14 +127,14 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-            if (strcmp(name, candidates[i].name) == 0)
-            {
-                preferences[voter][rank] = i;
+        if (strcmp(name, candidates[i].name) == 0)
+        {
+            preferences[voter][rank] = i;
 
-                return true;
-            }
+            return true;
+        }
     }
 
     return false;
@@ -173,10 +172,10 @@ bool print_winner(void)
     for (int i = 0; i < voter_count; i++)
     {
         // If candidate has more than half of the votes
-        if (candidates[i].votes > (voter_count/2))
+        if (candidates[i].votes > (voter_count / 2))
         {
-        printf("%s\n", candidates[i].name);
-        return true;
+            printf("%s\n", candidates[i].name);
+            return true;
         }
     }
 
