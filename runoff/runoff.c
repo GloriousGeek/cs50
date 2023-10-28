@@ -172,7 +172,7 @@ bool print_winner(void)
     // Iterate through each voter
     for (int i = 0; i < voter_count; i++)
     {
-        // if candidate has more than half of the votes
+        // If candidate has more than half of the votes
         if (candidates[i].votes > (voter_count/2))
         {
         printf("%s\n", candidates[i].name);
@@ -187,9 +187,10 @@ bool print_winner(void)
 int find_min(void)
 {
     // Iterate through candidates
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        
+        // Candidate who is still running and fewest votes
+        if (!candidates[i].eliminated && candidates[i].)
     }
     return 0;
 }
