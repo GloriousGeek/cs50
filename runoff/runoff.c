@@ -193,7 +193,11 @@ int find_min(void)
         // Candidate who is still running and fewest votes
         if (!candidates[i].eliminated)
         {
-            
+            for (int j = 0; j < candidate_count, j++)
+            {
+                // Find min_vote
+                candidates[j].votes
+            }
         }
     }
     return 0;
