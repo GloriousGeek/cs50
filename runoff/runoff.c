@@ -137,7 +137,7 @@ bool vote(int voter, int rank, string name)
                 return true;
             }
     }
-    
+
     return false;
 }
 
@@ -169,7 +169,11 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    // Iterate through each voter
+    for (int i = 0; i < voter_count, i++)
+    {
+        if ()
+    }
     return false;
 }
 
