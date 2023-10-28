@@ -189,7 +189,7 @@ int find_min(void)
     // Iterate through candidates
     for (int i = 0; i < candidate_count; i++)
     {
-
+        
     }
     return 0;
 }
