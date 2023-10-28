@@ -172,8 +172,13 @@ bool print_winner(void)
     // Iterate through each voter
     for (int i = 0; i < voter_count, i++)
     {
-        if (candidates[i].votes > (0.5 * ))
+        // if candidate has more than half of the votes
+        if (candidates[i].votes > (voter_count/2))
+        {
+        printf("%s\n", candidates[i].name);
+        }
     }
+
     return false;
 }
 
