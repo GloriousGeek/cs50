@@ -150,7 +150,8 @@ void tabulate(void)
         // Iterate through each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            
+            // Get voter's preferred candidate for this rank
+            preferred_candidate = 
         }
 
 
