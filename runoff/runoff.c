@@ -151,9 +151,17 @@ void tabulate(void)
         for (int j = 0; j < candidate_count; j++)
         {
             // Get voter's preferred candidate for this rank
-            preferred_candidate = 
-        }
+            int preferred_candidate = preferences[i][j]
 
+            // Check if preferred_candidate is not eliminated
+            if (!candidates[preferred_candidate].eliminated)
+            {
+                // Update candidate's vote count
+                candidates[preferred_candidate].votes++;
+                // Move on to the next voter
+                break;
+            }
+        }
 
     }
     return;
