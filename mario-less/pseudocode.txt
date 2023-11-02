@@ -1,6 +1,6 @@
 Prompt user for positive integer b/w and including 1 and 8 (Do-while loop!)
 Store the input in a variable
-Give Hash (#) as output. Increasing by 1 in each row
+Give Hash (#) as output. Increasing by 1 in each row - for
 There should be one hash in the first row.
 Hash increases with every next iteration or step.
 There are spaces before the hash (#)
