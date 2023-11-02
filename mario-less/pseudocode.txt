@@ -6,3 +6,4 @@ Hash increases with every next iteration or step.
 There are spaces before the hash (#)
 Space is one Less the input at the beginning
 Space decreases by 1 in each step, row.
+
