@@ -9,6 +9,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         {
             // Take average of the three
             BYTE avg = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed)/(3.0);
+
+            // Set all RGB to gray
+            
         }
     }
     return;
