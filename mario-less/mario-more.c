@@ -24,7 +24,7 @@ int main(void)
         printf("  ");
 
         // Print hashes for right-aligned side
-        for (int j = 0; j <= i; j--)
+        for (int j = 0; j <= i; j++)
         {
             printf("#");
         }
