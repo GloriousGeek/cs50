@@ -33,6 +33,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             BYTE sepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
 
             // Cap values at 255 if they exceed it
+            // Set all RGB pixel to Sepia
             if (sepiaRed > 255)
             {
                 image[i][j].rgbtRed = 255;
@@ -59,11 +60,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             {
                 image[i][j].rgbtBlue = (BYTE)sepiaBlue;
             }
-            
-            // Set all RGB pixel to Sepia
-            image[i][j].rgbtRed = BYTE (sepiaRed);
-            image[i][j].rgbtGreen = BYTE (sepiaGreen);
-            image[i][j].rgbtBlue = BYTE (sepiaBlue);
+
+            // // Set all RGB pixel to Sepia
+            // image[i][j].rgbtRed = BYTE (sepiaRed);
+            // image[i][j].rgbtGreen = BYTE (sepiaGreen);
+            // image[i][j].rgbtBlue = BYTE (sepiaBlue);
         }
     }
     return;
