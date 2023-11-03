@@ -127,6 +127,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
+
+            // Average
+            int average_red = total_red/
             RGBTRIPLE new_value =
             image[i][j] =
         }
