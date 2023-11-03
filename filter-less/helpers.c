@@ -112,7 +112,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     RGBTRIPLE neighbor_x = i + 1;
                     RGBTRIPLE neighbor_y = j + 1;
                     if (neighbor_x >= 0 && neighbor_x < width && neighbor_y >= 0 && neighbor_y < height)
-                    
+                    {
+                        
+                    }
                 }
             }
             RGBTRIPLE new_value =
