@@ -74,10 +74,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Iterating through height and width
-    // Every row, swap pixels to the horizontal opp side
+    // Iterating through each row
+    // Every row, swap pixels to the horizontal (width) opp side
     for (int i = 0; i < height; i++)
     {
+        // Iterate through column
         for (int j = 0; j < width; j++)
         {
 
