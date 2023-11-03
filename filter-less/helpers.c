@@ -115,8 +115,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int y = -1; y <= 1; y++)
                 {
-                    RGBTRIPLE neighbor_x = j + 1;
-                    RGBTRIPLE neighbor_y = i + 1;
+                    int neighbor_x = j + 1;
+                    int neighbor_y = i + 1;
                     if (neighbor_x >= 0 && neighbor_x < width && neighbor_y >= 0 && neighbor_y < height)
                     {
                         // Updating our running totals
@@ -131,7 +131,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Average color value for the pixel
             temp[i][j].rgbtRed = (BYTE)(total_red/valid_neighbor);
             temp[i][j].rgbtGreen = (BYTE)(total_green/valid_neighbor);
-            temp[i][j].rgbtBlue = (BYTE)(total_blue/valid_neighbor)
+            temp[i][j].rgbtBlue = (BYTE)(total_blue/valid_neighbor);
         }
     }
 
@@ -143,4 +143,5 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j] = temp[i][j];
         }
     }
+    return;
 }
