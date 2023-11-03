@@ -111,9 +111,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int valid_neighbor = 0;
 
             // Loop over pixel and 3x3 neighbor centered around (x,y)
-            for (int x = -1; x <= 1; k++)
+            for (int x = -1; x <= 1; x++)
             {
-                for (int y = -1; int k <= 1; k++)
+                for (int y = -1; y <= 1; y++)
                 {
                     RGBTRIPLE neighbor_x = j + 1;
                     RGBTRIPLE neighbor_y = i + 1;
