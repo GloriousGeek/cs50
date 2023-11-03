@@ -1,0 +1,2 @@
+for each color
+    give a new value by averaging color value of neighboring pixels
