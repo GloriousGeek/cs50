@@ -87,7 +87,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             // Swap current pixel with that of opp side
             image[i][j] = image[i][width - 1 - j];
 
-            // Swap opp sid
+            // Swap opp side pixel color with that of temp variable
+            image[i][width - 1 - j] = temp;
 
         }
     }
