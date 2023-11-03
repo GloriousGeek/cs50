@@ -93,6 +93,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Create temp variable to store new blurred values
+    RGBTRIPLE temp[height][width];
+
     // Iterating through height/rows
     for (int i = 0; i < height; i++)
     {
@@ -104,8 +107,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int y = -1; k <= 1; k++)
                 {
-                    RGBTRIPLE neighbor_x = i + 1;
-                    RGBTRIPLE neighbor_y = j + 1;
+                    RGBTRIPLE neighbor_x = j + 1;
+                    RGBTRIPLE neighbor_y = i + 1;
                     if (neighbor_x >= 0 && neighbor_x < width && neighbor_y >= 0 && neighbor_y < height)
                     {
                         neighbor_x.rgbtRed += image[neighbor_x][neighbor_y].rgbtRed
