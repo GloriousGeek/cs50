@@ -128,11 +128,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            // Average
-            int average_red = total_red/
-            RGBTRIPLE new_value =
-            image[i][j] =
+            // Average color value for the pixel
+            temp[i][j].rgbtRed = (BYTE)(total_red/valid_neighbor);
+            temp[i][j].rgbtGreen = (BYTE)(total_green/valid_neighbor);
+            temp[i][j].rgbtBlue = (BYTE)(total_blue/valid_neighbor)
         }
     }
-    return;
+
+    // Copy temporary image to the original image
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = temp[i][j];
+        }
+    }
 }
