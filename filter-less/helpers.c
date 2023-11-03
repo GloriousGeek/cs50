@@ -84,7 +84,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             // Temperory variable to store color info of current pixel at (i,j)
             RGBTRIPLE temp = image[i][j];
 
-            // Swap the color info
+            // Swap current pixel with that of opp side
+            image[i][j] = image[i][width - 1 - j];
+
+            // Swap opp sid
 
         }
     }
