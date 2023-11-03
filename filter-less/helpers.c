@@ -103,9 +103,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // Initializing variable to zero to keep track of the color sums
-            int red = 0;
-            int green = 0;
-            int blue = 0;
+            int total_red = 0;
+            int total_green = 0;
+            int total_blue = 0;
 
             // Keep valid neighbor count
             int valid_neighbor = 0;
@@ -119,7 +119,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     RGBTRIPLE neighbor_y = i + 1;
                     if (neighbor_x >= 0 && neighbor_x < width && neighbor_y >= 0 && neighbor_y < height)
                     {
-                        red += image[neighbor_x][neighbor_y].rgbtRed
+                        // Updating our running totals
+                        total_red += image[neighbor_x][neighbor_y].rgbtRed;
+                        total_green += image[neighbor_x][neighbor_y].rgbtGreen;
+                        total_blue += image[neighbor_x][neighbor_y].rgbtBlue;
+                        valid_neighbor ++;
                     }
                 }
             }
