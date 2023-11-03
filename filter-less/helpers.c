@@ -104,7 +104,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         // Iterate through columns (x-coordinate)
         for (int j = 0; j < width; j++)
         {
-            
+            // Loop over pixel and 3x3 neighbor
+            for (int )
             RGBTRIPLE new_value =
             image[i][j] =
         }
