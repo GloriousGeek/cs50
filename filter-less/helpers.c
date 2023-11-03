@@ -78,14 +78,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // Every row, swap pixels to the horizontal (width) opp side
     for (int i = 0; i < height; i++)
     {
-        // Iterate through column (left to right)
+        // Iterate through column - width (left to right)
         for (int j = 0; j < width/2; j++)
         {
             // Temperory variable to store color info of current pixel at (i,j)
             RGBTRIPLE temp = image[i][j];
 
             // Swap the color info
-            
+
         }
     }
     return;
