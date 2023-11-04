@@ -9,7 +9,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // Take average of the three to ensure same brightness
-            BYTE avg_gray = (BYTE)round((image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed)/(3.0));
+            BYTE avg_gray = (BYTE) round((image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / (3.0));
 
             // Set all RGB to gray
             image[i][j].rgbtRed = image[i][j].rgbtGreen = image[i][j].rgbtBlue = avg_gray;
@@ -42,7 +42,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
             else
             {
-                image[i][j].rgbtRed = (BYTE)sepiaRed;
+                image[i][j].rgbtRed = (BYTE) sepiaRed;
             }
 
             if (sepiaGreen > 255)
@@ -51,7 +51,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
             else
             {
-                image[i][j].rgbtGreen = (BYTE)sepiaGreen;
+                image[i][j].rgbtGreen = (BYTE) sepiaGreen;
             }
 
             if (sepiaBlue > 255)
@@ -60,7 +60,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
             else
             {
-                image[i][j].rgbtBlue = (BYTE)sepiaBlue;
+                image[i][j].rgbtBlue = (BYTE) sepiaBlue;
             }
         }
     }
@@ -75,7 +75,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         // Iterate through half of the columns - width (left to right)
-        for (int j = 0; j < width/2; j++)
+        for (int j = 0; j < width / 2; j++)
         {
             // Temperory variable to store original color info of current pixel at (i,j)
             RGBTRIPLE temp = image[i][j];
@@ -124,7 +124,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         total_red += image[neighbor_x][neighbor_y].rgbtRed;
                         total_green += image[neighbor_x][neighbor_y].rgbtGreen;
                         total_blue += image[neighbor_x][neighbor_y].rgbtBlue;
-                        valid_neighbor ++;
+                        valid_neighbor++;
                     }
                 }
             }
@@ -133,10 +133,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // temp[i][j].rgbtRed = (BYTE)(round(total_red/valid_neighbor));
             // temp[i][j].rgbtGreen = (BYTE)(round(total_green/valid_neighbor));
             // temp[i][j].rgbtBlue = (BYTE)(round(total_blue/valid_neighbor));
-            temp[i][j].rgbtRed = (BYTE)((total_red + (valid_neighbor / 2)) / valid_neighbor);
-            temp[i][j].rgbtGreen = (BYTE)((total_green + (valid_neighbor / 2)) / valid_neighbor);
-            temp[i][j].rgbtBlue = (BYTE)((total_blue + (valid_neighbor / 2)) / valid_neighbor);
-
+            temp[i][j].rgbtRed = (BYTE) ((total_red + (valid_neighbor / 2)) / valid_neighbor);
+            temp[i][j].rgbtGreen = (BYTE) ((total_green + (valid_neighbor / 2)) / valid_neighbor);
+            temp[i][j].rgbtBlue = (BYTE) ((total_blue + (valid_neighbor / 2)) / valid_neighbor);
         }
     }
 
