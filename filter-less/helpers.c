@@ -130,9 +130,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Average color value for the pixel
-            temp[i][j].rgbtRed = (BYTE)(total_red/valid_neighbor);
-            temp[i][j].rgbtGreen = (BYTE)(total_green/valid_neighbor);
-            temp[i][j].rgbtBlue = (BYTE)(total_blue/valid_neighbor);
+            temp[i][j].rgbtRed = (BYTE)(round(total_red/valid_neighbor));
+            temp[i][j].rgbtGreen = (BYTE)(round(total_green/valid_neighbor));
+            temp[i][j].rgbtBlue = (BYTE)(round(total_blue/valid_neighbor));
         }
     }
 
