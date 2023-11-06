@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     }
 
     // Open memory card by declaring a pointer
-    FILE *file = fopen(argv[1], "r");
+    FILE *input_file = fopen(argv[1], "r");
     if (file != NULL)
     {
         return 2;
@@ -21,11 +21,14 @@ int main(int argc, char *argv[])
     unsigned char buffer[512];
 
     // Initialize variables for output file and counter
-    FILE *output = NULL;
+    FILE *output_file = NULL;
     int jpeg_count = 0;
 
     // Iterate over memory card's data
     // Reads data from the file file and stores it in the buffer
-    while fread(buffer, 512, 1, file)
+    while (fread(buffer, 512, 1, input_file) == 1)
+    {
+        if (1 )
+    }
 
 }
