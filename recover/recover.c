@@ -19,7 +19,11 @@ int main(int argc, char *argv[])
 
     // Read data from memory card into buffer in 512 byte chunks
     unsigned char buffer[512];
-    
+
+    // Initialize variables for output file and counter
+    FILE *output = NULL;
+    int jpeg_count = 0;
+
     fread(storedata[], 512, 512, FILE *file)
 
     // Iterate over memory card's data
