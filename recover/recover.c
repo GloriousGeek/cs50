@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
     // Open memory card by declaring a pointer
     FILE *input_file = fopen(argv[1], "r");
-    if (input_file != NULL)
+    if (input_file == NULL)
     {
         return 2;
     }
