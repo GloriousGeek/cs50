@@ -33,32 +33,34 @@ int main(int argc, char *argv[])
         // Check for the start of JPEG file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] & 0xf0 == 0xe0)
         {
-            // Create new file
-            char new_file[BYTE];
-
-            // Write data
-            fwrite(buffer, );
-
+            // If JPEG is already open, close it.
             if (output_file != NULL)
             {
                 fclose(output_file);
             }
+
+            // Create new file
+            char new_file[BYTE];
+
+            // String formatting to new_file
+            sprintf(new_file, "%03i.jpg", jpeg_count);
+            output_file = fopen(new_file, "wb");
+            jpeg_count++;
         }
 
-        else if (output_file != NULL)
+        if (output_file != NULL)
         {
             // Write data in buffer from the output_file
             fwrite(buffer, 512, 1, output_file);
         }
     }
 
+    // Close file
+    if (output_file != NULL)
+    {
+        fclose(output_file);
+    }
 
-        if (output_file != NULL)
-        {
-            fclose(output_file);
-        }
-
-        fclose(input);
-        return 0;
-
+    fclose(input);
+    return 0;
 }
