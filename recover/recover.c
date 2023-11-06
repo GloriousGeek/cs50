@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 typedef uint8_t BYTE;
+const int byte = 8;
 
 int main(int argc, char *argv[])
 {
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
     }
 
     // Read data from memory card into buffer in 512 byte chunks
-    unsigned char buffer[512];
+    BYTE buffer[512];
 
     // Initialize variables for output file and counter
     FILE *output_file = NULL;
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
             }
 
             // Create new file
-            char new_file[BYTE];
+            char new_file[byte];
 
             // String formatting to new_file
             sprintf(new_file, "%03i.jpg", jpeg_count);
@@ -62,6 +63,6 @@ int main(int argc, char *argv[])
         fclose(output_file);
     }
 
-    fclose(input);
+    fclose(input_file);
     return 0;
 }
