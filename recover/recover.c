@@ -10,5 +10,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    
+    // Open memory card by declaring a pointer
+    FILE *file = fopen
 }
