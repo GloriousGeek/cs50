@@ -12,6 +12,10 @@ int main(int argc, char *argv[])
 
     // Open memory card by declaring a pointer
     FILE *file = fopen(argv[1], "r");
+    if (file != NULL)
+    {
+        
+    }
 
     // Read data from memory card
     fread(store[], )
