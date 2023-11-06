@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file != NULL)
     {
-        
+
     }
 
     // Read data from memory card
-    fread(store[], )
+    fread(store[], 512, 512, )
 
     // Iterate over memory card's data
     if (file )
