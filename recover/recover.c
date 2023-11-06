@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     }
 
     // Read data from memory card
-    fread(store[], 512, 512, )
+    fread(storedata[], 512, 512, FILE *file)
 
     // Iterate over memory card's data
     if (file )
