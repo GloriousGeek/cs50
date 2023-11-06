@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
 
     // Read data from memory card
-    fread()
+    fread(store[], )
 
     // Iterate over memory card's data
     if (file )
