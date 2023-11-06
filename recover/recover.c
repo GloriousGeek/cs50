@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, 512, 1, input_file) == 1)
     {
         // Check for the start of JPEG file
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0 == 0xe0))
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             // If JPEG is already open, close it.
             if (output_file != NULL)
