@@ -1,0 +1,15 @@
+JPEG signature pattern of bytes: 0xff 0xd8 0xff
+FAT file system block size: 512 B (bytes)
+
+initialize a variable to keep track of the current file being written
+Iterate over the memory card's data
+    Read a block of data from the memory card
+    If block starts with jpeg signature:
+        create a new file with a unique name
+        write block of data to the new file
+    Else if a file is open:
+        Write the block of data to the current file
+    Else:
+        Continue to the next block of data
+
+Close any open files (if any)
