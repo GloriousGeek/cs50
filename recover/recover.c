@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     int jpeg_count = 0;
 
     // Iterate over memory card's data
-    // Reads data from the file file and stores it in the buffer
+    // Reads data from the input_file file and stores it in the buffer
     while (fread(buffer, 512, 1, input_file) == 1)
     {
         // Check for the start of JPEG file
@@ -37,9 +37,23 @@ int main(int argc, char *argv[])
             char new_file[8];
 
             // Write data
-            fwrite()
+            fwrite();
 
-            if ()
+            if (output_file 1= NULL)
+            {
+                fclose(output_file);
+            }
+        }
+
+        else if (output_file != NULL)
+        {
+            // Write data in buffer from the output_file
+            fwrite(buffer, 512, 1, output_file);
+        }
+
+        else
+        {
+            
         }
 
     }
