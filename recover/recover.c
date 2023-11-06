@@ -13,6 +13,9 @@ int main(int argc, char *argv[])
     // Open memory card by declaring a pointer
     FILE *file = fopen(argv[1], "r");
 
+    // Read data from memory card
+    fread()
+
     // Iterate over memory card's data
     if (file )
 }
