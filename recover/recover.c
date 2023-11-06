@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+    typedef uint8_t BYTE;
+    
     // Read data from memory card into buffer in 512 byte chunks
     unsigned char buffer[512];
 
