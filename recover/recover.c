@@ -24,8 +24,7 @@ int main(int argc, char *argv[])
     FILE *output = NULL;
     int jpeg_count = 0;
 
-    fread(storedata[], 512, 512, FILE *file)
-
     // Iterate over memory card's data
-    if (file )
+    while fread(buffer, 512, 1, file)
+
 }
