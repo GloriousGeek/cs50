@@ -41,8 +41,8 @@ int main(int argc, char *argv[])
                 fclose(output_file);
             }
 
-            // Create new file
-            char new_file[byte];
+            // Create new file. 8 characters for the name + 4 characters for ".jpg"
+            char new_file[12];
 
             // String formatting to new_file
             sprintf(new_file, "%03i.jpg", jpeg_count);
