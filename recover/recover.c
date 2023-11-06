@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
             char new_file[BYTE];
 
             // Write data
-            fwrite();
+            fwrite(buffer, );
 
-            if (output_file 1= NULL)
+            if (output_file != NULL)
             {
                 fclose(output_file);
             }
