@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     int jpeg_count = 0;
 
     // Iterate over memory card's data
+    // Reads data from the file file and stores it in the buffer
     while fread(buffer, 512, 1, file)
 
 }
