@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    // Read data from memory card
+    // Read data from memory card into buffer in 512 byte chunks
+    
     fread(storedata[], 512, 512, FILE *file)
 
     // Iterate over memory card's data
