@@ -50,12 +50,15 @@ int main(int argc, char *argv[])
             // Write data in buffer from the output_file
             fwrite(buffer, 512, 1, output_file);
         }
+    }
 
-        else
+
+        if (output_file != NULL)
         {
-            
+            fclose(output_file);
         }
 
-    }
+        fclose(input);
+        return 0;
 
 }
