@@ -35,8 +35,13 @@ int main(int argc, char *argv[])
         {
             // Create new file
             char new_file[8];
+
+            // Write data
             fwrite()
+
+            if ()
         }
+
     }
 
 }
