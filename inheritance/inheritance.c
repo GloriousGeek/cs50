@@ -43,6 +43,7 @@ person *create_family(int generations)
     if (new_person == NULL)
     {
         // Memory allocation failed, return error code.
+        free(new_person);
         return 1;
     }
 
