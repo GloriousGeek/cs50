@@ -42,6 +42,7 @@ person *create_family(int generations)
     person *new_person = malloc(sizeof(person));
     if (new_person == NULL)
     {
+        // Memory allocation failed, return error code.
         return 1;
     }
 
