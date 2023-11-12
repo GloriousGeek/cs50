@@ -81,7 +81,7 @@ person *create_family(int generations)
         // TODO: Randomly assign alleles for each of the two allelos
         for (int i = 0; i < 2; i++)
         {
-            new_person->alleles[i](rand() % 2);
+            new_person->alleles[i] = rand() % 2;
         }
     }
 
@@ -97,7 +97,7 @@ void free_family(person *p)
     // TODO: Handle base case
     if (p == NULL)
     {
-        return 1;
+        return;
     }
 
     // TODO: Free parents recursively
