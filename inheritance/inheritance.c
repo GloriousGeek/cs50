@@ -101,10 +101,11 @@ void free_family(person *p)
     }
 
     // TODO: Free parents recursively
-    free_family(parents[0]);
-    free_family(parents[1]);
+    free(free_family(parents[0]));
+    free(free_family(parents[1]));
 
     // TODO: Free child
+    free(new_person);
 }
 
 // Print each family member and their alleles.
