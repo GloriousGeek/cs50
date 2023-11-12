@@ -68,7 +68,6 @@ person *create_family(int generations)
         char allelo_2 = parent1->alleles[rand() & 2];
 
         new_person->alleles[1] = allelo_2;
-
     }
 
     // If there are no generations left to create
