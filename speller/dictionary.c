@@ -82,6 +82,11 @@ bool load(const char *dictionary)
         // Add a new node to a linked list
         node *head = table[h];
 
+        if (head == NULL)
+        {
+            return false;
+        }
+
 
     }
 
