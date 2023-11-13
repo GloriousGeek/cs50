@@ -36,6 +36,7 @@ unsigned int hash(const char *word)
 
     }
 
+    // Numerical index b/w 0 and N-1
     return toupper(word[0]) - 'A';
 }
 
