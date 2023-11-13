@@ -74,7 +74,6 @@ bool load(const char *dictionary)
         strcpy(n->word, w);
 
         // Insert (n) node into the hash table that returns index
-        // To determine which linked list to use
         int h = hash(n->w);
 
         // Insert that word into the linked list
