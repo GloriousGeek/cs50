@@ -56,8 +56,8 @@ bool load(const char *dictionary)
     // Read strings from that file one at a time
 
     // int value;
-    char *w[LENGTH];
-    while(fscanf(file, "%s", w) != "EOF")
+    char w[LENGTH];
+    while(fscanf(file, "%s", w) != EOF)
     {
 
         // char *
@@ -80,7 +80,7 @@ bool load(const char *dictionary)
 
         // Insert that word into the linked list
         // Add a new node to a linked list
-        
+
 
     }
 
