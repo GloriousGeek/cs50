@@ -71,7 +71,7 @@ bool load(const char *dictionary)
             return false;
         }
 
-        // Copy the word inside of hash table
+        // Copy the word into the node
         strcpy(n->word, w);
         // Set next pointer (NULL if nothing comes after )
         n->next = NULL;
