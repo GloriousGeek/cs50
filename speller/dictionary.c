@@ -62,6 +62,20 @@ bool load(const char *dictionary)
 
         // char *
         fscanf(file, "%s", word);
+
+        // Allocate memory for new node
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            free(n);
+            return false;
+        }
+
+        // Copy the word hello into n word element
+        strcpy(n->word, word);
+        // Set next pointer (NULL if nothing comes after )
+        n->next = NULL;
+
     }
 
     return false;
