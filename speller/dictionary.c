@@ -76,7 +76,8 @@ bool load(const char *dictionary)
         // Set next pointer (NULL if nothing comes after )
         n->next = NULL;
 
-        // Insert (n) node into the hash table
+        // Insert (n) node into the hash table that returns index
+        // To determine which linked list to use
         hash(w)
 
     }
