@@ -30,6 +30,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int length = strlen(word);
+    unsigned int v = 0;
 
     for(int i = 0; i < length; i++)
     {
