@@ -80,6 +80,9 @@ bool load(const char *dictionary)
         // To determine which linked list to use
         hash(w)
 
+        // Insert that word into the linked list
+        
+
     }
 
     return false;
