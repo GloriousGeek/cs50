@@ -71,7 +71,7 @@ bool load(const char *dictionary)
             return false;
         }
 
-        // Copy the word into the node
+        // Copy the word into the node if malloc successful
         strcpy(n->word, w);
 
         // Insert (n) node into the hash table that returns index
