@@ -29,15 +29,9 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
+    
 
-    // Allocate memory for new node
-    node *n = malloc(sizeof(node));
 
-    // Copy the word hello into n word element
-    strcpy(n->word, "Hello");
-    // Set next pointer (NULL if nothing comes after )
-    n->next = NULL;
 
     return toupper(word[0]) - 'A';
 }
