@@ -73,8 +73,6 @@ bool load(const char *dictionary)
 
         // Copy the word into the node
         strcpy(n->word, w);
-        // Set next pointer (NULL if nothing comes after )
-        n->next = NULL;
 
         // Insert (n) node into the hash table that returns index
         // To determine which linked list to use
