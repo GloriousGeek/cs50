@@ -65,7 +65,7 @@ person *create_family(int generations)
         new_person->alleles[0] = allelo_1;
 
         // Other parent
-        char allelo_2 = parent1->alleles[rand() & 2];
+        char allelo_2 = parent1->alleles[rand() % 2];
 
         new_person->alleles[1] = allelo_2;
     }
