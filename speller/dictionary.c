@@ -84,7 +84,8 @@ bool load(const char *dictionary)
 
         if (head == NULL)
         {
-            return false;
+            table[h] = n;
+            
         }
 
 
