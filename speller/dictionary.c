@@ -33,16 +33,18 @@ unsigned int hash(const char *word)
 
     for(int i = 0; i < length; i++)
     {
-        
+
     }
 
     if(v > N)
     {
         return v % N;
     }
-
+    else
+    {
     // Numerical index b/w 0 and N-1
     return toupper(word[0]) - 'A';
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
