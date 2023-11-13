@@ -47,8 +47,8 @@ bool load(const char *dictionary)
 {
     // TODO
     // Open Dictionary File
-    FILE *file = fopen("dictionaries", "r");
-    if (FILE == NULL)
+    FILE *file = fopen("dictionary.h", "r");
+    if (file == NULL)
     {
         return false;
     }
