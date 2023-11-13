@@ -84,6 +84,7 @@ bool load(const char *dictionary)
 
         if (head == NULL)
         {
+            // Point head to the new node (n)
             table[h] = n;
             //word_count++;
         }
