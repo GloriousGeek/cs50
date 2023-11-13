@@ -76,7 +76,7 @@ bool load(const char *dictionary)
 
         // Insert (n) node into the hash table that returns index
         // To determine which linked list to use
-        hash(w)
+        int h = hash(n->w);
 
         // Insert that word into the linked list
         // Add a new node to a linked list
