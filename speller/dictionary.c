@@ -38,7 +38,7 @@ unsigned int hash(const char *word)
 
     if(v > N)
     {
-        return N
+        return v % N;
     }
 
     // Numerical index b/w 0 and N-1
