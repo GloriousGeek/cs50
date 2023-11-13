@@ -76,6 +76,9 @@ bool load(const char *dictionary)
         // Set next pointer (NULL if nothing comes after )
         n->next = NULL;
 
+        // Insert (n) node into the hash table
+        
+
     }
 
     return false;
