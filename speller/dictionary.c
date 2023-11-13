@@ -90,7 +90,10 @@ bool load(const char *dictionary)
         }
         else
         {
+            // Set new node's next pointer to be the first element in the linked list
             n->next = table[h];
+
+            // Now, set head to be the new node that we created
             table[h] = n;
         }
     }
