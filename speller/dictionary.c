@@ -30,10 +30,13 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int length = strlen(word);
+
+    // Initialize a variable to keep track of hash
     unsigned int v = 0;
 
     for(int i = 0; i < length; i++)
     {
+        // Updating v
         v = (v << 2) ^ word[i];
     }
 
@@ -41,10 +44,11 @@ unsigned int hash(const char *word)
     {
         return v % N;
     }
+
     else
     {
-    // Numerical index b/w 0 and N-1
-    return toupper(word[0]) - 'A';
+        // Numerical index b/w 0 and N-1
+        return toupper(word[0]) - 'A';
     }
 }
 
