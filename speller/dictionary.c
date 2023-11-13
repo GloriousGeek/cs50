@@ -85,13 +85,17 @@ bool load(const char *dictionary)
         if (head == NULL)
         {
             table[h] = n;
-            
+            //word_count++;
         }
-
-
+        else
+        {
+            n->next = table[h];
+            table[h] = n;
+        }
     }
 
-    return false;
+    fclose(file);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
