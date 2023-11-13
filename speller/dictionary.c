@@ -56,7 +56,7 @@ bool load(const char *dictionary)
     // Read strings from that file one at a time
 
     // int value;
-    char w[LENGTH];
+    char *w[LENGTH];
     while(fscanf(file, "%s", w) != "EOF")
     {
 
@@ -77,7 +77,7 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         // Insert (n) node into the hash table
-        hash()
+        hash(w)
 
     }
 
