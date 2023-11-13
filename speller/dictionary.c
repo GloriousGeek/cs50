@@ -80,7 +80,7 @@ bool load(const char *dictionary)
 
         // Insert that word into the linked list
         // Add a new node to a linked list
-        node *head = 
+        node *head = table[h];
 
 
     }
