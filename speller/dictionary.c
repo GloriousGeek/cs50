@@ -57,10 +57,9 @@ bool load(const char *dictionary)
 
     // int value;
     char w[LENGTH];
+
     while(fscanf(file, "%s", w) != EOF)
     {
-
-        // char *
         fscanf(file, "%s", w);
 
         // Allocate memory for new node
