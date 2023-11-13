@@ -56,12 +56,12 @@ bool load(const char *dictionary)
     // Read strings from that file one at a time
 
     // int value;
-    char word[LENGTH];
-    while(fscanf(file, "%s", word) != "EOF")
+    char w[LENGTH];
+    while(fscanf(file, "%s", w) != "EOF")
     {
 
         // char *
-        fscanf(file, "%s", word);
+        fscanf(file, "%s", w);
 
         // Allocate memory for new node
         node *n = malloc(sizeof(node));
@@ -72,7 +72,7 @@ bool load(const char *dictionary)
         }
 
         // Copy the word hello into n word element
-        strcpy(n->word, word);
+        strcpy(n->word, w);
         // Set next pointer (NULL if nothing comes after )
         n->next = NULL;
 
