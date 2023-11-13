@@ -71,7 +71,7 @@ bool load(const char *dictionary)
             return false;
         }
 
-        // Copy the word hello into n word element
+        // Copy the word inside of hash table
         strcpy(n->word, w);
         // Set next pointer (NULL if nothing comes after )
         n->next = NULL;
