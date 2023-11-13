@@ -77,7 +77,7 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         // Insert (n) node into the hash table
-        
+        hash()
 
     }
 
