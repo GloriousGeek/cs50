@@ -81,6 +81,7 @@ bool load(const char *dictionary)
         hash(w)
 
         // Insert that word into the linked list
+        // Add a new node to a linked list
         
 
     }
