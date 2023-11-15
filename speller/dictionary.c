@@ -153,7 +153,10 @@ bool unload(void)
 {
     // Call free on any memory allocated via malloc and return true
 
-    node *cursor = table[]
+    node *cursor = table[];
+
+    // Temperoray pointer to prevent the linked list from breaking
+    void *tmp = cursor;
 
     // Iterate over hash table
     for(int i = 0; )
