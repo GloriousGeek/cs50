@@ -158,6 +158,7 @@ bool unload(void)
 
             // Free tmp
             free(tmp);
+            printf("1");
         }
         if (cursor == NULL && i == N -1)
         {
