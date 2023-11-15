@@ -3,10 +3,9 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <strings.h>
-#include <string.h>
 #include <stdlib.h>
-
+#include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -36,7 +35,6 @@ bool check(const char *word)
     // Access linked list at that hash value index
     node *cursor = table[hash_value];
 
-
     // Look for word (strcasecmp)
     while (cursor != NULL)
     {
@@ -62,7 +60,7 @@ unsigned int hash(const char *word)
     // Initialize a variable to keep track of hash
     unsigned int v = 0;
 
-    for(int i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         // Updating v
         v += tolower(word[i]);
@@ -91,7 +89,7 @@ bool load(const char *dictionary)
     // int value;
     char word[LENGTH + 1];
 
-    while(fscanf(file, "%s", word) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
         // Allocate memory for new node
         node *n = malloc(sizeof(node));
@@ -148,7 +146,7 @@ bool unload(void)
     node *cursor = head;
 
     // Iterate over hash table to free linked list
-    while(cursor != NULL)
+    while (cursor != NULL)
     {
         // Temp pointer to free memory
         node *tmp = cursor;
