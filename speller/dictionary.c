@@ -34,20 +34,20 @@ bool check(const char *word)
     int hash_value = hash(word);
 
     // Access linked list at that hash value index
-    node *list = table[hash_value];
+    node *cursor = table[hash_value];
 
 
     // Look for word (strcasecomp)
-    while (list != NULL)
+    while (cursor != NULL)
     {
-        if (strcasecmp(word, list->word) == 0)
+        if (strcasecmp(word, cursor->word) == 0)
         {
             return true;
         }
 
         else
         {
-            list = list->next;
+            cursor = cursor->next;
         }
     }
 
