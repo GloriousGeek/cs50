@@ -3,6 +3,10 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <strings.h>
+#include <string.h>
+#include <stdlib.h>
+
 
 #include "dictionary.h"
 
@@ -22,7 +26,31 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    // node head. pointer to the first element of linked list
+    // Make a copy of the head pointer and point to it
+    // Check if value is in that node if not, keep moving
+
+    // Obtain hash value of word
+    int hash_value = hash(word);
+
+    // Access linked list at that hash value index
+    node *list = table[hash_value];
+
+
+    // Look for word (strcasecomp)
+    while (list != NULL)
+    {
+        if (strcasecmp(word, list->word) == 0)
+        {
+            return true;
+        }
+
+        else
+        {
+            list = list->next;
+        }
+    }
+
     return false;
 }
 
@@ -52,10 +80,12 @@ unsigned int hash(const char *word)
     }
 }
 
+// Initialize counter for words in dictionary to use in size function
+int word_counter = 0;
+
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
     // Open Dictionary File
     FILE *file = fopen("dictionary.h", "r");
     if (file == NULL)
@@ -76,7 +106,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            unload();
+            unload(); //
             return false;
         }
 
@@ -84,7 +114,7 @@ bool load(const char *dictionary)
         strcpy(n->word, w);
 
         // Insert (n) node into the hash table that returns index
-        int h = hash(n->w);
+        int h = hash(n->word);
 
         // Insert that word into the linked list
         // Add a new node to a linked list
@@ -94,7 +124,7 @@ bool load(const char *dictionary)
         {
             // Point head to the new node (n)
             table[h] = n;
-            //word_count++;
+            word_counter++;
         }
         else
         {
@@ -103,6 +133,7 @@ bool load(const char *dictionary)
 
             // Now, set head to be the new node that we created
             table[h] = n;
+            word_counter++;
         }
     }
 
@@ -113,8 +144,8 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    // From load function
+    return word_counter;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
