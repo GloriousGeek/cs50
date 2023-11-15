@@ -18,7 +18,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 130;
+const unsigned int N = 143000;
 
 // Hash table
 node *table[N];
@@ -65,19 +65,12 @@ unsigned int hash(const char *word)
     for(int i = 0; i < length; i++)
     {
         // Updating v
-        v = (v << 2) ^ word[i];
+        v += tolower(word[i]);
+        // v = (v << 2) ^ word[i];
     }
 
-    if(v > N)
-    {
-        return v % N;
-    }
-
-    else
-    {
-        // Numerical index b/w 0 and N-1
-        return toupper(word[0]) - 'A';
-    }
+    // Numerical index b/w 0 and N-1
+    return v % N;
 }
 
 // Initialize counter for words in dictionary to use in size function
@@ -87,7 +80,7 @@ int word_counter = 0;
 bool load(const char *dictionary)
 {
     // Open Dictionary File
-    FILE *file = fopen("dictionary.h", "r");
+    FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
         return false;
@@ -96,43 +89,40 @@ bool load(const char *dictionary)
     // Read strings from that file one at a time
 
     // int value;
-    char w[LENGTH];
+    char word[LENGTH + 1];
 
-    while(fscanf(file, "%s", w) != EOF)
+    while(fscanf(file, "%s", word) != EOF)
     {
-        fscanf(file, "%s", w);
-
         // Allocate memory for new node
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            unload(); //
             return false;
         }
 
         // Copy the word into the node if malloc successful
-        strcpy(n->word, w);
+        strcpy(n->word, word);
 
-        // Insert (n) node into the hash table that returns index
-        int h = hash(n->word);
+        // Hash word to obtain hash value
+        int hash_value = hash(n->word);
 
         // Insert that word into the linked list
         // Add a new node to a linked list
-        node *head = table[h];
+        node *head = table[hash_value];
 
         if (head == NULL)
         {
             // Point head to the new node (n)
-            table[h] = n;
+            table[hash_value] = n;
             word_counter++;
         }
         else
         {
             // Set new node's next pointer to be the first element in the linked list
-            n->next = table[h];
+            n->next = table[hash_value];
 
             // Now, set head to be the new node that we created
-            table[h] = n;
+            table[hash_value] = n;
             word_counter++;
         }
     }
@@ -151,14 +141,24 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // Call free on any memory allocated via malloc and return true
+    node *head = NULL;
 
-    node *cursor = table[];
+    // Cursor to point at the address of the first node
+    // Cursor will point to the linked list while freeing to avoid breaking the linked list
+    node *cursor = head;
 
-    // Temperoray pointer to prevent the linked list from breaking
-    void *tmp = cursor;
+    // Iterate over hash table to free linked list
+    while(cursor != NULL)
+    {
+        // Temp pointer to free memory
+        node *tmp = cursor;
 
-    // Iterate over hash table
-    for(int i = 0; )
-    return false;
+        // Point cursor to the next elemenet before freeing
+        cursor = cursor->next;
+
+        // Free tmp
+        free(tmp);
+    }
+
+    return true;
 }
