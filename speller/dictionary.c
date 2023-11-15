@@ -158,7 +158,11 @@ bool unload(void)
             // Free tmp
             free(tmp);
         }
+        if (cursor == NULL && i == N -1)
+        {
+            return true;
+        }
     }
 
-    return true;
+    return false;
 }
