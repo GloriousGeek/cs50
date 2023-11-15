@@ -142,6 +142,7 @@ bool unload(void)
     // Iterate over each element in the hash table
     for (int i = 0; i < N; i++)
     {
+        table[i] = NULL;
         // Cursor to point at the address of the first node
         // Cursor will point to the linked list while freeing to avoid breaking the linked list
         node *cursor = table[i];
@@ -164,5 +165,5 @@ bool unload(void)
         }
     }
 
-    return false;
+    return true;
 }
