@@ -153,7 +153,7 @@ bool unload(void)
 {
     // Call free on any memory allocated via malloc and return true
 
-    
+    node *cursor = table[]
 
     // Iterate over hash table
     for(int i = 0; )
