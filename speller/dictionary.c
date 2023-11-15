@@ -151,6 +151,9 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    // Call free on any memory allocated via malloc and return true
+
+    // Iterate over hash table
+    for(int i = 0; )
     return false;
 }
