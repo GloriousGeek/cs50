@@ -160,10 +160,10 @@ bool unload(void)
             free(tmp);
             printf("1");
         }
-        if (cursor == NULL && i == N -1)
-        {
-            return true;
-        }
+        // if (cursor == NULL && i == N -1)
+        // {
+        //     return true;
+        // }
     }
 
     return true;
