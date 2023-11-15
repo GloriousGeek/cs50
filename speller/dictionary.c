@@ -37,7 +37,7 @@ bool check(const char *word)
     node *cursor = table[hash_value];
 
 
-    // Look for word (strcasecomp)
+    // Look for word (strcasecmp)
     while (cursor != NULL)
     {
         if (strcasecmp(word, cursor->word) == 0)
@@ -152,6 +152,8 @@ unsigned int size(void)
 bool unload(void)
 {
     // Call free on any memory allocated via malloc and return true
+
+    
 
     // Iterate over hash table
     for(int i = 0; )
