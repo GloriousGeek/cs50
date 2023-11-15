@@ -140,23 +140,25 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    node *head = NULL;
-
-    // Cursor to point at the address of the first node
-    // Cursor will point to the linked list while freeing to avoid breaking the linked list
-    node *cursor = head;
-
-    // Iterate over hash table to free linked list
-    while (cursor != NULL)
+    // Iterate over each element in the hash table
+    for (int i = 0; i < N; i++)
     {
-        // Temp pointer to free memory
-        node *tmp = cursor;
+        // Cursor to point at the address of the first node
+        // Cursor will point to the linked list while freeing to avoid breaking the linked list
+        node *cursor = table[i];
 
-        // Point cursor to the next elemenet before freeing
-        cursor = cursor->next;
+        // Iterate over the linked list for the current hash value
+        while (cursor != NULL)
+        {
+            // Temp pointer to free memory
+            node *tmp = cursor;
 
-        // Free tmp
-        free(tmp);
+            // Point cursor to the next elemenet before freeing
+            cursor = cursor->next;
+
+            // Free tmp
+            free(tmp);
+        }
     }
 
     return true;
