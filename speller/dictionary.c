@@ -122,7 +122,7 @@ bool load(const char *dictionary)
             // Now, set head to be the new node that we created
             table[hash_value] = n;
             word_counter++;
-        }
+        // }
     }
 
     fclose(file);
