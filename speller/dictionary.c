@@ -105,24 +105,12 @@ bool load(const char *dictionary)
         int hash_value = hash(word);
 
         // Insert node into hash table at that location
-        // Add a new node to a linked list
-        // node *head = table[hash_value];
+        // Set new node's next pointer to be the first element in the linked list
+        n->next = table[hash_value];
 
-        // if (head == NULL)
-        // {
-        //     // Point head to the new node (n)
-        //     table[hash_value] = n;
-        //     word_counter++;
-        // }
-        // else
-        // {
-            // Set new node's next pointer to be the first element in the linked list
-            n->next = table[hash_value];
-
-            // Now, set head to be the new node that we created
-            table[hash_value] = n;
-            word_counter++;
-        // }
+        // Now, set head to be the new node that we created
+        table[hash_value] = n;
+        word_counter++;
     }
 
     fclose(file);
@@ -163,7 +151,6 @@ bool unload(void)
         // {
         //     return true;
         // }
-
     }
 
     return true;
