@@ -1,8 +1,8 @@
 print("hello, world")
 
-import cs50
+from cs50 import get_string
 
-answer = get_string("What's your name?")
+answer = get_string("What's your name? ")
 print("hello, " + answer) # + Concatinating (joining) strings
 print("hello,", answer) # Another way
 print(f"hello, {answer}") # Best way. Format strings
