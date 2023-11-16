@@ -86,7 +86,7 @@ bool load(const char *dictionary)
 
     // Read strings from that file one at a time
 
-    // Buffer to store next word;
+    // Buffer to store each word with max limit;
     char word[LENGTH + 1];
 
     while (fscanf(file, "%s", word) != EOF)
