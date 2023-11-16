@@ -104,7 +104,7 @@ bool load(const char *dictionary)
         // Hash word to obtain hash value
         int hash_value = hash(n->word);
 
-        // Insert that word into the linked list
+        // Insert node into hash table at that location
         // Add a new node to a linked list
         node *head = table[hash_value];
 
