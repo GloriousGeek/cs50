@@ -52,7 +52,7 @@ bool check(const char *word)
     return false;
 }
 
-// Hashes word to a number
+// Hashes word to a number. Returns a hash code
 unsigned int hash(const char *word)
 {
     int length = strlen(word);
