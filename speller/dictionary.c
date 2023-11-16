@@ -19,7 +19,7 @@ typedef struct node
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 71000;
 
-// Hash table
+// Hash table. Hash table is a pointer to the head of the linked lists
 node *table[N];
 
 // Returns true if word is in dictionary, else false
