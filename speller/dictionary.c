@@ -98,7 +98,7 @@ bool load(const char *dictionary)
             return false;
         }
 
-        // Copy the word into the node if malloc successful
+        // Copy the word into the node/buffer if malloc successful
         strcpy(n->word, word);
 
         // Hash word to obtain hash value
