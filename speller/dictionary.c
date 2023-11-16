@@ -102,20 +102,20 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
 
         // Hash word to obtain hash value
-        int hash_value = hash(n->word);
+        int hash_value = hash(word);
 
         // Insert node into hash table at that location
         // Add a new node to a linked list
-        node *head = table[hash_value];
+        // node *head = table[hash_value];
 
-        if (head == NULL)
-        {
-            // Point head to the new node (n)
-            table[hash_value] = n;
-            word_counter++;
-        }
-        else
-        {
+        // if (head == NULL)
+        // {
+        //     // Point head to the new node (n)
+        //     table[hash_value] = n;
+        //     word_counter++;
+        // }
+        // else
+        // {
             // Set new node's next pointer to be the first element in the linked list
             n->next = table[hash_value];
 
