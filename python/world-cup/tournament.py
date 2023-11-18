@@ -25,6 +25,9 @@ def main():
         # Reader
         reader = csv.DictReader(file)
 
+        for i in reader:
+            
+
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
