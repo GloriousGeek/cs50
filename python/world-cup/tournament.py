@@ -15,8 +15,10 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
+    file_name = sys.argv[1]
+
     # TODO: Read teams into memory from file
-    with open("2018m.csv", "r") as file:
+    with open(file_name, "r") as file:
         # Convert ratings(str) to int
         int(file["rating"])
 
