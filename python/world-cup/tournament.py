@@ -26,7 +26,8 @@ def main():
         reader = csv.DictReader(file)
 
         for i in reader:
-            
+            # Convert str rating to int
+            i["rating"] = int(i["rating"])
 
 
     counts = {}
