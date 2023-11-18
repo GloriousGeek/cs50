@@ -18,8 +18,9 @@ def main():
     # TODO: Read teams into memory from file
     with open("2018m.csv", "r") as file:
         # Convert ratings to int
-        
-        csv.DictReader(file)
+
+        # Reader
+        reader = csv.DictReader(file)
 
 
     counts = {}
