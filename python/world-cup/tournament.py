@@ -63,8 +63,10 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
 
+    # As long as there is more than one team, we will keep simulating
     while len(teams) > 1:
-        simulate_round(i)
+        teams = simulate_round(teams)
+    return teams[0]["team"]
 
 
 
