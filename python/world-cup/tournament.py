@@ -66,6 +66,9 @@ def simulate_tournament(teams):
     # As long as there is more than one team, we will keep simulating
     while len(teams) > 1:
         teams = simulate_round(teams)
+
+    # Only one team[0] will be left.
+    # Team is a dict so accessing "team" column
     return teams[0]["team"]
 
 
