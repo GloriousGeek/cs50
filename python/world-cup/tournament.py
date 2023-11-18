@@ -19,15 +19,15 @@ def main():
 
     # TODO: Read teams into memory from file
     with open(file_name, "r") as file:
-        # Convert ratings(str) to int
-        int(file["rating"])
-
+        
         # Reader
         reader = csv.DictReader(file)
 
         for i in reader:
             # Convert str rating to int
             i["rating"] = int(i["rating"])
+            # Appending and updating teams list
+            teams.append(i)
 
 
     counts = {}
