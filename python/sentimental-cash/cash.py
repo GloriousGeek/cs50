@@ -7,21 +7,21 @@ def main():
     # Calculate the number of quarters to give
     quarter_count = quarters(dollars)
     # Update the dollars after subtracting the ones used in quarters
-    dollars = dollars - (quarters * 0.25)
+    dollars = dollars - (quarter_count * 0.25)
 
     dime_count = dimes(dollars)
     # Update dollars
-    dollars = dollars - (dimes * 0.10)
+    dollars = dollars - (dime_count * 0.10)
 
     # Calculate number of nickels
     nickel_count = nickels(dollars)
     # Update dollars
-    dollars = dollars - (nickels * 0.5)
+    dollars = dollars - (nickel_count * 0.5)
 
     # Calculate pennies
     penny_count = pennies(dollars)
     # Update dollars
-    dollars = dollars - (pennies * 0.10)
+    dollars = dollars - (penny_count * 0.10)
 
     # Count the number of coins
     coins = quarter_count + dime_count + nickel_count + penny_count
