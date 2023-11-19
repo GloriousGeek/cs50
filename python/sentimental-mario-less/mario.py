@@ -4,14 +4,15 @@ def main():
     while height < 1 or height > 8:
         height
 
+
     # Print the pyramid
-    for i in range(1, height + 1):
+    for i in range(0, height):
         # Print spaces
-        for j in range(height - i):
-            print(" ", end="")
-        # Print blocks
+        for j in range(1, height - i):
+            print(" ", end = "")
+        # Print hash
         for k in range(i):
-            print("#", end="")
+            print("#", end= "")
         # Move to the next line after each row
         print()
 
