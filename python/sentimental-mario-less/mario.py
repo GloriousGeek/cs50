@@ -2,9 +2,9 @@ height = get_height()
 
 def main():
     for i in range(height):
-    for j in range(height):
-        print(" " , end ="")
-    print("#")
+        for j in range(height):
+            print(" " , end ="")
+        print("#")
     # Decreasing the user_input by 1
     # user_input -= 1
 
@@ -16,6 +16,7 @@ def get_height():
             return n
 
 
+get_height()
 main()
 
 
