@@ -36,10 +36,10 @@ def main():
         team_name = simulate_tournament(teams)
         if team_name in counts:
             # Add 1 to that team_name in count
-            teams += 1
+            counts[team_name] += 1
         else:
             # Enter that team_name
-            team_name = 1
+            counts[team_name] = 1
 
 
     # Print each team's chances of winning, according to simulation
