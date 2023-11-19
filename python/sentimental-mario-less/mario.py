@@ -6,9 +6,9 @@ while (8 < user_input < 1):
     print(user_input)
 
 for i in range(user_input):
-    print(" " * (user_input - 1), end ="")
     for j in range(user_input):
-        print("#")
+        print(" " * (user_input - 1), end ="")
+    print("#")
     # Decreasing the user_input by 1
     # user_input -= 1
 
