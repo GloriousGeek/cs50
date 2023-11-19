@@ -14,7 +14,7 @@ def main():
     dollars = dollars - (dimes * 0.10)
 
     # Calculate number of nickels
-    nikels = nickels(dollars)
+    nickels = nickels(dollars)
     # Update dollars
     dollars = dollars - (nickels * 0.5)
 
@@ -22,6 +22,11 @@ def main():
     pennies = pennies(dollars)
     # Update dollars
     dollars = dollars - (pennies * 0.10)
+
+    # Count the number of coins
+    coins = quarters + dimes + nickels + pennies
+
+    print(coins)
 
 
 def get_dollars():
