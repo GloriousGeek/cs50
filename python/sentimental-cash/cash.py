@@ -10,6 +10,7 @@ while True:
     except ValueError:
         print("Enter a valid digit")
 
-
+def quarters():
+    
 
 
