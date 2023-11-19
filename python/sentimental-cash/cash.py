@@ -5,26 +5,26 @@ def main():
     dollars = get_dollars()
 
     # Calculate the number of quarters to give
-    quarters = quarters(dollars)
+    quarter = quarters(dollars)
     # Update the dollars after subtracting the ones used in quarters
-    dollars = dollars - (quarters * 0.25)
+    dollar = dollars - (quarters * 0.25)
 
-    dimes = dimes(dollars)
+    dime = dimes(dollars)
     # Update dollars
-    dollars = dollars - (dimes * 0.10)
+    dollar = dollars - (dimes * 0.10)
 
     # Calculate number of nickels
-    nickels = nickels(dollars)
+    nickel = nickels(dollars)
     # Update dollars
     dollars = dollars - (nickels * 0.5)
 
     # Calculate pennies
-    pennies = pennies(dollars)
+    penny = pennies(dollars)
     # Update dollars
     dollars = dollars - (pennies * 0.10)
 
     # Count the number of coins
-    coins = quarters + dimes + nickels + pennies
+    coins = quarter + dime + nickel + penny
 
     print(coins)
 
