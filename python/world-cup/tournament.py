@@ -9,7 +9,6 @@ N = 10
 
 
 def main():
-
     # Ensure correct usage
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
@@ -19,7 +18,6 @@ def main():
 
     # TODO: Read teams into memory from file
     with open(file_name, "r") as file:
-
         # Reader
         reader = csv.DictReader(file)
 
@@ -29,21 +27,17 @@ def main():
             # Appending and updating teams list
             teams.append(i)
 
-
     counts = {}
     # Simulate N tournaments and keep track of win counts
     for team_name in range(N):
-
         # store winner into team_name. It will go on for N iterations
         team_name = simulate_tournament(teams)
 
         if team_name in counts:
-
             # Add 1 to that team_name in counts
             counts[team_name] += 1
 
         else:
-
             # Enter that team_name
             counts[team_name] = 1
 
@@ -84,8 +78,6 @@ def simulate_tournament(teams):
     # Only one team[0] will be left.
     # Team is a dict so accessing "team"
     return teams[0]["team"]
-
-
 
 
 if __name__ == "__main__":
