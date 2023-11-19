@@ -11,6 +11,8 @@ while True:
         print("Enter a valid digit")
 
 def quarters(dollars):
-    
+    for i in dollars:
+        if dollars >= 0.25:
+            
 
 
