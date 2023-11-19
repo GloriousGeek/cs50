@@ -3,26 +3,27 @@ from cs50 import get_float
 
 def main():
     # Prompt user for dollars owed
-    dollars = get_dollars()
+    # Convert dollars to cents
+    dollars = 100 * get_dollars()
 
     # Calculate the number of quarters to give
     quarter_count = quarters(dollars)
     # Update the dollars after subtracting the ones used in quarters
-    dollars = dollars - (quarter_count * 0.25)
+    dollars = dollars - (quarter_count * 25)
 
     dime_count = dimes(dollars)
     # Update dollars
-    dollars = dollars - (dime_count * 0.10)
+    dollars = dollars - (dime_count * 10)
 
     # Calculate number of nickels
     nickel_count = nickels(dollars)
     # Update dollars
-    dollars = dollars - (nickel_count * 0.05)
+    dollars = dollars - (nickel_count * 5)
 
     # Calculate pennies
     penny_count = pennies(dollars)
     # Update dollars
-    dollars = dollars - (penny_count * 0.01)
+    dollars = dollars - (penny_count * 1)
 
     # Count the number of coins
     coins = quarter_count + dime_count + nickel_count + penny_count
@@ -45,33 +46,33 @@ def get_dollars():
 def quarters(dollars):
     # Initializing a variable to count quarters
     q = 0
-    while dollars >= 0.25:
+    while dollars >= 25:
         q += 1
-        dollars -= 0.25
+        dollars -= 25
     return q
 
 
 def dimes(dollars):
     d = 0
-    while dollars >= 0.10:
+    while dollars >= 10:
         d += 1
-        dollars -= 0.10
+        dollars -= 10
     return d
 
 
 def nickels(dollars):
     n = 0
-    while dollars >= 0.05:
+    while dollars >= 5:
         n += 1
-        dollars -= 0.05
+        dollars -= 5
     return n
 
 
 def pennies(dollars):
     p = 0
-    while dollars >= 0.01:
+    while dollars >= 1:
         p += 1
-        dollars -= 0.01
+        dollars -= 1
     return p
 
 
