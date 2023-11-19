@@ -10,10 +10,7 @@ for i in range(user_input):
     for j in range(user_input):
         print("#")
     # Decreasing the user_input by 1
-    user_input -= 1
+    # user_input -= 1
 
-for i in range(3):
-    for j in range(3):
-        print("#", end = "")
-    print()
+
 
