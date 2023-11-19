@@ -33,11 +33,17 @@ def main():
     counts = {}
     # Simulate N tournaments and keep track of win counts
     for team_name in range(N):
+
+        # store winner into team_name. It will go on for N iterations
         team_name = simulate_tournament(teams)
+
         if team_name in counts:
+
             # Add 1 to that team_name in count
             counts[team_name] += 1
+
         else:
+            
             # Enter that team_name
             counts[team_name] = 1
 
