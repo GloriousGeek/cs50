@@ -5,26 +5,26 @@ def main():
     dollars = get_dollars()
 
     # Calculate the number of quarters to give
-    quarter = quarters(dollars)
+    quarter_count = quarters(dollars)
     # Update the dollars after subtracting the ones used in quarters
     dollars = dollars - (quarters * 0.25)
 
-    dime = dimes(dollars)
+    dime_count = dimes(dollars)
     # Update dollars
     dollars = dollars - (dimes * 0.10)
 
     # Calculate number of nickels
-    nickel = nickels(dollars)
+    nickel_count = nickels(dollars)
     # Update dollars
     dollars = dollars - (nickels * 0.5)
 
     # Calculate pennies
-    penny = pennies(dollars)
+    penny_count = pennies(dollars)
     # Update dollars
     dollars = dollars - (pennies * 0.10)
 
     # Count the number of coins
-    coins = quarter + dime + nickel + penny
+    coins = quarter_count + dime_count + nickel_count + penny_count
 
     print(coins)
 
@@ -34,7 +34,7 @@ def get_dollars():
         try:
             user_input = get_float("Change owed: ")
             if user_input > 0:
-                break
+                return user_input
             else:
                 print("Enter a positive value")
         except ValueError:
