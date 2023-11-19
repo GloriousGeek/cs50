@@ -1,7 +1,27 @@
 from cs50 import get_float
 
 def main():
+    # Prompt user for dollars owed
+    dollars = get_dollars()
 
+    # Calculate the number of quarters to give
+    quarters = quarters(dollars)
+    # Update the dollars after subtracting the ones used in quarters
+    dollars = dollars - (quarters * 0.25)
+
+    dimes = dimes(dollars)
+    # Update dollars
+    dollars = dollars - (dimes * 0.10)
+
+    # Calculate number of nickels
+    nikels = nickels(dollars)
+    # Update dollars
+    dollars = dollars - (nickels * 0.5)
+
+    # Calculate pennies
+    pennies = pennies(dollars)
+    # Update dollars
+    dollars = dollars - (pennies * 0.10)
 
 
 def get_dollars():
