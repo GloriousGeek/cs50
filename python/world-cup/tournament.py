@@ -32,7 +32,8 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    
+    for teams in N:
+        
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
