@@ -2,7 +2,7 @@ from cs50 import get_float
 
 while True:
     try:
-        user_input = get_float(input("Change owed: "))
+        get_dollars = get_float(input("Change owed: "))
         if user_input > 0:
             break
         else:
@@ -10,7 +10,7 @@ while True:
     except ValueError:
         print("Enter a valid digit")
 
-def quarters():
+def quarters(dollars):
     
 
 
