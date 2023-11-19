@@ -5,8 +5,8 @@ print(user_input)
 while True:
     user_input = int(input("Height: "))
     if 1 < user_input > 8:
-        print("Wrong height")
         return user_input
+
 
 
 for i in range(user_input):
