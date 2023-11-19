@@ -53,6 +53,7 @@ def dimes(dollars):
     d = 0
     while dollars >= 0.10:
         d += 1
+        dollars -= 0.10
     return d
 
 
@@ -60,6 +61,7 @@ def nickels(dollars):
     n = 0
     while dollars >= 0.5:
         n += 1
+        dollars -= 0.5
     return n
 
 
@@ -67,6 +69,7 @@ def pennies(dollars):
     p = 0
     while dollars >= 0.1:
         p += 1
+        dollars -= 0.1
     return p
 
 
