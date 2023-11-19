@@ -1,4 +1,5 @@
 user_input = int(input("Height: "))
+print(user_input)
 
 # Re-prompt the user for value b/w 1 and 8
 while (8 < user_input < 1):
