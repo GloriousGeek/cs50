@@ -2,19 +2,18 @@ def main():
     height = int(input("Height: "))
     # Re-prompt the user for value b/w 1 and 8
     while height < 1 or height > 8:
-        print(height)
-        
-    for i in range(height):
-        for j in range(height):
-            print(" " , end ="")
-        print("#")
+        height
 
-    # Decreasing the user_input by 1
-    # user_input -= 1
-
-
-
-
+    # Print the pyramid
+    for i in range(1, height + 1):
+        # Print spaces
+        for j in range(height - i):
+            print(" ", end="")
+        # Print blocks
+        for k in range(i):
+            print("#", end="")
+        # Move to the next line after each row
+        print()
 
 main()
 
