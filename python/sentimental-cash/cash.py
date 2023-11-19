@@ -7,11 +7,11 @@ def main():
     # Calculate the number of quarters to give
     quarter = quarters(dollars)
     # Update the dollars after subtracting the ones used in quarters
-    dollar = dollars - (quarters * 0.25)
+    dollars = dollars - (quarters * 0.25)
 
     dime = dimes(dollars)
     # Update dollars
-    dollar = dollars - (dimes * 0.10)
+    dollars = dollars - (dimes * 0.10)
 
     # Calculate number of nickels
     nickel = nickels(dollars)
