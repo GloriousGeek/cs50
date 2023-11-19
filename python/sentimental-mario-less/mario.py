@@ -3,7 +3,7 @@ def main():
     # Re-prompt the user for value b/w 1 and 8
     while height < 1 or height > 8:
         print("Enter height between 1 and 8")
-        return height
+        return height = int(input("Height: "))
 
 
     # Print the pyramid
