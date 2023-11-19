@@ -5,7 +5,7 @@ while (8 < user_input < 1):
     print(user_input)
 
 for i in range(user_input):
-    print(" ", end =)
+    print(" ", end ="")
     for j in range(user_input):
         print("#")
 
