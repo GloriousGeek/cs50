@@ -11,9 +11,9 @@ def main():
 # Re-prompt the user for value b/w 1 and 8
 def get_height():
     while True:
-        user_input = int(input("Height: "))
-        if 1 < user_input > 8:
-            return user_input
+        n = int(input("Height: "))
+        if 1 < n > 8:
+            return n
 
 
 main()
