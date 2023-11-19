@@ -6,7 +6,7 @@ def main():
 
 
     # Print the pyramid
-    for i in range(height):
+    for i in range(1, height + 1):
         # Print spaces
         for j in range(height - i):
             print(" ", end = "")
