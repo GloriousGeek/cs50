@@ -47,10 +47,6 @@ def main():
             # Enter that team_name
             counts[team_name] = 1
 
-        print(counts)
-        print(counts[team_name])
-
-
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
         print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
