@@ -1,5 +1,6 @@
 from cs50 import get_float
 
+
 def main():
     # Prompt user for dollars owed
     dollars = get_dollars()
@@ -40,6 +41,7 @@ def get_dollars():
         except ValueError:
             print("Enter a valid digit")
 
+
 def quarters(dollars):
     # Initializing a variable to count quarters
     q = 0
@@ -73,4 +75,5 @@ def pennies(dollars):
     return p
 
 
+# Calling main
 main()
