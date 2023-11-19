@@ -16,7 +16,6 @@ def get_height():
             return n
 
 
-get_height()
 main()
 
 
