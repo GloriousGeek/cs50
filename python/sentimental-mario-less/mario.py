@@ -1,12 +1,17 @@
 def main():
     # Re-prompt the user for value b/w 1 and 8
     while True:
-        height = int(input("Height: "))
-        if 1 <= height <= 8:
-            # Exit the loop
-            break
-        else:
-            print("Enter height between 1 and 8")
+        # Try to Convert the input to an int
+        try:
+            height = int(input("Height: "))
+            if 1 <= height <= 8:
+                # Exit the loop
+                break
+            else:
+                print("Enter height between 1 and 8")
+        # Except this condition
+        except ValueError:
+            print("Non Numeric Value")
 
     # Print the pyramid
     for i in range(1, height + 1):
@@ -20,4 +25,5 @@ def main():
         print()
 
 
+# Call main
 main()
