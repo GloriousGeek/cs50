@@ -22,7 +22,7 @@ def main():
     # Calculate pennies
     penny_count = pennies(dollars)
     # Update dollars
-    dollars = dollars - (penny_count * 0.10)
+    dollars = dollars - (penny_count * 0.010)
 
     # Count the number of coins
     coins = quarter_count + dime_count + nickel_count + penny_count
