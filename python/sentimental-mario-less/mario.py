@@ -6,9 +6,9 @@ def main():
 
 
     # Print the pyramid
-    for i in range(0, height):
+    for i in range(0, height - 1):
         # Print spaces
-        for j in range(1, height - i):
+        for j in range(0, height - i):
             print(" ", end = "")
         # Print hash
         for k in range(i):
