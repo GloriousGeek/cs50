@@ -13,6 +13,7 @@ while True:
 def quarters(dollars):
     for i in dollars:
         if dollars >= 0.25:
-            
+            i += 1
+        return i
 
 
