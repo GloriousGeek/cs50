@@ -7,7 +7,7 @@ while (8 < user_input < 1):
 
 for i in range(user_input):
     for j in range(user_input):
-        print(" " * (user_input - 1), end ="")
+        print(" " , end ="")
     print("#")
     # Decreasing the user_input by 1
     # user_input -= 1
