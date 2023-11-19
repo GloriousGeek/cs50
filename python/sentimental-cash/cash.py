@@ -32,7 +32,7 @@ def main():
 def get_dollars():
     while True:
         try:
-            get_dollars = get_float("Change owed: ")
+            user_input = get_float("Change owed: ")
             if user_input > 0:
                 break
             else:
