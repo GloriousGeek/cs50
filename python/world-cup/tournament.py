@@ -68,7 +68,7 @@ def simulate_tournament(teams):
         teams = simulate_round(teams)
 
     # Only one team[0] will be left.
-    # Team is a dict so accessing "team" column
+    # Team is a dict so accessing "team" 
     return teams[0]["team"]
 
 
