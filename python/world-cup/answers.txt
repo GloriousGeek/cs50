@@ -9,7 +9,7 @@ Times:
 
 Questions:
 
-Which predictions, if any, proved incorrect as you increased the number of simulations?: TODO
+Which predictions, if any, proved incorrect as you increased the number of simulations?: As I increased the number of simulations, Belgium's chance of winning dropped from 40% to about 21.2% almost the same as that of Brazil 20.7%.
 
 Suppose you're charged a fee for each second of compute time your program uses.
 After how many simulations would you call the predictions "good enough"?: It seems the predictions stablized after 1000 simulations. Hence, I would call the predictions good enough after 1000 simulations.
