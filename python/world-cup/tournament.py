@@ -33,6 +33,7 @@ def main():
     counts = {}
     # Simulate N tournaments and keep track of win counts
     for team_name in range(N):
+        team_name = simulate_tournament(teams)
         if team_name in counts:
             # Add 1 to that team_name in count
             teams += 1
