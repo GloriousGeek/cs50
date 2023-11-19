@@ -17,12 +17,12 @@ def main():
     # Calculate number of nickels
     nickel_count = nickels(dollars)
     # Update dollars
-    dollars = dollars - (nickel_count * 0.5)
+    dollars = dollars - (nickel_count * 0.05)
 
     # Calculate pennies
     penny_count = pennies(dollars)
     # Update dollars
-    dollars = dollars - (penny_count * 0.010)
+    dollars = dollars - (penny_count * 0.01)
 
     # Count the number of coins
     coins = quarter_count + dime_count + nickel_count + penny_count
@@ -61,17 +61,17 @@ def dimes(dollars):
 
 def nickels(dollars):
     n = 0
-    while dollars >= 0.5:
+    while dollars >= 0.05:
         n += 1
-        dollars -= 0.5
+        dollars -= 0.05
     return n
 
 
 def pennies(dollars):
     p = 0
-    while dollars >= 0.1:
+    while dollars >= 0.01:
         p += 1
-        dollars -= 0.1
+        dollars -= 0.01
     return p
 
 
