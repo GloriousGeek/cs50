@@ -5,7 +5,7 @@ import sys
 import random
 
 # Number of simluations to run
-N = 1000
+N = 10
 
 
 def main():
@@ -39,13 +39,16 @@ def main():
 
         if team_name in counts:
 
-            # Add 1 to that team_name in count
+            # Add 1 to that team_name in counts
             counts[team_name] += 1
 
         else:
-            
+
             # Enter that team_name
             counts[team_name] = 1
+
+        print(counts)
+        print(counts[team_name])
 
 
     # Print each team's chances of winning, according to simulation
