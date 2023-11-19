@@ -1,20 +1,25 @@
-user_input = int(input("Height: "))
-print(user_input)
+height = get_height()
 
-# Re-prompt the user for value b/w 1 and 8
-while True:
-    user_input = int(input("Height: "))
-    if 1 < user_input > 8:
-        return user_input
-
-
-
-for i in range(user_input):
-    for j in range(user_input):
+def main():
+    for i in range(height):
+    for j in range(height):
         print(" " , end ="")
     print("#")
     # Decreasing the user_input by 1
     # user_input -= 1
+
+# Re-prompt the user for value b/w 1 and 8
+def get_height():
+    while True:
+        user_input = int(input("Height: "))
+        if 1 < user_input > 8:
+            return user_input
+
+
+main()
+
+
+
 
 
 
