@@ -16,7 +16,7 @@ int main(void)
 
     // Calling function for letter
     int letter_count = count_letters(text);
-    // printf("%i letters\n", letter_count);
+    printf("%i letters\n", letter_count);
 
     // Word count function
     int word_count = count_words(text);
