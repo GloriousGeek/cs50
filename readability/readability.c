@@ -36,6 +36,7 @@ int main(void)
 
     // Coleman-Liau index formula
     int index = round(0.0588 * L - 0.296 * S - 15.8);
+    printf("Index: %i\n", index);
 
     if (index >= 16)
     {
