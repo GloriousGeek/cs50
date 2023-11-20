@@ -4,4 +4,6 @@ from cs50 import get_string
 text = get_string("Text: ")
 
 # Count letters
+letter_count = len(text)
+
 
