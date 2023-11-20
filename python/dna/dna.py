@@ -14,7 +14,7 @@ def main():
     file_name = sys.argv[1]
 
     # Empty dict to store data
-    database = []
+    database = {}
 
     # Empty list to store sequence
     sequence_txt = []
@@ -23,7 +23,7 @@ def main():
         reader = csv.DictReader(file)
 
         # Store values in database variable
-        for i in reader:
+        for i in reader
             database.append({i})
     print(reader)
 
