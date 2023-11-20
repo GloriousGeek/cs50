@@ -29,7 +29,7 @@ def count_sentences(text):
 
 
 # Average # of letters per 100 words
-L = float((letter_count/(count_words(text)))) * 100
+L = (letter_count/(count_words(text))) * 100
 print(f"L {L}")
 
 # Average sentences per 100 words
@@ -38,6 +38,7 @@ print(f"S {S}")
 
 # Coleman-Liau index formula
 index = round(0.0588 * L - 0.296 * S - 15.8)
+print(f"Index {index}")
 
 if index >= 16:
     print("Grade 16+")
