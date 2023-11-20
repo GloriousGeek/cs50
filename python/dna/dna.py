@@ -20,13 +20,13 @@ def main():
     sequence_txt = []
 
     with open(file_name, "r") as file:
-        reader = csv.DictReader(file)
+        csv_reader = csv.DictReader(file)
 
         # Store values in database variable
-        for row in reader:
+        for row in csv_reader:
             # Add to database list
             database.append(row)
-    print(reader)
+    print(csv_reader)
 
     # TODO: Read DNA sequence file into a variable
     dna_sequence = sys.argv[2]
