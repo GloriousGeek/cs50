@@ -47,7 +47,9 @@ def main():
     for i in range(len(csv_database)):
         matches = 0
         for j in range(1, len(csv_reader.fieldnames)):
-            if int(counts[j-1]) == int(csv_database[])
+            if int(counts[j-1]) ==
+            int(csv_database[i]  [csv_reader.fieldnames[j]]):
+
 
         else:
             print("No match")
