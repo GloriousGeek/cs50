@@ -25,7 +25,7 @@ def main():
         # Store values in database variable
         for row in csv_reader:
             # Add to database list
-            database.append(row)
+            csv_database.append(row)
     print(csv_database)
 
     # TODO: Read DNA sequence file into a variable
@@ -41,11 +41,12 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match(sys.argv[2], sys.argv[1])
+    str_count = longest_match(sys.argv[2], sys.argv[1])
 
     # TODO: Check database for matching profiles
-    for row in database:
-        if row in
+    for row in csv_database:
+        if row in str_count:
+            p
 
     return
 
