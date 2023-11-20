@@ -14,7 +14,7 @@ def main():
     file_name = sys.argv[1]
 
     # Empty list to store database
-    database = []
+    csv_database = []
 
     # Empty list to store sequence
     sequence_txt = []
@@ -26,7 +26,7 @@ def main():
         for row in csv_reader:
             # Add to database list
             database.append(row)
-    print(csv_reader)
+    print(csv_database)
 
     # TODO: Read DNA sequence file into a variable
     dna_sequence = sys.argv[2]
