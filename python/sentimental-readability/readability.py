@@ -5,7 +5,6 @@ text = get_string("Text: ")
 
 # Count letters
 letter_count = len(text)
-print(letter_count)
 
 # Word count
 def count_words(text):
