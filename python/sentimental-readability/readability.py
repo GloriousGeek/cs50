@@ -28,6 +28,7 @@ def count_sentences(text):
     # return sentence_count
 
 
-
+# Average # of letters per 100 words
+L = (letter_count/)
 
 
