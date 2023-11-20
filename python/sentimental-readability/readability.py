@@ -6,4 +6,10 @@ text = get_string("Text: ")
 # Count letters
 letter_count = len(text)
 
+# Word count
+word_count = 1
+if text.isspace():
+    word_count += 1
+word_count
+
 
