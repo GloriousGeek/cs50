@@ -8,7 +8,7 @@ letter_count = len(text)
 
 # Word count
 word_count = 1
-if text.isspace():
+if text.isspace() in text:
     word_count += 1
 word_count
 
