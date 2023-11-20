@@ -24,7 +24,8 @@ def main():
 
         # Store values in database variable
         for row in reader:
-            
+            name = row["name"]
+
             database.append({i})
     print(reader)
 
