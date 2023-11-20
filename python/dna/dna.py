@@ -13,8 +13,15 @@ def main():
     # The file to open is from user input
     file_name = sys.argv[2]
 
+    # Empty dict to store data
+    database = {}
+
     with open(file_name, "r") as file:
         reader = csv.DictReader(file)
+
+        # Store values in database variable
+        for i in reader:
+            database.append(i)
     print(reader)
 
     # TODO: Read DNA sequence file into a variable
