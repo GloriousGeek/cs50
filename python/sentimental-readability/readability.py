@@ -8,7 +8,7 @@ letter_count = len(text)
 
 # Word count
 def count_words(text):
-    # Initiating from 1 as the last word 
+    # Initiating from 1 to include the last word
     word_count = 1
     for i in text:
         if i == " ":
@@ -17,5 +17,7 @@ def count_words(text):
 
 
 def count_sentences(text):
+    sentence_count = 1
+
 
 
