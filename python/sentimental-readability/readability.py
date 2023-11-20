@@ -11,7 +11,7 @@ def count_letters(text):
         if i.isalpha():
             letter_count += 1
     return letter_count
-print(letter_count)
+print(count_letters(text))
 
 # Word count
 def count_words(text):
