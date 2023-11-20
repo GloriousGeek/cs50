@@ -30,9 +30,11 @@ def count_sentences(text):
 
 # Average # of letters per 100 words
 L = (letter_count/count_words(text)) * 100
+print(f"L {L}")
 
 # Average sentences per 100 words
 S = (count_sentences(text)/count_words(text)) * 100
+print(f"S {S}")
 
 # Coleman-Liau index formula
 index = round(0.0588 * L - 0.296 * S - 15.8)
