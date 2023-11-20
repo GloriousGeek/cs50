@@ -13,7 +13,7 @@ def main():
     # The file to open is from user input
     file_name = sys.argv[1]
 
-    # Empty dict to store data
+    # Empty list to store database
     database = []
 
     # Empty list to store sequence
@@ -36,18 +36,18 @@ def main():
 
         for i in dna_reader:
             # Store values in empty list
-            sequence_txt.append()
+            sequence_txt.append(i)
     print(dna_reader)
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match(sys.argv[2], :)
+    longest_match(sys.argv[2], sys.argv[1])
 
     # TODO: Check database for matching profiles
-    for row in database:
-        if row in
+    # for row in database:
+    #     if row in
 
-    return
+    # return
 
 
 def longest_match(sequence, subsequence):
