@@ -16,6 +16,9 @@ def main():
     # Empty dict to store data
     database = {}
 
+    # Empty list to store sequence
+    
+
     with open(file_name, "r") as file:
         reader = csv.DictReader(file)
 
