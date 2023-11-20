@@ -24,10 +24,8 @@ def main():
 
         # Store values in database variable
         for row in reader:
-            # Accessing the "name" column
-            name = row["name"]
-
-            database.append({i})
+            # Add to database list
+            database.append(row)
     print(reader)
 
     # TODO: Read DNA sequence file into a variable
