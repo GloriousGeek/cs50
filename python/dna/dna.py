@@ -49,7 +49,11 @@ def main():
         for j in range(1, len(csv_reader.fieldnames)):
             if int(counts[j-1]) ==
             int(csv_database[i]  [csv_reader.fieldnames[j]]):
-
+                matches += 1
+            if matches == (len(reader.fieldnames) - 1):
+                print(dict_list[i]['name'])
+                exit(0)
+print("No match")
 
         else:
             print("No match")
