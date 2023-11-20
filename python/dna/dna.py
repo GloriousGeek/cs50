@@ -44,9 +44,11 @@ def main():
     str_count = longest_match(sys.argv[2], sys.argv[1])
 
     # TODO: Check database for matching profiles
-    for row in csv_database:
-        if row in str_count:
-            print(row)
+    for i in range(len(csv_database)):
+        matches = 0
+        for j in range(1, len(csv_reader.fieldnames)):
+            if int()
+
         else:
             print("No match")
 
