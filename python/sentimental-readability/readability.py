@@ -7,7 +7,7 @@ text = get_string("Text: ")
 letter_count = len(text)
 
 # Word count
-def count_words():
+def count_words(text):
     word_count = 1
     if text.isspace() in text:
         word_count += 1
