@@ -18,6 +18,7 @@ def count_words(text):
 
 def count_sentences(text):
     sentence_count = 0
+    for i in text:
     if (text == "." or text == "!" or text == "?"):
         # Update count
         sentence_count += 1
