@@ -4,7 +4,12 @@ from cs50 import get_string
 text = get_string("Text: ")
 
 # Count letters
-letter_count = len(text)
+def count_letters(text):
+    letter_count = 0
+    for i in text:
+        if i.isalpha():
+            letter_count += 1
+    return letter_count
 print(letter_count)
 
 # Word count
