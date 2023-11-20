@@ -7,6 +7,7 @@ text = get_string("Text: ")
 def count_letters(text):
     letter_count = 0
     for i in text:
+        # Count only letters
         if i.isalpha():
             letter_count += 1
     return letter_count
@@ -35,7 +36,7 @@ def count_sentences(text):
 
 
 # Average # of letters per 100 words
-L = (letter_count/(count_words(text))) * 100
+L = (count_letters(text)/(count_words(text))) * 100
 print(f"L {L}")
 
 # Average sentences per 100 words
