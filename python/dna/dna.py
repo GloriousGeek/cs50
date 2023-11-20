@@ -46,9 +46,11 @@ def main():
     # TODO: Check database for matching profiles
     for row in csv_database:
         if row in str_count:
-            p
+            print(row)
+        else:
+            print("No match")
 
-    return
+    return 0
 
 
 def longest_match(sequence, subsequence):
