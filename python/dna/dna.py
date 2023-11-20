@@ -23,7 +23,8 @@ def main():
         reader = csv.DictReader(file)
 
         # Store values in database variable
-        for i in reader
+        for row in reader:
+            
             database.append({i})
     print(reader)
 
