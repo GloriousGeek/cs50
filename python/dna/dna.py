@@ -14,7 +14,7 @@ def main():
     file_name = sys.argv[1]
 
     # Empty dict to store data
-    database = {}
+    database = []
 
     # Empty list to store sequence
     sequence_txt = []
