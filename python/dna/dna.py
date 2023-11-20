@@ -44,10 +44,10 @@ def main():
     longest_match(sys.argv[2], sys.argv[1])
 
     # TODO: Check database for matching profiles
-    # for row in database:
-    #     if row in
+    for row in database:
+        if row in
 
-    # return
+    return
 
 
 def longest_match(sequence, subsequence):
