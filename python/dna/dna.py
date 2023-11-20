@@ -53,13 +53,9 @@ def main():
             if matches == (len(reader.fieldnames) - 1):
                 print(dict_list[i]['name'])
                 exit(0)
-print("No match")
-
-        else:
-            print("No match")
-
+    print("No match")
+    
     return 0
-
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
