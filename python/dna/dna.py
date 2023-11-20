@@ -11,7 +11,7 @@ def main():
 
     # TODO: Read database file into a variable
     # The file to open is from user input
-    file_name = sys.argv[2]
+    file_name = sys.argv[1]
 
     # Empty dict to store data
     database = {}
@@ -28,7 +28,7 @@ def main():
     print(reader)
 
     # TODO: Read DNA sequence file into a variable
-    dna_sequence = sys.argv[3]
+    dna_sequence = sys.argv[2]
 
     with open(dna_sequence, "r") as file:
         dna_reader = csv.reader(file)
