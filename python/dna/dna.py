@@ -17,7 +17,7 @@ def main():
     database = {}
 
     # Empty list to store sequence
-    
+    sequence_txt = []
 
     with open(file_name, "r") as file:
         reader = csv.DictReader(file)
@@ -32,6 +32,10 @@ def main():
 
     with open(dna_sequence, "r") as file:
         dna_reader = csv.reader(file)
+
+        for i in dna_reader:
+            # Store values in empty list
+            sequence_txt.append()
     print(dna_reader)
 
 
