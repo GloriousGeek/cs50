@@ -42,6 +42,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     str_count = longest_match(sys.argv[2], sys.argv[1])
+    print(str_count)
+    print()
 
     # TODO: Check database for matching profiles
     for row in csv_database:
