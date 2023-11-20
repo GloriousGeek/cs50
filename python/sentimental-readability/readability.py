@@ -4,7 +4,7 @@ from cs50 import get_string
 text = get_string("Text: ")
 
 
-# Count letters
+# Count only letters (excluding spaces, numbers, and punctuation)
 def count_letters(text):
     letter_count = 0
     for i in text:
