@@ -17,6 +17,8 @@ def count_words(text):
 
 
 def count_sentences(text):
+    #str.count() counts the number of occurances of 
+
     sentence_count = 0
     for i in text:
     if (text == "." or text == "!" or text == "?"):
