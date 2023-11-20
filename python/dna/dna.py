@@ -46,6 +46,8 @@ def main():
     longest_match(sys.argv[2], :)
 
     # TODO: Check database for matching profiles
+    for row in database:
+        
 
     return
 
