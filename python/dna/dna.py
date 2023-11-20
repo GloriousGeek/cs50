@@ -19,8 +19,8 @@ def main():
     # Empty list to store sequence
     sequence_txt = []
 
-    with open(file_name, "r") as file:
-        csv_reader = csv.DictReader(file)
+    with open(file_name, "r") as csvfile:
+        csv_reader = csv.DictReader(csvfile)
 
         # Store values in database variable
         for row in csv_reader:
