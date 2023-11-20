@@ -24,7 +24,7 @@ def main():
 
         # Store values in database variable
         for i in reader:
-            database.append(i)
+            database.append({i})
     print(reader)
 
     # TODO: Read DNA sequence file into a variable
