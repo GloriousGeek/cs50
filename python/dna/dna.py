@@ -45,14 +45,15 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
+    # Empty dict
     long_match = {}
-    # Adding values to keys in long_match
+    # Finding longest match
     for subsequence in subsequences:
         long_match[subsequence] = longest_match(dna_reader, subsequence)
-    str_count = longest_match(sys.argv[2], sys.argv[1])
 
     # TODO: Check database for matching profiles
     for i in range(len(csv_database)):
+        # Initiaze matches 
         matches = 0
         for j in range(1, len(csv_reader.fieldnames)):
             if int(counts[j-1]) ==
