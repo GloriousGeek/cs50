@@ -29,7 +29,6 @@ def main():
         for row in csv_reader:
             # Add to database list because it is a csv file
             csv_database.append(row)
-    print(csv_database)
 
     # TODO: Read DNA sequence file into a variable
     dna_sequence = sys.argv[2]
@@ -38,7 +37,6 @@ def main():
         dna_reader = csv.reader(dna_seq)
         row = next(dna_reader)
         dna_seq = row[0]
-    # print(sequence_txt)
 
     # TODO: Find longest match of each STR in DNA sequence
     # Empty dict
