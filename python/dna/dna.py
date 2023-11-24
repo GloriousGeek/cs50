@@ -15,6 +15,7 @@ def main():
 
     # Empty list to store database
     csv_database = []
+    subsequence = []
 
     # Empty list to store sequence
     sequence_txt = []
@@ -54,7 +55,7 @@ def main():
                 print(dict_list[i]['name'])
                 exit(0)
     print("No match")
-    
+
     return 0
 
 def longest_match(sequence, subsequence):
