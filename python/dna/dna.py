@@ -41,7 +41,7 @@ def main():
         for i in dna_reader:
             # Store values in empty list
             sequence_txt.append(i)
-    print(dna_reader)
+    # print(sequence_txt)
 
 
     # TODO: Find longest match of each STR in DNA sequence
