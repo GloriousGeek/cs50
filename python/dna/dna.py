@@ -47,7 +47,7 @@ def main():
     long_match = {}
     # Finding longest match
     for subsequence in subsequences:
-        long_match[subsequence] = longest_match(sequence_txt, subsequence)
+        long_match[subsequence] = longest_match(dna_seq, subsequence)
 
     # TODO: Check database for matching profiles
     for person in csv_database:
@@ -59,11 +59,11 @@ def main():
                 match += 1
         # If all subsequences match
         if match == len(subsequences):
-            print(person["Name"])
+            print(person["name"])
+            return 0
 
     # Else
     print("No match")
-
     return 0
 
 def longest_match(sequence, subsequence):
