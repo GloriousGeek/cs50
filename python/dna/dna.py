@@ -49,7 +49,7 @@ def main():
     long_match = {}
     # Finding longest match
     for subsequence in subsequences:
-        long_match[subsequence] = longest_match(dna_reader, subsequence)
+        long_match[subsequence] = longest_match(sequence_txt, subsequence)
 
     # TODO: Check database for matching profiles
     for person in csv_database:
