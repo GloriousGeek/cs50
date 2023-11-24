@@ -23,6 +23,9 @@ def main():
     with open(file_name, "r") as csvfile:
         csv_reader = csv.DictReader(csvfile)
 
+        # Populate list of short tandem repeats (STRs)
+        subsequence = csv_reader.fieldnames[1:]
+
         # Store values in database variable
         for row in csv_reader:
             # Add to database list
