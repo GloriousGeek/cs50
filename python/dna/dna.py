@@ -28,7 +28,7 @@ def main():
 
         # Store values in database variable
         for row in csv_reader:
-            # Add to database list
+            # Add to database list because it is a csv file
             csv_database.append(row)
     print(csv_database)
 
