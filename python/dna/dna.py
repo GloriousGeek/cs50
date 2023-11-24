@@ -14,10 +14,9 @@ def main():
 
     # Empty list to store database
     csv_database = []
-    subsequences = []
 
-    # Empty list to store sequence
-    sequence_txt = []
+    # To store STRs
+    subsequences = []
 
     with open(file_name, "r") as csvfile:
         csv_reader = csv.DictReader(csvfile)
