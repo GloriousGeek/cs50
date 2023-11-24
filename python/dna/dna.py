@@ -15,7 +15,7 @@ def main():
 
     # Empty list to store database
     csv_database = []
-    subsequence = []
+    subsequences = []
 
     # Empty list to store sequence
     sequence_txt = []
@@ -24,7 +24,7 @@ def main():
         csv_reader = csv.DictReader(csvfile)
 
         # Populate list of short tandem repeats (STRs)
-        subsequence = csv_reader.fieldnames[1:]
+        subsequences = csv_reader.fieldnames[1:]
 
         # Store values in database variable
         for row in csv_reader:
@@ -45,6 +45,9 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
+    longest_match = {}
+    for subsequence in subsequences:
+        
     str_count = longest_match(sys.argv[2], sys.argv[1])
 
     # TODO: Check database for matching profiles
