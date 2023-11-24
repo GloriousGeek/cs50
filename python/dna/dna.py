@@ -52,16 +52,12 @@ def main():
         long_match[subsequence] = longest_match(dna_reader, subsequence)
 
     # TODO: Check database for matching profiles
-    for i in range(len(csv_database)):
-        # Initiaze matches
-        matches = 0
-        for j in range(1, len(subsequences)):
-            if int(counts[j-1]) ==
-            int(csv_database[i]  [csv_reader.fieldnames[j]]):
-                matches += 1
-            if matches == (len(reader.fieldnames) - 1):
-                print(dict_list[i]['name'])
-                exit(0)
+    for person in csv_database:
+        # Initiate match at 0
+        match = 0
+        for subsequence in subsequences:
+            
+
     print("No match")
 
     return 0
