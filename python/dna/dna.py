@@ -37,10 +37,8 @@ def main():
 
     with open(dna_sequence, "r") as dna_seq:
         dna_reader = csv.reader(dna_seq)
-
-        for i in dna_reader:
-            # Store values in empty list
-            sequence_txt.append(i)
+        row = next(dna_reader)
+        dna_seq = row[0]
     # print(sequence_txt)
 
 
