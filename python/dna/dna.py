@@ -35,8 +35,8 @@ def main():
     # TODO: Read DNA sequence file into a variable
     dna_sequence = sys.argv[2]
 
-    with open(dna_sequence, "r") as file:
-        dna_reader = csv.reader(file)
+    with open(dna_sequence, "r") as dna_seq:
+        dna_reader = csv.reader(dna_seq)
 
         for i in dna_reader:
             # Store values in empty list
@@ -46,8 +46,9 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     long_match = {}
+    # Adding values to keys in long_match
     for subsequence in subsequences:
-        long_match[subsequence] = longest_match()
+        long_match[subsequence] = longest_match(dna_reader, subsequence)
     str_count = longest_match(sys.argv[2], sys.argv[1])
 
     # TODO: Check database for matching profiles
