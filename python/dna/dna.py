@@ -56,9 +56,9 @@ def main():
         # Initiate match at 0
         match = 0
         for subsequence in subsequences:
-            if person[subsequence] == str(long_match[subsequence])
-            # Add 1 to match
-            match += 1
+            if person[subsequence] == str(long_match[subsequence]):
+                # Add 1 to match
+                match += 1
         # If all subsequences match
         if match == len(subsequences):
             print(person["Name"])
