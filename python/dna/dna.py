@@ -56,7 +56,7 @@ def main():
         # Initiate match at 0
         match = 0
         for subsequence in subsequences:
-            
+            if person[subsequence] == str(long_match)
 
     print("No match")
 
