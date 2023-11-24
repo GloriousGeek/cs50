@@ -60,8 +60,10 @@ def main():
             # Add 1 to match
             match += 1
         # If all subsequences match
-        if match == len()
+        if match == len(subsequences):
+            print(person["Name"])
 
+    # Else
     print("No match")
 
     return 0
