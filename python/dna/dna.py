@@ -53,9 +53,9 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(len(csv_database)):
-        # Initiaze matches 
+        # Initiaze matches
         matches = 0
-        for j in range(1, len(csv_reader.fieldnames)):
+        for j in range(1, len(subsequences)):
             if int(counts[j-1]) ==
             int(csv_database[i]  [csv_reader.fieldnames[j]]):
                 matches += 1
