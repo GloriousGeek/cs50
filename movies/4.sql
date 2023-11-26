@@ -1,2 +1,2 @@
 SELECT COUNT(id) FROM movies
-WHERE
+WHERE 
