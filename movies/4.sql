@@ -1,2 +1,2 @@
 SELECT COUNT(id) FROM movies
-WHERE 
+WHERE id IN (SELECT movie_id FROM ratings WHERE rating == 10);
