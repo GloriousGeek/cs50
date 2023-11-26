@@ -34,6 +34,7 @@ def main():
 
     with open(dna_sequence, "r") as dna_seq:
         dna_reader = csv.reader(dna_seq)
+        # To skip the header
         row = next(dna_reader)
         dna_seq = row[0]
 
