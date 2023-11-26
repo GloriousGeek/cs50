@@ -1,1 +1,3 @@
-I would cahracterize that listener's audio aura depending on the average energy, valence, and danceability
+I would cahracterize that listener's audio aura depending on the average energy, valence, and danceability. If the averages are above 50%, I would rate it as 'happy'. If the averages are below 50%, I would characterize it as 'sad' and so and so.
+
+
