@@ -1,3 +1,3 @@
 I would cahracterize that listener's audio aura depending on the average energy, valence, and danceability. If the averages are above 50%, I would rate it as 'happy'. If the averages are below 50%, I would characterize it as 'sad' and so and so.
 
-
+It might not be very representative because it lacks the factor of real emotions and lyrics. There should be a method of understanding the lyrics and considering that as one of the factors to characterize audio aura as some sad songs could be upbeat and full of energy like the famous 'Dancing on my Own by Robyn'.
