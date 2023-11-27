@@ -74,5 +74,5 @@ SELECT * FROM passengers
 WHERE flight_id == 36;
 
 SELECT * FROM passengers
-JOIN people ON people.passport_number = passengers.passport_number
-WHERE flight_id == 36 AND ;
+WHERE name IN (SELECT name FROM passengers
+WHERE flight_id == 36);
