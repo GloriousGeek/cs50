@@ -23,5 +23,7 @@ WHERE atm_location = 'Leggett Street' AND day = 28 AND month = 7 AND year = 2021
 
 -- We got account_number of 8 people. Lets query the bank_accounts and link it to people
 SELECT * FROM bank_accounts
-WHERE 
+WHERE account_number IN (SELECT account_number FROM atm_transactions
+WHERE atm_location = 'Leggett Street'
+AND day = 28 AND month = 7 AND year = 2021 AND transaction_type = 'withdraw');
 
