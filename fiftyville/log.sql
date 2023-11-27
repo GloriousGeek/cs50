@@ -26,5 +26,6 @@ SELECT * FROM bank_accounts
 WHERE account_number IN (SELECT account_number FROM atm_transactions
 WHERE atm_location = 'Leggett Street'
 AND day = 28 AND month = 7 AND year = 2021 AND transaction_type = 'withdraw')
-AND person_id IN (SELECT id FROM people);
+JOIN people ON people.id = bank_accounts.person_id
+WHERE ;
 
