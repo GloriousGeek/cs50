@@ -21,7 +21,7 @@ WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit'
 SELECT * FROM atm_transactions
 WHERE atm_location = 'Leggett Street' AND day = 28 AND month = 7 AND year = 2021 AND transaction_type = 'withdraw';
 
--- We got account_number of 8 people. Lets query the bank_accounts and link it to people
+-- We got account_number of 8 people. Lets query the bank_accounts and link it to people and lice_plate from Bakery logs
 SELECT * FROM bank_accounts
 WHERE account_number IN
     (SELECT account_number FROM atm_transactions
