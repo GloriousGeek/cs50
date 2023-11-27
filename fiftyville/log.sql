@@ -46,4 +46,5 @@ WHERE account_number IN
 
 -- Linking the above output 'name' with 'caller' on phone_calls
 SELECT * FROM phone_calls
-WHERE day = 28 AND month = 7 AND year = 2021;
+JOIN people ON people.phone_number = phone_calls.caller
+WHERE  day = 28 AND month = 7 AND year = 2021;
