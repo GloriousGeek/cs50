@@ -13,5 +13,5 @@ JOIN stars s ON p.id = s.person_id
 JOIN movies m ON s.movie_id = m.id
 JOIN stars k ON m.id = k.movie_id
 JOIN people kb ON k.person_id = kb.id
-WHERE kb.name = 'Kevin Bacon' AND kb.birth_year = 1958
+WHERE kb.name = 'Kevin Bacon' AND kb.birth = 1958
   AND p.name != 'Kevin Bacon';
