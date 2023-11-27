@@ -73,6 +73,10 @@ AND day = 29 AND month = 7 AND year = 2021 and hour < 9;
 SELECT * FROM passengers
 WHERE flight_id == 36;
 
+-- Compare passport numbers of the 3 shortlisted in above queries with the ones receivied in flight_id = 36 to get to the two names
 SELECT * FROM people
 WHERE passport_number IN (SELECT passport_number FROM passengers
 WHERE flight_id == 36);
+
+-- Finalize the single person and connect his call with the receiver to find the accompliance as well as destination city
+
