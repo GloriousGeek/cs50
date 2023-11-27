@@ -12,3 +12,8 @@ WHERE day = 28 AND month = 7 AND year = 2021;
 SELECT * FROM bakery_security_logs
 WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit';
 
+-- Searching all people affiliated with the license_plate from the query above
+SELECT name FROM people
+WHERE IN (SELECT * FROM bakery_security_logs
+WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit');
+
