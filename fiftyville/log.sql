@@ -67,4 +67,4 @@ WHERE full_name LIKE 'Fiftyville%';
 SELECT * FROM flights
 WHERE origin_airport_id = (SELECT * FROM airports
 WHERE full_name LIKE 'Fiftyville%')
-AND 
+AND day = 29 AND month = 7 AND year = 2021
