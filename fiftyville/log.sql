@@ -46,4 +46,4 @@ WHERE account_number IN
 
 -- Linking the above output 'name' with 'caller' on phone_calls
 SELECT * FROM phone_calls
-
+JOIN people ON people.
