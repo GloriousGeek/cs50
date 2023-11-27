@@ -8,3 +8,6 @@ WHERE day = 28 AND month = 7 AND year = 2021 AND street = 'Humphrey Street';
 SELECT * FROM interviews
 WHERE day = 28 AND month = 7 AND year = 2021;
 
+-- Ruth's intel - Security footage 10 mins aftr CS
+
+
