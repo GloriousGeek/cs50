@@ -58,3 +58,8 @@ WHERE account_number IN
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
     AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
 
+-- Getting id for fiftyville airport
+SELECT * FROM airports
+WHERE full_name LIKE 'Fiftyville%';
+
+
