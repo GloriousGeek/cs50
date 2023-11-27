@@ -71,5 +71,4 @@ AND day = 29 AND month = 7 AND year = 2021 and hour < 9;
 
 -- Earliest flight. Finding passengers linking with flight_id
 SELECT * FROM passengers
-JOIN flights ON flights.id = passengers_flights_id
-WHERE id == 36;
+WHERE flight_id == 36;
