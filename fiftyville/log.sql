@@ -73,4 +73,6 @@ AND day = 29 AND month = 7 AND year = 2021 and hour < 9;
 SELECT * FROM passengers
 WHERE flight_id == 36;
 
-SELECT * FROM 
+SELECT * FROM passengers
+JOIN people ON people.passport_number = passengers.passport_number
+WHERE people.passport_number = passengers.passport_number;
