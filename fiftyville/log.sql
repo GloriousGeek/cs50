@@ -33,8 +33,8 @@ WHERE account_number IN
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit'));
 
 -- Linking the above shortlisted people with passport numbers
-SELECT * FROM bank_accounts
-WHERE account_number IN (SELECT * FROM bank_accounts
+SELECT * FROM people
+WHERE id IN (SELECT person_id FROM bank_accounts
 WHERE account_number IN
     (SELECT account_number FROM atm_transactions
     WHERE atm_location = 'Leggett Street'
