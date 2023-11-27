@@ -44,7 +44,7 @@ WHERE account_number IN
         WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')));
 
--- Linking the above output 'name' with 'caller' on phone_calls
+-- Linking the above output 'name' with 'caller' on phone_calls to narrow-down
 SELECT * FROM phone_calls
 JOIN people ON people.phone_number = phone_calls.caller
 WHERE people.id IN (SELECT person_id FROM bank_accounts
@@ -57,3 +57,4 @@ WHERE account_number IN
         WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
     AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
+
