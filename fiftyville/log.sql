@@ -67,4 +67,6 @@ WHERE full_name LIKE 'Fiftyville%';
 SELECT * FROM flights
 WHERE origin_airport_id IN (SELECT id FROM airports
 WHERE full_name LIKE 'Fiftyville%')
-AND day = 29 AND month = 7 AND year = 2021;
+AND day = 29 AND month = 7 AND year = 2021 and hour < 9;
+
+-- Earliest flight
