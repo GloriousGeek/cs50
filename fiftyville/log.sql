@@ -44,3 +44,6 @@ WHERE account_number IN
         WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')));
 
+-- Linking the above output 'name' with 'caller' on phone_calls
+SELECT * FROM phone_calls
+
