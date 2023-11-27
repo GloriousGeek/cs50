@@ -63,3 +63,8 @@ SELECT * FROM airports
 WHERE full_name LIKE 'Fiftyville%';
 
 
+-- Enquiring flights
+SELECT * FROM flights
+WHERE origin_airport_id = (SELECT * FROM airports
+WHERE full_name LIKE 'Fiftyville%')
+AND 
