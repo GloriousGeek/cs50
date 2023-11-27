@@ -5,3 +5,4 @@ SELECT * FROM crime_scene_reports
 WHERE day = 28 AND month = 7 AND year = 2021 AND street = 'Humphrey Street';
 
 SELECT * FROM interviews
+WHERE day = 28 AND month = 7 AND year = 2021;
