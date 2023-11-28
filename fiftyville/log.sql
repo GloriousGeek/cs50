@@ -78,5 +78,18 @@ SELECT * FROM people
 WHERE passport_number IN (SELECT passport_number FROM passengers
 WHERE flight_id == 36);
 
+SELECT * FROM phone_calls
+JOIN people ON people.phone_number = phone_calls.caller
+WHERE people.id IN (SELECT person_id FROM bank_accounts
+WHERE account_number IN
+    (SELECT account_number FROM atm_transactions
+    WHERE atm_location = 'Leggett Street'
+    AND day = 28 AND month = 7 AND year = 2021 AND transaction_type = 'withdraw')
+    AND person_id IN
+        (SELECT id FROM people
+        WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
+        WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
+    AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
+
 -- Finalize the single person and connect his call with the receiver to find the accompliance as well as destination city
 
