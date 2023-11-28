@@ -82,7 +82,7 @@ WHERE flight_id == 36);
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN people ON AS p2 people.phone_number = phone_calls.caller
-JOIN flights ON 
+JOIN flights ON flights.id = passengers.flight_id
 WHERE passengers.flight_id IN
 (SELECT id FROM flights
 WHERE origin_airport_id IN (SELECT id FROM airports
