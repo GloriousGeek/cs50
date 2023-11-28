@@ -98,5 +98,35 @@ WHERE account_number IN
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
     AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
 
+SELECT *
+FROM people
+JOIN passengers ON passengers.passport_number = people.passport_number
+JOIN flights ON passengers.flight_id = flights.id
+JOIN people ON people.phone_number = flights.caller
+WHERE flights.id IN (
+    SELECT flights.id
+    FROM flights
+    JOIN airports ON flights.origin_airport_id = airports.id
+    WHERE airports.full_name LIKE 'Fiftyville%'
+    AND flights.day = 29 AND flights.month = 7 AND flights.year = 2021 AND flights.hour < 9
+)
+AND people.id IN (
+    SELECT people.id
+    FROM bank_accounts
+    JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
+    JOIN people ON atm_transactions.person_id = people.id
+    WHERE atm_transactions.atm_location = 'Leggett Street'
+    AND atm_transactions.day = 28 AND atm_transactions.month = 7 AND atm_transactions.year = 2021
+    AND atm_transactions.transaction_type = 'withdraw'
+    AND people.id IN (
+        SELECT people.id
+        FROM people
+        JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
+        WHERE bakery_security_logs.hour = 10 AND bakery_security_logs.day = 28 AND bakery_security_logs.month = 7 AND bakery_security_logs.year = 2021
+        AND bakery_security_logs.activity = 'exit'
+    )
+)
+AND flights.day = 28 AND flights.month = 7 AND flights.year = 2021 AND flights.duration < 60;
+
 -- Finalize the single person and connect his call with the receiver to find the accompliance as well as destination city
 
