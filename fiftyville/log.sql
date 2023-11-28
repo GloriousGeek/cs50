@@ -115,5 +115,5 @@ JOIN people ON people.phone_number = phone_calls.caller
     WHERE person_id IN
         (SELECT id FROM people
         WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
-        WHERE minute < 15 AND minute > 30 AND hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
+        WHERE minute < 15 AND minute > 30 AND hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit'))
     AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
