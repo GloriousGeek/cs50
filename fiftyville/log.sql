@@ -99,3 +99,9 @@ WHERE account_number IN
 -- Finalize the single person and connect his call with the receiver
 -- To find the accompliance as well as destination city
 
+
+
+
+-- City thief left to from the above city id = 4
+SELECT city FROM airports
+WHERE id == 4;
