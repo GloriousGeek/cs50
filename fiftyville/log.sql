@@ -91,7 +91,7 @@ WHERE account_number IN
     AND person_id IN
         (SELECT id FROM people
         WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
-        WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
+        WHERE 30 < minute > 15 AND hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
     AND phone_calls.day = 28 AND phone_calls.month = 7
     AND phone_calls.year = 2021 AND phone_calls.duration < 60;
 
