@@ -81,8 +81,11 @@ WHERE flight_id == 36);
 
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
-WHERE passengers.flight_id IN (SELECT )
-
+WHERE passengers.flight_id IN
+(SELECT id FROM flights
+WHERE origin_airport_id IN (SELECT id FROM airports
+WHERE full_name LIKE 'Fiftyville%')
+AND day = 29 AND month = 7 AND year = 2021 and hour < 9)
 JOIN people ON people.phone_number = phone_calls.caller
 WHERE people.id IN (SELECT person_id FROM bank_accounts
 WHERE account_number IN
