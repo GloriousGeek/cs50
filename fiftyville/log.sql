@@ -88,7 +88,8 @@ WHERE passengers.flight_id =
 (SELECT id FROM flights
 WHERE flights.id == 36);
 
-WHERE people.id IN (SELECT person_id FROM bank_accounts
+AND people.id IN 
+(SELECT person_id FROM bank_accounts
 WHERE account_number IN
     (SELECT account_number FROM atm_transactions
     WHERE atm_location = 'Leggett Street'
