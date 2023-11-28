@@ -78,7 +78,11 @@ SELECT * FROM people
 WHERE passport_number IN (SELECT passport_number FROM passengers
 WHERE flight_id == 36);
 
-SELECT * FROM phone_calls
+
+SELECT * FROM people
+JOIN passengers ON passengers.passport_number = people.passport_number
+WHERE passengers.flight_id IN (SELECT )
+
 JOIN people ON people.phone_number = phone_calls.caller
 WHERE people.id IN (SELECT person_id FROM bank_accounts
 WHERE account_number IN
