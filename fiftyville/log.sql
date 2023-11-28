@@ -86,9 +86,8 @@ JOIN people ON people.phone_number = phone_calls.caller
 JOIN flights ON flights.id = passengers.flight_id
 WHERE passengers.flight_id =
 (SELECT id FROM flights
-WHERE flights.id == 36);
-
-AND people.id IN 
+WHERE flights.id == 36)
+AND people.id IN
 (SELECT person_id FROM bank_accounts
 WHERE account_number IN
     (SELECT account_number FROM atm_transactions
