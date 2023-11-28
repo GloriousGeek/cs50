@@ -99,8 +99,10 @@ WHERE account_number IN
 -- Finalize the single person and connect his call with the receiver
 -- To find the accompliance as well as destination city
 
-SELECT * FROM people
-WHERE id = 449774;
+-- Connect person_id 449774 and 686048 with bank account
+SELECT * FROM bank_accounts
+JOIN people ON people.id = bank_accounts.person_id
+WHERE people.id IN (449774, 686048);
 
 
 -- City thief left to from the above city id = 4
