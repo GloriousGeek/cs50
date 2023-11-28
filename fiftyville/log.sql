@@ -110,9 +110,5 @@ WHERE id == 4;
 
 
 -- Find accomplice by finding the receiver of the above person (Bruce)
-SELECT phone_calls.caller, phone_calls.receiver, flights.destination_airport_id
-FROM phone_calls
-JOIN people AS people_caller ON people_caller.phone_number = phone_calls.caller
-JOIN flights ON flights.id = (SELECT flight_id FROM passengers WHERE passport_number = people_caller.passport_number)
-WHERE people_caller.id IN (449774, 686048)
-AND phone_calls.day = 28 AND phone_calls.month = 7 AND phone_calls.year = 2021 AND phone_calls.duration < 60;
+SELECT receiver FROM phone_calls
+WHERE caller = '(367) 555-5533';
