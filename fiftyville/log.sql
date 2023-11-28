@@ -99,7 +99,8 @@ WHERE account_number IN
 -- Finalize the single person and connect his call with the receiver
 -- To find the accompliance as well as destination city
 
-
+SELECT * FROM people
+WHERE id = 449774;
 
 
 -- City thief left to from the above city id = 4
