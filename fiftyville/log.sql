@@ -98,7 +98,7 @@ WHERE account_number IN
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
     AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
 
-SELECT name
+SELECT *
 FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON passengers.flight_id = flights.id
@@ -125,8 +125,8 @@ AND people.id IN (
         WHERE bakery_security_logs.hour = 10 AND bakery_security_logs.day = 28 AND bakery_security_logs.month = 7 AND bakery_security_logs.year = 2021
         AND bakery_security_logs.activity = 'exit'
     )
-)
-AND flights.day = 28 AND flights.month = 7 AND flights.year = 2021 AND flights.duration < 60;
+);
+-- AND flights.day = 28 AND flights.month = 7 AND flights.year = 2021 AND flights.duration < 60;
 
 -- Finalize the single person and connect his call with the receiver to find the accompliance as well as destination city
 
