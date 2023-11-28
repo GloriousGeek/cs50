@@ -74,7 +74,7 @@ SELECT * FROM passengers
 WHERE flight_id == 36;
 
 -- Compare passport numbers of the 3 shortlisted in above queries
--- with the ones receivied in flight_id = 36 to get to the two names
+-- With the ones receivied in flight_id = 36 to get to the two names
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN phone_calls ON people.phone_number = phone_calls.caller
@@ -96,5 +96,6 @@ WHERE account_number IN
     AND phone_calls.year = 2021 AND phone_calls.duration < 60;
 
 
--- Finalize the single person and connect his call with the receiver to find the accompliance as well as destination city
+-- Finalize the single person and connect his call with the receiver
+-- To find the accompliance as well as destination city
 
