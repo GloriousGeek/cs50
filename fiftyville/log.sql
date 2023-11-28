@@ -98,7 +98,7 @@ WHERE account_number IN
         WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
     AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
 
-SELECT *
+SELECT name
 FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN flights ON passengers.flight_id = flights.id
