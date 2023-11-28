@@ -81,24 +81,11 @@ WHERE flight_id == 36);
 
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
-JOIN people ON AS p2 people.phone_number = phone_calls.caller
+JOIN people AS p2 ON p2.phone_number = phone_calls.caller
 JOIN flights ON flights.id = passengers.flight_id
 WHERE passengers.flight_id IN
 (SELECT id FROM flights
-WHERE origin_airport_id IN (SELECT id FROM airports
-WHERE full_name LIKE 'Fiftyville%')
-AND day = 29 AND month = 7 AND year = 2021 and hour < 9)
-
-WHERE people.id IN (SELECT person_id FROM bank_accounts
-WHERE account_number IN
-    (SELECT account_number FROM atm_transactions
-    WHERE atm_location = 'Leggett Street'
-    AND day = 28 AND month = 7 AND year = 2021 AND transaction_type = 'withdraw')
-    AND person_id IN
-        (SELECT id FROM people
-        WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
-        WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
-    AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
+WHERE flights.id == 36);
 
 
 -- Finalize the single person and connect his call with the receiver to find the accompliance as well as destination city
