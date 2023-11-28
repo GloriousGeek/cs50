@@ -74,7 +74,8 @@ SELECT * FROM passengers
 WHERE flight_id == 36;
 
 -- Compare passport numbers of the 3 shortlisted in above queries
--- With the ones receivied in flight_id = 36 to get to the two names
+-- With the ones receivied in flight_id = 36 to get to the one person
+-- Time between 10:15 and 10:30
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 JOIN phone_calls ON people.phone_number = phone_calls.caller
@@ -95,21 +96,20 @@ WHERE account_number IN
     AND phone_calls.day = 28 AND phone_calls.month = 7
     AND phone_calls.year = 2021 AND phone_calls.duration < 60;
 
-
-
-
--- Connect person_id 449774 and 686048 with bank account
-SELECT * FROM bank_accounts
-JOIN people ON people.id = bank_accounts.person_id
-WHERE people.id IN (449774, 686048);
-
-
 -- City thief left to from the above city id = 4
 SELECT city FROM airports
 WHERE id == 4;
 
--- Finalize the single person and connect his call with the receiver
--- To find the accompliance as well as destination city
+
+
+-- -- Connect person_id 449774 and 686048 with bank account
+-- SELECT * FROM bank_accounts
+-- JOIN people ON people.id = bank_accounts.person_id
+-- WHERE people.id IN (449774, 686048);
+
+
+
+-- Find accomplice by finding the receiver of the above person (Bruce)
 SELECT phone_calls.caller, phone_calls.receiver, flights.destination_airport_id
 FROM phone_calls
 JOIN people AS people_caller ON people_caller.phone_number = phone_calls.caller
