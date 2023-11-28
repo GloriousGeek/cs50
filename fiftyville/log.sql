@@ -101,7 +101,7 @@ WHERE account_number IN
 
 SELECT * FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
-JOIN phone_calls AS people_phone ON people.phone_number = phone_calls.caller
+JOIN phone_calls ON people.phone_number = phone_calls.caller
 JOIN flights ON flights.id = passengers.flight_id
 WHERE passengers.flight_id =
 (SELECT id FROM flights
@@ -115,7 +115,9 @@ WHERE account_number IN
     AND person_id IN
         (SELECT id FROM people
         WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
-        WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')));
+        WHERE hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit')))
+    AND phone_calls.day = 28 AND phone_calls.month = 7
+    AND phone_calls.year = 2021 AND phone_calls.duration < 60;
 
 
 -- Finalize the single person and connect his call with the receiver to find the accompliance as well as destination city
