@@ -96,24 +96,15 @@ WHERE account_number IN
     AND phone_calls.day = 28 AND phone_calls.month = 7
     AND phone_calls.year = 2021 AND phone_calls.duration < 60;
 
+-- Find accomplice by finding the receiver of the above person (Bruce)
+SELECT name FROM people
+WHERE phone_number = '(375) 555-8161';
+
 -- City thief left to from the above city id = 4
 SELECT city FROM airports
 WHERE id == 4;
 
 
 
--- -- Connect person_id 449774 and 686048 with bank account
--- SELECT * FROM bank_accounts
--- JOIN people ON people.id = bank_accounts.person_id
--- WHERE people.id IN (449774, 686048);
 
 
-
--- Find accomplice by finding the receiver of the above person (Bruce)
-SELECT * FROM phone_calls
-JOIN people ON people.phone_number = phone_calls.caller
-    WHERE person_id IN
-        (SELECT id FROM people
-        WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
-        WHERE minute < 15 AND minute > 30 AND hour = 10 AND day = 28 AND month = 7 AND year = 2021 AND activity = 'exit'))
-    AND day = 28 AND month = 7 AND year = 2021 AND duration < 60;
