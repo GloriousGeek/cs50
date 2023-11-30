@@ -8,9 +8,16 @@
         <script>
             // TODO: Add code to check answers to questions
             let body = document.querySelector('body');
+            <button id = "red">Liaqat Ali Khan</button>
+            <button id = "green">Mohammad Ali Jinnah</button>
+            <button id = "red">Allama Iqbal</button>
+            <button id = "red">Imran Khan</button>
+            
             if (button == 'Mohammad Ali Jinnah')
             {
-                document.querySelector('#green')
+                document.querySelector('#green').addEventListener('click', function(){
+                    body.style.backgroundColor = 'green';
+                });
             }
         </script>
     </head>
