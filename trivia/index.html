@@ -9,16 +9,21 @@
             // TODO: Add code to check answers to questions
             let body = document.querySelector('h3');
 
+            // DOMcontentloaded is to let the browser skim through all the code so that
+            // My code implements regardless of top to bottom
+            document.addEventListener('DOMContentLoaded', function() {
+            })
+
             // Function to check answer
             function checkAnswer(selected_option)
             {
                 if (selected_option == "option2")
                 {
-                    body.style.background = 'green';
+                    body.style.backgroundColor = 'green';
                 }
                 else
                 {
-                    body.style.background = 'red';
+                    body.style.backgroundColor = 'red';
                 }
             }
         </script>
@@ -50,8 +55,8 @@
                     <input autocomplete="off" autofocus placeholder="Answer" type="text">
                     <button>Check Answer</button>
                 </form>
+                </html>
 
             </div>
         </div>
     </body>
-</html>
