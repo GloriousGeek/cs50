@@ -12,11 +12,17 @@
             <button id = "green">Mohammad Ali Jinnah</button>
             <button id = "red">Allama Iqbal</button>
             <button id = "red">Imran Khan</button>
-            
+
             if (button == 'Mohammad Ali Jinnah')
             {
                 document.querySelector('#green').addEventListener('click', function(){
                     body.style.backgroundColor = 'green';
+                });
+            }
+            else
+            {
+                document.querySelector('#red').addEventListener('click', function(){
+                    body.style.backgroundColor = 'red';
                 });
             }
         </script>
