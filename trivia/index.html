@@ -22,13 +22,17 @@
                     }
                 }
 
-                function check_p2_answer(answer){
-                    // Convert to lowercase for case insensitive 
+                function check_p2_answer(){
+                    // Convert to lowercase for case insensitive
                     let user_input = document.querySelector('input').value.toLowerCase();
-                    if (lc_answer === 'egypt' )
+                    if (user_input === 'egypt' )
                     {
-                        body.style.backgroundColor = 'green'
+                        body.style.backgroundColor = 'green';
 
+                    }
+                    else
+                    {
+                        body.style.backgroundColor = 'red';
                     }
                 }
 
