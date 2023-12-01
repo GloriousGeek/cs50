@@ -41,11 +41,11 @@
                     document.querySelector('#check').addEventListener('click', function(){
                         check_p2_answer();
                     });
-                    
+
                     function check_p2_answer(){
                         // Convert to lowercase for case insensitive
                         let user_input = document.querySelector('input').value.toLowerCase();
-                        if (user_input === 'egypt' )
+                        let correctAnswer = document.querySelector('input').getAttribute('p2_correct_ans').toLowerCase();
                         {
                             body.style.backgroundColor = 'green';
 
