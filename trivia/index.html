@@ -23,11 +23,12 @@
                 }
 
                 function check_p2_answer(answer){
-                    let lc_answer = answer.toLowerCase();
+                    // Convert to lowercase for case insensitive 
+                    let user_input = document.querySelector('input').value.toLowerCase();
                     if (lc_answer === 'egypt' )
                     {
                         body.style.backgroundColor = 'green'
-                        
+
                     }
                 }
 
