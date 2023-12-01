@@ -9,37 +9,52 @@
             // TODO: Add code to check answers to questions
             let body = document.querySelector('body');
 
-                // Function to check answer
-                function checkAnswer(selected_option)
-                {
-                    if (selected_option === 'option2')
-                    {
-                        body.style.backgroundColor = 'green';
-                    }
-                    else
-                    {
-                        body.style.backgroundColor = 'red';
-                    }
-                }
-
-                function check_p2_answer(){
-                    // Convert to lowercase for case insensitive
-                    let user_input = document.querySelector('input').value.toLowerCase();
-                    if (user_input === 'egypt' )
-                    {
-                        body.style.backgroundColor = 'green';
-
-                    }
-                    else
-                    {
-                        body.style.backgroundColor = 'red';
-                    }
-                }
-
             // DOMcontentloaded is to let the browser skim through all the code so that
             // My code implements regardless of top to bottom
             document.addEventListener('DOMContentLoaded', function() {
+                
+                // Event Listener for MCQ
+                let Btn = documemt.querySelectorAll('.btn');
+                Btn.forEach(function(ans_button) {
+                    ans_button.addEventListener('click', function(event){
+                        checkAnswer(ans_button);
+                    });
+                });
+
+                    // Function to check answer
+                    function checkAnswer(ans_button)
+                    {
+                        let correct_ans = ans_button.getAttribute('btn') === 'true';
+                        if (correct_ans)
+                        {
+                            ans_button.style.backgroundColor = 'green';
+                            document.querySelector('#feedback1').innerHTML = 'Correct!';
+                        }
+                        else
+                        {
+                            ans_button.style.backgroundColor = 'red';
+                            document.querySelector('#feedback1').innherHTML = 'Incorrect';
+
+                        }
+                    }
+
+                    function check_p2_answer(){
+                        // Convert to lowercase for case insensitive
+                        let user_input = document.querySelector('input').value.toLowerCase();
+                        if (user_input === 'egypt' )
+                        {
+                            body.style.backgroundColor = 'green';
+
+                        }
+                        else
+                        {
+                            body.style.backgroundColor = 'red';
+                        }
+                    }
+
             });
+
+
 
         </script>
     </head>
@@ -55,10 +70,10 @@
                 <!-- TODO: Add multiple choice question here -->
                 <!-- Also add button -->
                 <h3>Who is the founder of Pakistan?</h3>
-                <button class="option1" answer_correct ='false'>Liaqat Ali Khan</button>
-                <button class="option2" answer_corrent = 'true'">Mohammad Ali Jinnah</button>
-                <button class="option3" answer_correct ='false'>Allama Iqbal</button>
-                <button class="option4" answer_correct ='false'>Imran Khan</button>
+                <button class="btn" answer_correct ='false'>Liaqat Ali Khan</button>
+                <button class="btn" answer_corrent = 'true'>Mohammad Ali Jinnah</button>
+                <button class="btn" answer_correct ='false'>Allama Iqbal</button>
+                <button class="btn" answer_correct ='false'>Imran Khan</button>
 
                 <!-- For feedback -->
                 <p id = "feedback1"></p>
