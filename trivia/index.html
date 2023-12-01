@@ -12,7 +12,7 @@
             // DOMcontentloaded is to let the browser skim through all the code so that
             // My code implements regardless of top to bottom
             document.addEventListener('DOMContentLoaded', function() {
-                
+
                 // Event Listener for MCQ
                 let Btn = documemt.querySelectorAll('.btn');
                 Btn.forEach(function(ans_button) {
@@ -38,6 +38,7 @@
                         }
                     }
 
+                    document.querySelector('#check');
                     function check_p2_answer(){
                         // Convert to lowercase for case insensitive
                         let user_input = document.querySelector('input').value.toLowerCase();
@@ -85,10 +86,13 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>Which country has the most pyramids?</h3>
-                <form onsubmit="event.preventDefault(); check_p2_answer();">
-                    <input autocomplete="off" autofocus placeholder="Answer" type="text">
-                    <button onclick="check_p2_answer()">Check Answer</button>
-                </form>
+                <input autocomplete="off" autofocus placeholder="Answer" type="text" p2_correct_ans ="Sudan">
+                <button id = "check">Check Answer</button>
+
+                <!-- Feedback for part2 -->
+                <p id = "feedback2"></p>
+
+
                 </html>
 
             </div>
