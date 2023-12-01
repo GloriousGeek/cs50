@@ -46,6 +46,10 @@
                         // Convert to lowercase for case insensitive
                         let user_input = document.querySelector('input').value.toLowerCase();
                         let correctAnswer = document.querySelector('input').getAttribute('p2_correct_ans').toLowerCase();
+
+                        let is_correct = (user_input === correctAnswer);
+
+                        if (is_correct)
                         {
                             body.style.backgroundColor = 'green';
 
