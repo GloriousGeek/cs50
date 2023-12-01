@@ -38,7 +38,10 @@
                         }
                     }
 
-                    document.querySelector('#check');
+                    document.querySelector('#check').addEventListener('click', function(){
+                        check_p2_answer();
+                    });
+                    
                     function check_p2_answer(){
                         // Convert to lowercase for case insensitive
                         let user_input = document.querySelector('input').value.toLowerCase();
