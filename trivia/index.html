@@ -22,7 +22,7 @@
                     // Function to check answer
                     function checkAnswer(ans_button)
                     {
-                        let correct_ans = ans_button.getAttribute('btn') === 'true';
+                        let correct_ans = ans_button.getAttribute('answer_correct') === 'true';
                         if (correct_ans)
                         {
                             ans_button.style.backgroundColor = 'green';
