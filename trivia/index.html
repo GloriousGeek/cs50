@@ -12,20 +12,22 @@
             // DOMcontentloaded is to let the browser skim through all the code so that
             // My code implements regardless of top to bottom
             document.addEventListener('DOMContentLoaded', function() {
-            })
 
-            // Function to check answer
-            function checkAnswer(selected_option)
-            {
-                if (selected_option === 'option2')
+
+                // Function to check answer
+                function checkAnswer(selected_option)
                 {
-                    body.style.backgroundColor = 'green';
+                    if (selected_option === 'option2')
+                    {
+                        body.style.backgroundColor = 'green';
+                    }
+                    else
+                    {
+                        body.style.backgroundColor = 'red';
+                    }
                 }
-                else
-                {
-                    body.style.backgroundColor = 'red';
-                }
-            }
+
+            });
         </script>
     </head>
     <body>
