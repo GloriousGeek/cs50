@@ -1,8 +1,10 @@
-/* Styling the header with a background color and padding */
+/* Styling the header with a white background color and padding */
 .header {
     overflow: hidden;
-    background-color: #ffff;
+    background-color: #ffffff;
     padding: 20px 10px;
 }
 
-
+.body {
+    background-color: purple;
+}
