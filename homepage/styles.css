@@ -5,6 +5,12 @@
     padding: 20px 10px;
 }
 
-.body {
-    background-color: purple;
+body {
+    background-color: #fff;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
 }
