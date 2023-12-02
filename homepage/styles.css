@@ -1,5 +1,8 @@
 /* Styling the header with a background color and padding */
 .header {
     overflow: hidden;
-    background-color: 
+    background-color: #ffff;
+    padding: 20px 10px;
 }
+
+
