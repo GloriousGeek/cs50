@@ -1,3 +1,14 @@
+/* Styling the body */
+body {
+    background-color: green;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
 /* Styling the header with a white background color and padding */
 .header {
     overflow: hidden;
@@ -53,12 +64,4 @@ when the screen is 500px wide or less, stack the links on top of each other */
     }
   }
 
-body {
-    background-color: green;
-    color: #212529;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
-}
+
