@@ -11,7 +11,7 @@ body {
 
 /* Contains all the data inside the body */
 .container {
-  color: purple;
+  color: green;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -19,7 +19,7 @@ body {
 }
 
 .contact {
-  color: purple;
+  color: green;
   margin-left: auto;
   margin-right: auto;
   padding-top: 400px;
@@ -60,7 +60,7 @@ body {
 
 /* Style the active/current link*/
 .header a.active {
-    background-color: purple;
+    background-color: green;
     color: white;
   }
 
