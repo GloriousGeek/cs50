@@ -1,3 +1,8 @@
+.about-us-img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Styling the body */
 body {
     background-color: #c8f5c4;
@@ -85,11 +90,6 @@ body {
     margin-right: 20px;
   }
 
-.about-us-img {
-  max-width: 100%;
-  height: auto;
-}
-
 
 
 /* Add media queries for responsiveness -
@@ -107,6 +107,10 @@ when the screen is 500px wide or less, stack the links on top of each other */
 
 .section {
 
+}
+
+.story-img {
+  height: 50%
 }
 
 
