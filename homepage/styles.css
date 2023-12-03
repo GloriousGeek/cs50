@@ -51,7 +51,8 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #ffffff; /* Set the text color */
+  color: green;
+  font-family: "Audiowide", sans-serif;
 }
 
 .logo img {
