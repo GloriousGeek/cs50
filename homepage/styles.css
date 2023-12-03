@@ -46,7 +46,19 @@ body {
     border-radius: 4px;
   }
 
+/* Define styling for the logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff; /* Set the text color */
+}
 
+.logo img {
+  max-width: 50px; /* Set the maximum width of the logo image */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 10px; /* Add spacing between the logo image and text */
+}
 
 /* Style the logo link (notice same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
