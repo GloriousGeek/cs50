@@ -18,6 +18,15 @@ body {
   padding-right: 15px;
 }
 
+.contact {
+  color: purple;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 400px;
+  padding left: 15px;
+  padding-right: 15px;
+}
+
 /* Styling the header with a white background color and padding */
 .header {
     overflow: hidden;
