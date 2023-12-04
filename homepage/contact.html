@@ -11,7 +11,7 @@
                 function check_name() {
                     // taking the unique id='name' from the input in the html code below
                     let user_input = document.querySelector('#name');
-                    if (typeof user_input.value !== "string") {
+                    if (typeof user_input.value !== "text") {
                         user_input.style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'Usage: Text only!';
                     } else {
