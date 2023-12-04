@@ -14,15 +14,15 @@
                     if (type(user_input) != "text")
                     {
                         inputField.style.backgroundColor = 'red';
-                        document.querySelector('#feedback2').innerHTML = 'Usage: Text only!';
+                        document.querySelector('#feedback1').innerHTML = 'Usage: Text only!';
                     }
                     else
                     {
                         inputField.style.backgroundColor = 'green';
-                        document.querySelector('#feedback2').innerHTML = 'Thank you!';
+                        document.querySelector('#feedback1').innerHTML = 'Thank you!';
                     }
                 }
-            })
+            });
         </script>
     </head>
     <body>
@@ -70,6 +70,10 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+
+                <!-- For feedback -->
+                <p id = "feedback1"></p>
+                
             </div>
         </div>
     </div>
