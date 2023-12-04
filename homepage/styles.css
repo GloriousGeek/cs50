@@ -74,6 +74,7 @@ body {
 .header-right {
   float: right;
   margin-right: 20px;
+  padding-top:10px;
 }
 
 /* Define styling for the logo */
