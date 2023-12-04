@@ -9,12 +9,16 @@
             // DOMcontentloaded to let the browser skim through all the code before execution
             document.addEventListener('DOMContentLoaded', function() {
                 function check_name() {
-                    // taking the unique id='name' from the input in the html code below
+                    // Taking the unique id='name' from the input in the html code below
                     let user_input = document.querySelector('#name');
-                    if (typeof user_input.value !== "text") {
+                    // To check if the user_input contains only letters
+                    let lettersOnlyRegex = /^[A-Za-z]+$/;
+
+                    if (!lettersOnlyRegex.test(user_input.value)) {
                         user_input.style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'Name usage: Text only!';
                     } else {
+                        user_input.style.backgroundColor = 'default';
                         document.querySelector('#feedback1').innerHTML = 'Thank you!';
                     }
                 }
