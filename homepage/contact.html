@@ -11,7 +11,7 @@
             {
                 function check_name(){
                     let user_input = document.querySelector('.mb-3.input');
-                    if (type(user_input) != "text")
+                    if (typeof user_input.value !== "string")
                     {
                         inputField.style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'Usage: Text only!';
@@ -73,7 +73,7 @@
 
                 <!-- For feedback -->
                 <p id = "feedback1"></p>
-                
+
             </div>
         </div>
     </div>
