@@ -7,27 +7,24 @@
         <title>Contact</title>
         <script>
             // DOMcontentloaded to let the browser skim through all the code before execution
-            document.addEventListener('DOMContentLoaded', function()
-            {
-                function check_name(){
+            document.addEventListener('DOMContentLoaded', function() {
+                function check_name() {
                     // taking the unique id='name' from the input in the html code below
                     let user_input = document.querySelector('#name');
-                    if (typeof user_input.value !== "string")
-                    {
+                    if (typeof user_input.value !== "string") {
                         user_input.style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'Usage: Text only!';
-                    }
-                    else
-                    {
+                    } else {
                         user_input.style.backgroundColor = 'green';
                         document.querySelector('#feedback1').innerHTML = 'Thank you!';
                     }
-
-                    document.querySelector('form').addEventListener('submit', function(event) {
-                        event.preventDefault();
-                        check_name();
-                    });
                 }
+
+                // Move this event listener outside the check_name function
+                document.querySelector('form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    check_name();
+                });
             });
         </script>
     </head>
