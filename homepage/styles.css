@@ -102,6 +102,14 @@ when the screen is 500px wide or less, stack the links on top of each other */
     .header-right {
       float: none;
     }
+    .container {
+      color: green;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: auto;
+    }
   }
 
 .story-img {
