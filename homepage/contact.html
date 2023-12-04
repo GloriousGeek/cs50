@@ -13,7 +13,13 @@
                     let user_input = document.querySelector('.mb-3.input');
                     if (type(user_input) != "text")
                     {
-                        
+                        inputField.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Usage: Text only!';
+                    }
+                    else
+                    {
+                        inputField.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Thank you!';
                     }
                 }
             })
