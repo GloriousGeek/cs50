@@ -65,7 +65,12 @@ body {
   margin-right: 10px; /* Add spacing between the logo image and text */
 }
 
-.
+.table {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 
 /* Style the logo link (notice same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
