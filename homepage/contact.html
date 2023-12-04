@@ -13,14 +13,19 @@
                     let user_input = document.querySelector('.mb-3.input');
                     if (typeof user_input.value !== "string")
                     {
-                        inputField.style.backgroundColor = 'red';
+                        user_input.style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'Usage: Text only!';
                     }
                     else
                     {
-                        inputField.style.backgroundColor = 'green';
+                        user_input.style.backgroundColor = 'green';
                         document.querySelector('#feedback1').innerHTML = 'Thank you!';
                     }
+
+                    document.querySelector('form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        check_name();
+                    });
                 }
             });
         </script>
