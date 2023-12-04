@@ -51,6 +51,31 @@ body {
     border-radius: 4px;
   }
 
+/* Style the logo link (notice same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color:green;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: white;
+  color: brown;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: green;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+  margin-right: 20px;
+}
+
 /* Define styling for the logo */
 .logo {
   display: flex;
@@ -65,40 +90,6 @@ body {
   margin-right: 10px; /* Add spacing between the logo image and text */
 }
 
-/* .table {
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-
-} */
-
-/* Style the logo link (notice same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-    color:green;
-  }
-
-/* Change the background color on mouse-over */
-.header a:hover {
-    background-color: white;
-    color: brown;
-  }
-
-/* Style the active/current link*/
-.header a.active {
-    background-color: green;
-    color: white;
-  }
-
-/* Float the link section to the right */
-.header-right {
-    float: right;
-    margin-right: 20px;
-  }
-
-
-
 /* Add media queries for responsiveness -
 when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
@@ -111,10 +102,6 @@ when the screen is 500px wide or less, stack the links on top of each other */
       float: none;
     }
   }
-
-.section {
-
-}
 
 .story-img {
   max-height: 350px;
