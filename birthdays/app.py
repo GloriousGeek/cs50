@@ -27,12 +27,6 @@ def index():
     if request.method == "POST":
 
         # TODO: Add the user's entry into the database
-
-        return redirect("/")
-
-    else:
-
-        # TODO: Display the entries in the database on index.html
         db.execute("SELECT * FROM birthdays")
 
         # Fetching data from index.html
@@ -41,5 +35,12 @@ def index():
         day = request.args.get('day')
 
         return render_template("index.html")
+
+        return redirect("/")
+
+    else:
+
+        # TODO: Display the entries in the database on index.html
+
 
 
