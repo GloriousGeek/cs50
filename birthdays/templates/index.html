@@ -38,8 +38,8 @@
                         {% for birthday in birthdays %}
                             <tr>
                                 <td>{{ birthday.name }}</td>
-                                <td>{{ birthday.month }}</td>
-                                <td>{{ birthday.day }}</td>
+                                <!-- Concatinating month and day in Jinja -->
+                                <td>{{ birthday.month ~ '/' ~ birthday.day }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
