@@ -50,7 +50,7 @@ def index():
         entries = db.execute("SELECT * FROM birthdays").fetchall()
 
         # Check entries in index.html
-        return render_template("index.html", entries = entries)
+        return render_template("index.html", birthdays = entries)
 
 
 
