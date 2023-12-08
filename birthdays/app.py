@@ -46,6 +46,9 @@ def index():
         # TODO: Display the entries in the database on index.html
         # User is getting the website
 
+        # Query for all birthdays
+        entries = db.execute("SELECT * FROM birthdays")
+
         return render_template("index.html")
 
 
