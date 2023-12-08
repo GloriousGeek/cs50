@@ -6,9 +6,6 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 # Configure application
 app = Flask(__name__)
 
-# Global variable
-PEOPLE = {}
-
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
@@ -29,14 +26,13 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        # TODO: Add the user's entry into the database
+        # TODO: Add the user's entry into the database when user enters.
         db.execute("SELECT * FROM birthdays")
 
         # Fetching data from index.html. .form.get for POST method
         name = request.form.get('name')
         month = request.form.get('month')
         day = request.form.get('day')
-
 
         # Insert the above values in your database of birthdays.db
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
