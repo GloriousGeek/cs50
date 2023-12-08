@@ -25,22 +25,25 @@ def after_request(response):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-
         # TODO: Add the user's entry into the database when user enters.
         db.execute("SELECT * FROM birthdays")
 
         # Fetching data from index.html. .form.get for POST method
-        name = request.form.get('name')
-        month = request.form.get('month')
-        day = request.form.get('day')
+        name = request.form.get("name")
+        month = request.form.get("month")
+        day = request.form.get("day")
 
         # Insert the above values in your database of birthdays.db
-        db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
+        db.execute(
+            "INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)",
+            name,
+            month,
+            day,
+        )
 
         return redirect("/")
 
     else:
-
         # TODO: Display the entries in the database on index.html
         # User is getting the website
 
@@ -48,7 +51,4 @@ def index():
         entries = db.execute("SELECT * FROM birthdays")
 
         # Check entries in index.html
-        return render_template("index.html", birthdays = entries)
-
-
-
+        return render_template("index.html", birthdays=entries)
