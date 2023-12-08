@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="/static/styles.css" rel="stylesheet">
         <title>Birthdays</title>
     </head>
+
     <body>
         <div class="header">
             <h1>Birthdays</h1>
@@ -38,7 +40,7 @@
                         {% for birthday in birthdays %}
                             <tr>
                                 <td>{{ birthday.name }}</td>
-                                <!-- Concatinating month and day in Jinja -->
+                            <!-- Concatinating month and day in Jinja -->
                                 <td>{{ birthday.month ~ '/' ~ birthday.day }}</td>
                             </tr>
                         {% endfor %}
@@ -47,4 +49,5 @@
             </div>
         </div>
     </body>
+
 </html>
