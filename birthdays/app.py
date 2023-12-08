@@ -34,13 +34,16 @@ def index():
         month = request.args.get('month')
         day = request.args.get('day')
 
-        return render_template("index.html")
+
 
         return redirect("/")
 
     else:
 
         # TODO: Display the entries in the database on index.html
+        # User is getting the website
+
+        return render_template("index.html")
 
 
 
