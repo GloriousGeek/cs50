@@ -47,9 +47,9 @@ def index():
         # User is getting the website
 
         # Query for all birthdays
-        entries = db.execute("SELECT * FROM birthdays")
+        entries = db.execute("SELECT * FROM birthdays").fetchall()
 
-        return render_template("index.html")
+        return render_template("index.html", entries)
 
 
 
