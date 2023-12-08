@@ -49,7 +49,7 @@ def index():
         # Query for all birthdays
         entries = db.execute("SELECT * FROM birthdays").fetchall()
 
-        return render_template("index.html", entries)
+        return render_template("index.html", entries = entries)
 
 
 
