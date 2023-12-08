@@ -32,12 +32,12 @@ def index():
         # TODO: Add the user's entry into the database
         db.execute("SELECT * FROM birthdays")
 
-        # Fetching data from index.html
-        name = request.args.get('name')
-        month = request.args.get('month')
-        day = request.args.get('day')
+        # Fetching data from index.html. .form.get for POST method
+        name = request.form.get('name')
+        month = request.form.get('month')
+        day = request.form.get('day')
 
-
+        db.execute("INSERT )
 
         return redirect("/")
 
