@@ -140,14 +140,14 @@ def register():
         # Add to database (users table)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, generate_password_hash(password))
 
+        # Once registeration is done, keep track of the user
         session["user_id"] = "id"
-
 
     # For get request
     else:
-        return render_template("/register")
+        return render_template("register.html")
 
-    return apology("TODO")
+    # return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
