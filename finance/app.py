@@ -109,25 +109,30 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+
+    username = request.form.get("username")
+    password = request.form.get("password")
+    verifypassword = request.form.get("verifypassword")
+
     # If user is submitting something
     if request.method == "POST":
 
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if not username:
             return apology("must provide username", 403)
 
         # Ensure username is not taken already
-        if request.form.get("username")
+        if db.execute("SELECT * FROM users WHERE username = ?", username)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password", 403)
 
-        elif not request.form.get("verifypassword"):
+        elif not verifypassword:
             return apology("must verify password", 403)
 
         # When passwords don't match
-        elif request.form.get("password") != request.form.get("verifypassword"):
+        elif (password != verifypassword):
             return apology("password does not match", 403)
 
         # Get username
