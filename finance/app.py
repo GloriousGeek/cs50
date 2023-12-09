@@ -108,7 +108,7 @@ def quote():
     """Get stock quote."""
 
     if request.method == "POST":
-        return lookup(symbol)
+        lookup(symbol)
 
 
     else:
