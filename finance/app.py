@@ -137,10 +137,8 @@ def register():
         elif (password != verifypassword):
             return apology("password does not match", 403)
 
-        # Get username
-        username = get.form.request("username")
-
         # Add to database (users table)
+        row = db.execute(INSERT )
 
 
     # For get request
