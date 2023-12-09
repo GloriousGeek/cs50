@@ -122,7 +122,8 @@ def register():
             return apology("must provide username", 403)
 
         # Ensure username is not taken already
-        if db.execute("SELECT * FROM users WHERE username = ?", username)
+        if db.execute("SELECT * FROM users WHERE username = ?", username):
+            return apology("Username already taken", 403)
 
         # Ensure password was submitted
         elif not password:
