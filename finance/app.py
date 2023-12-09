@@ -61,7 +61,6 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
@@ -71,10 +70,14 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+        if len(rows) != 1 or not check_password_hash(
+            rows[0]["hash"], request.form.get("password")
+        ):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
@@ -116,7 +119,6 @@ def register():
 
     # If user is submitting something
     if request.method == "POST":
-
         # Ensure username was submitted
         if not username:
             return apology("must provide username", 403)
@@ -135,11 +137,15 @@ def register():
             return apology("must verify password", 403)
 
         # When passwords don't match
-        elif (password != verifypassword):
+        elif password != verifypassword:
             return apology("password does not match", 403)
 
         # If all good, add to database (users table)
-        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, generate_password_hash(password))
+        db.execute(
+            "INSERT INTO users (username, hash) VALUES (?,?)",
+            username,
+            generate_password_hash(password),
+        )
 
         # Once registeration is done, keep track of the user
         session["user_id"] = "id"
@@ -150,8 +156,6 @@ def register():
     # For get request
     else:
         return render_template("register.html")
-
-    # return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
