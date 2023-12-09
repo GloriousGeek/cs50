@@ -111,7 +111,7 @@ def register():
     """Register user"""
     # If user is submitting something
     if request.method == "POST":
-        
+
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
@@ -119,6 +119,8 @@ def register():
         # Ensure password was submitted
         elif not request.form.get("password"):
             return apology("must provide password", 403)
+
+        # Add to database
 
 
     # For get request
