@@ -122,7 +122,7 @@ def register():
             return apology("must provide username", 403)
 
         # Ensure username is not taken already by querying database
-        result = db.execute("SELECT * FROM users WHERE username = ?", username)
+        result = db.execute("SELECT * FROM users WHERE username = ?", username).fetchone()
         if result is not None:
             return apology("Username already taken", 403)
 
