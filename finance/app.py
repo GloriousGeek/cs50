@@ -112,7 +112,6 @@ def quote():
         look_symbol = lookup(symbol)
         return render_template("quoted.html", symbol=look_symbol)
 
-
     else:
         return render_template("quote.html")
 
