@@ -144,6 +144,9 @@ def register():
         # Once registeration is done, keep track of the user
         session["user_id"] = "id"
 
+        # Redirect user to home page
+        return redirect("/")
+
     # For get request
     else:
         return render_template("register.html")
