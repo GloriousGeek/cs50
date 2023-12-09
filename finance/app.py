@@ -137,7 +137,7 @@ def register():
         elif (password != verifypassword):
             return apology("password does not match", 403)
 
-        # Add to database (users table)
+        # If all good, add to database (users table)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, generate_password_hash(password))
 
         # Once registeration is done, keep track of the user
