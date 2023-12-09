@@ -120,6 +120,9 @@ def register():
         elif not request.form.get("password"):
             return apology("must provide password", 403)
 
+        # Get username
+        username = get.form.request("username")
+
         # Add to database
 
 
