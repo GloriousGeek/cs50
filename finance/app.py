@@ -140,7 +140,7 @@ def register():
         # Add to database (users table)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, generate_password_hash(password))
 
-        
+        session["user_id"] = "id"
 
 
     # For get request
