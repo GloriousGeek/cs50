@@ -126,13 +126,14 @@ def register():
         elif not request.form.get("verifypassword"):
             return apology("must verify password", 403)
 
+        # When passwords don't match
         elif request.form.get("password") != request.form.get("verifypassword"):
             return apology("password does not match", 403)
 
         # Get username
         username = get.form.request("username")
 
-        # Add to database
+        # Add to database (users table)
 
 
     # For get request
