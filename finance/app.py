@@ -138,7 +138,7 @@ def register():
             return apology("password does not match", 403)
 
         # Add to database (users table)
-        row = db.execute(INSERT )
+        row = db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username,  )
 
 
     # For get request
