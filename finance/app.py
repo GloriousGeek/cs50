@@ -49,6 +49,11 @@ def buy():
         if look_symbol is None:
             return apology("Invalid entry", 400)
 
+        shares = request.form.get("shares")
+        if shares < 0:
+            return apology("Shares cannot be negative", 400)
+
+        # Current price
         symbol_price = look_symbol["price"]
 
         # Lookup how much cash user has
