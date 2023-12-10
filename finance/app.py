@@ -49,7 +49,7 @@ def buy():
         symbol_price = look_symbol["price"]
 
         # Lookup how much cash user has
-        db.execute("SELECT cash FROM users WHERE user = ? VALUE
+        cash = db.execute("SELECT cash FROM users WHERE user = ?", )
 
 
 
