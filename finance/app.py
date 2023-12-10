@@ -82,7 +82,8 @@ def buy():
             # Update cash in db
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
-        # Update stocks table
+            # Update stocks table
+            db.execute("UPDATE stocks SET symbol = ? AND SET shares = ? AND SET price = ? WHERE id = ?",)
 
     else:
         return render_template("buy.html")
