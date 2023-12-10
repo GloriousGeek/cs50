@@ -46,6 +46,9 @@ def buy():
     if request.method="POST":
         symbol = request.form.get("symbol")
         look_symbol = lookup(symbol)
+        if look_symbol is None:
+            return apology("Invalid entry", 400)
+
         symbol_price = look_symbol["price"]
 
         # Lookup how much cash user has
