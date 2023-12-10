@@ -35,9 +35,16 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    request.method=="GET"
 
-    request.args.get("table table-striped")
+    # Get user's stocks
+    user_stocks = db.execute("SELECT * FROM stocks WHERE id = ?", session["user_id"])
+
+    # Calculate total value of each stock
+    for stock in user_stocks:
+        stock["total"] = stock["shares"] * stock["price"]
+
+    # Cash balance
+    user_cash = db.execute(")
 
 
     return render_template("index.html")
