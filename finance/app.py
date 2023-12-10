@@ -36,12 +36,12 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     request.method=="GET"
-    
+
     request.args.get("table table-striped")
 
 
     return render_template("index.html")
-    return apology("TODO")
+
 
 
 @app.route("/buy", methods=["GET", "POST"])
