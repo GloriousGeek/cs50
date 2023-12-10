@@ -64,15 +64,15 @@ def buy():
 
         # Create new table to add to database
         db.execute(
-            "CREATE TABLE IF NOT EXISTS stocks
+            """CREATE TABLE IF NOT EXISTS stocks
             (id INTEGER PRIMARY KEY AUTOINCREMENT,
             user_id INTEGER NOT NULL,
             symbol TEXT NOT NULL,
             shares INTEGER NOT NULL,
             price NUMERIC NOT NULL,
             date_purchased DATETIME DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (user_id) REFERENCES users(id))"
-                   )
+            FOREIGN KEY (user_id) REFERENCES users(id))
+            """)
 
 
     else:
