@@ -43,6 +43,18 @@ def index():
 def buy():
     """Buy shares of stock"""
 
+    # Create new table for stocks to add to database
+        db.execute(
+            """CREATE TABLE IF NOT EXISTS stocks
+            (id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL,
+            symbol TEXT NOT NULL,
+            shares INTEGER NOT NULL,
+            price NUMERIC NOT NULL,
+            date_purchased DATETIME DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (user_id) REFERENCES users(id))
+            """)
+
     if request.method="POST":
         symbol = request.form.get("symbol")
         look_symbol = lookup(symbol)
@@ -64,25 +76,13 @@ def buy():
         if user_cash < total_price:
             return apology("Not enough money", 400)
         else:
-            # Update cash
             # Deduct the cost of the purchased stock from the user's cash
             new_cash = user_cash - total_price
-            
-            db.execute("SELECT * FROM users WHERE user = ?", session["user_id"]
-                       ")
 
-        # Create new table to add to database
-        db.execute(
-            """CREATE TABLE IF NOT EXISTS stocks
-            (id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id INTEGER NOT NULL,
-            symbol TEXT NOT NULL,
-            shares INTEGER NOT NULL,
-            price NUMERIC NOT NULL,
-            date_purchased DATETIME DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (user_id) REFERENCES users(id))
-            """)
+            # Update cash in db
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
+        # Update stocks table
 
     else:
         return render_template("buy.html")
