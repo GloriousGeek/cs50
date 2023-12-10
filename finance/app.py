@@ -61,6 +61,10 @@ def buy():
 
         if cash < symbol_price:
             return apology("Not enough money", 400)
+        else:
+            # Update cash
+            db.execute("SELECT * FROM users WHERE user = ?",
+                       ")
 
         # Create new table to add to database
         db.execute(
