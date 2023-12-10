@@ -43,38 +43,47 @@ def index():
 def buy():
     """Buy shares of stock"""
 
-    # Create new table for stocks to add to database
-        db.execute(
-            """CREATE TABLE IF NOT EXISTS stocks
-            (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    # Create a new table (stocks) in finance.db
+    db.execute("""
+        CREATE TABLE IF NOT EXISTS stocks (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             user_id INTEGER NOT NULL,
             symbol TEXT NOT NULL,
             shares INTEGER NOT NULL,
             price NUMERIC NOT NULL,
             date_purchased DATETIME DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (user_id) REFERENCES users(id))
-            """)
+            FOREIGN KEY (user_id) REFERENCES users(id)
+        )
+    """)
 
-    if request.method="POST":
+    if request.method=="POST":
         symbol = request.form.get("symbol")
         look_symbol = lookup(symbol)
         if look_symbol is None:
             return apology("Invalid entry", 400)
 
         shares = request.form.get("shares")
-        if shares < 0:
+        # Ensure the shares input is a positive integer
+        if not shares.isdigit() or int(shares) <= 0:
             return apology("Shares cannot be negative", 400)
 
         # Current price
         stock_price = look_symbol["price"]
 
-        total_price = shares * stock_price
+        total_price = int(shares) * stock_price
 
         # Lookup how much cash user has
-        user_cash = db.execute("SELECT cash FROM users WHERE user = ?", session["user_id"])
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        if not user_cash:
+            return apology("User not found", 400)
+        elif len(user_cash) > 1:
+            return apology("Multiple users found with the same ID")
+        else:
+            # [0] first element of the list as the user logged in is the only one and ["cash"] is the key
+            user_cash = user_cash[0]["cash"]
 
-        if user_cash < total_price:
-            return apology("Not enough money", 400)
+        if (user_cash) < (total_price):
+            return apology("Not enough cash to buy stock", 400)
         else:
             # Deduct the cost of the purchased stock from the user's cash
             new_cash = user_cash - total_price
@@ -83,7 +92,12 @@ def buy():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
             # Update stocks table
-            db.execute("UPDATE stocks SET symbol = ? AND SET shares = ? AND SET price = ? WHERE id = ?",)
+            db.execute("""
+            INSERT INTO stocks (user_id, symbol, shares, price)
+            VALUES (?,?,?,?)""", session["user_id"], symbol, shares, stock_price)
+
+            # Return to the main page
+            return redirect("/")
 
     else:
         return render_template("buy.html")
