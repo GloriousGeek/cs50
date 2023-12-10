@@ -46,7 +46,11 @@ def buy():
     if request.method="POST":
         symbol = request.form.get("symbol")
         look_symbol = lookup(symbol)
-        
+        symbol_price = look_symbol["price"]
+
+        # Lookup how much cash user has
+        db.execute("SELECT cash FROM users WHERE user = ? VALUE
+
 
 
     else:
