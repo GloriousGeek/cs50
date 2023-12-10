@@ -63,7 +63,7 @@ def buy():
             return apology("Not enough money", 400)
 
         # Create new table to add to database
-        db.execute("
+        db.execute(
                    )
 
 
