@@ -17,13 +17,16 @@
         </thead>
         <tbody>
             <!-- For Loop -->
-            {% for x}
+            {% for stock in stocks %}
                 <tr>
-                    <td>{{ x.symbol }}</td>
-                    <td>{{ x.symbol }}</td>
-                    <td>{{ x.shares }}</td>
-                    <td>{{ x.price }}</td>
-                    <td>{{ x.[shares * price] }}</td>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td>{{ stock["price"] | round(2) }}</td>
+                    <td>{{ stock["shares"] * stock["price"] | round(2) }}</td>
                 </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
 {% endblock %}

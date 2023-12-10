@@ -44,10 +44,12 @@ def index():
         stock["total"] = stock["shares"] * stock["price"]
 
     # Cash balance
-    user_cash = db.execute(")
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
+    # Total portfolio value
+    total_value = user_cash + sum(stock["total"] for stock in user_stocks)
 
-    return render_template("index.html")
+    return render_template("index.html", )
 
 
 
