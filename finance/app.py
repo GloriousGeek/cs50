@@ -54,16 +54,21 @@ def buy():
             return apology("Shares cannot be negative", 400)
 
         # Current price
-        symbol_price = look_symbol["price"]
+        stock_price = look_symbol["price"]
+
+        total_price = shares * stock_price
 
         # Lookup how much cash user has
-        cash = db.execute("SELECT cash FROM users WHERE user = ?", )
+        user_cash = db.execute("SELECT cash FROM users WHERE user = ?", session["user_id"])
 
-        if cash < symbol_price:
+        if user_cash < total_price:
             return apology("Not enough money", 400)
         else:
             # Update cash
-            db.execute("SELECT * FROM users WHERE user = ?",
+            # Deduct the cost of the purchased stock from the user's cash
+            new_cash = user_cash - total_price
+            
+            db.execute("SELECT * FROM users WHERE user = ?", session["user_id"]
                        ")
 
         # Create new table to add to database
