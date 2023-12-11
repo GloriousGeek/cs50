@@ -21,6 +21,18 @@ Session(app)
 # Configure CS50 Library to use SQLite database. Use db.execute to execute a SQL statement
 db = SQL("sqlite:///finance.db")
 
+CREATE TABLE IF NOT EXISTS transactions ("""
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    symbol TEXT NOT NULL,
+    transaction_type TEXT NOT NULL,
+    price NUMERIC NOT NULL,
+    shares INTEGER NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (symbol) REFERENCES stocks(symbol)) """
+);
+
 
 @app.after_request
 def after_request(response):
@@ -139,20 +151,6 @@ def buy():
 
             # Return to the main page
             return redirect("/")
-
-            # Deduct the cost of the purchased stock from the user's cash
-            # new_cash = user_cash - total_price
-
-            # # Update cash in db
-            # db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
-
-            # # Update stocks table
-            # db.execute("""
-            # INSERT INTO stocks (user_id, symbol, shares, price)
-            # VALUES (?,?,?,?)""", session["user_id"], symbol, shares, stock_price)
-
-            # # Return to the main page
-            # return redirect("/")
 
     else:
         return render_template("buy.html")
