@@ -293,6 +293,15 @@ def sell():
     # Empty list to be used in .html as well
     symbols = []
 
+    for stock in user_stocks:
+        lookup_stock = lookup(stock["symbol"])
+        stock["name"] = lookup_stock["name"]
+        stock["price"] = lookup_stock["price"]
+        stock["symbol"] = lookup_stock["symbol"]
+        stock["total"] = stock["shares"] * stock["price"]
+
+        stocks.append(stock)
+
     if request.method == "POST":
         shares = request.form.get("shares")
         symbol = request.form.get("symbol")
