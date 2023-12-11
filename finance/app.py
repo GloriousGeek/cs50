@@ -298,11 +298,12 @@ def sell():
             return apology("No stock selected", 400)
         elif not shares:
             return apology("No shares to sell", 400)
+        else:
+            # Get user's stocks
+            user_stocks = db.execute("SELECT shares FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
+            if shares in user_stocks:
+                new_shares = db.execute(")
 
-        # Get user's stocks
-        user_stocks = db.execute("SELECT shares FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
-        if shares in user_stocks:
-            
 
     else:
         return render_template("sell.html")
