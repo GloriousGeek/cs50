@@ -57,7 +57,8 @@ def index():
         stocks.append(stock)
 
     if user_stocks:
-        db.execute("UPDATE stocks SET name = ?)
+        db.execute("UPDATE stocks SET name = ?, price = ?, total = ? WHERE user_id = ? AND symbol = ?",
+                   stock["name"], stock["price"], stock["total"], user_id, stock["symbol"])
 
 
     # Cash balance
