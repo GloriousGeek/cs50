@@ -41,7 +41,7 @@ def index():
     user_id = session["user_id"]
 
     # Get user's stocks
-    user_stocks = db.execute("SELECT * FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
+    user_stocks = db.execute("SELECT * FROM stocks WHERE id = ? GROUP BY symbol", user_id)
 
 
     # Calculate total value of each stock
