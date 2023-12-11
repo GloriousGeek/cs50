@@ -293,8 +293,8 @@ def sell():
     # Empty list to be used in .html as well
     symbols = []
 
-    for stock in user_stocks:
-        lookup_stock = lookup(stock["symbol"])
+    for symbol in symbols:
+        lookup_symbol = lookup(symbol["symbol"])
         stock["name"] = lookup_stock["name"]
         stock["price"] = lookup_stock["price"]
         stock["symbol"] = lookup_stock["symbol"]
