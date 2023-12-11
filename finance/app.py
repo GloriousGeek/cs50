@@ -293,11 +293,11 @@ def sell():
     # Empty list to be used in .html as well
     symbols = []
 
-    for symbol in symbols:
-        lookup_symbol = lookup(symbol["symbol"])
-        symbol["symbol"] = lookup_symbol["symbol"]
+    # Get user's stocks
+    user_stocks = db.execute("SELECT DISTINCT symbol FROM stocks WHERE user_id = ?", user_id)
 
-        symbol.append(stock)
+    for stock in user_stocks:
+        symbols.append(stock["symbol"])
 
     if request.method == "POST":
         shares = request.form.get("shares")
