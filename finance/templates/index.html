@@ -30,7 +30,13 @@
             <tfoot>
                 <tr>
                     <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-                    <td class="border-0 text-end">Cash</td>
+                    <td class="border-0 text-end">{{ user_cash | round(2) }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">Total</td>
+                    <td class="border-0 w-bold text-end">{{ total_value | round(2) }}</td>
+                </tr>
+            </tfoot>
         </table>
 
 {% endblock %}

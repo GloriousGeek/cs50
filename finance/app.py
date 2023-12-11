@@ -36,20 +36,30 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    user_id = session["user_id"]
+
     # Get user's stocks
-    user_stocks = db.execute("SELECT * FROM stocks WHERE id = ?", session["user_id"])
+    user_stocks = db.execute("SELECT * FROM stocks WHERE id = ? GROUP BY symbol", user_id)
+
 
     # Calculate total value of each stock
     for stock in user_stocks:
         stock["total"] = stock["shares"] * stock["price"]
 
     # Cash balance
-    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    if not user_cash:
+        return apology("User not found", 400)
+    elif len(user_cash) > 1:
+        return apology("Multiple users found with the same ID")
+    else:
+        # [0] first element of the list as the user logged in is the only one and ["cash"] is the key
+        user_cash = user_cash[0]["cash"]
 
     # Total portfolio value
     total_value = user_cash + sum(stock["total"] for stock in user_stocks)
 
-    return render_template("index.html", )
+    return render_template("index.html", stocks=user_stocks, user_cash=user_cash, total_value=total_value)
 
 
 
@@ -66,6 +76,7 @@ def buy():
             symbol TEXT NOT NULL,
             shares INTEGER NOT NULL,
             price NUMERIC NOT NULL,
+            total NUMERIC NOT NULL,
             date_purchased DATETIME DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (user_id) REFERENCES users(id)
         )
