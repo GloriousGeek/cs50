@@ -310,7 +310,11 @@ def sell():
                 # Add to cash
                 new_cash = existing_cash + shares["price"]
                 # Update db with cash
-                db.execute("UPDATE cash )
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
+                # Update shares in the db
+                db.execute("UPDATE stocks SET shares = ? WHERE id = ?", new_shares, )
+
+        return redirect("/")
 
     else:
         return render_template("sell.html")
