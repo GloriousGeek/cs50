@@ -294,6 +294,7 @@ def sell():
 
         if not symbol:
             return apology("No stock selected", 400)
+        elif 
 
     else:
         return render_template("sell.html")
