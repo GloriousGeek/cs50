@@ -306,6 +306,9 @@ def sell():
             stock_info = lookup(symbol)
             price = stock_info["price"]
 
+            # Check if user has enough shares to sell
+            if not existing_sjares
+
             # Update shares
             if shares in existing_shares:
                 new_shares = existing_shares[0]["shares"] - int(shares)
