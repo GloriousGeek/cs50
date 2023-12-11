@@ -334,4 +334,5 @@ def sell():
         return redirect("/")
 
     else:
-        return render_template("sell.html")
+        # Pass the symbols list to the template context
+        return render_template("sell.html", symbols=symbols)
