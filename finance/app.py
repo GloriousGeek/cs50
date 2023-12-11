@@ -36,6 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    # Empty list to append stocks later after lookup
     stocks = []
 
     user_id = session["user_id"]
