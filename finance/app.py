@@ -299,12 +299,18 @@ def sell():
         elif not shares:
             return apology("No shares to sell", 400)
         else:
-            # Get user's stocks
-            existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
+            # Get user's existing shares
+            existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?", user_id, symbol)
 
+            # Update shares
             if shares in existing_shares:
-                new_shares = db.execute(")
-
+                new_shares = existing_shares - shares
+                # Query db for cash
+                existing_cash = db.execute("SELECT cash FROM users WHERE id = ? AND symbol = ?", user_id, symbol)
+                # Add to cash
+                new_cash = existing_cash + shares["price"]
+                # Update db with cash
+                
 
     else:
         return render_template("sell.html")
