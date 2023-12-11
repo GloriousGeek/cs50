@@ -295,12 +295,9 @@ def sell():
 
     for symbol in symbols:
         lookup_symbol = lookup(symbol["symbol"])
-        stock["name"] = lookup_stock["name"]
-        stock["price"] = lookup_stock["price"]
-        stock["symbol"] = lookup_stock["symbol"]
-        stock["total"] = stock["shares"] * stock["price"]
+        symbol["symbol"] = lookup_symbol["symbol"]
 
-        stocks.append(stock)
+        symbol.append(stock)
 
     if request.method == "POST":
         shares = request.form.get("shares")
