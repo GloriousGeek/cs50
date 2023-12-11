@@ -53,12 +53,6 @@ def index():
         stock["symbol"] = lookup_stock["symbol"]
         stock["total"] = stock["shares"] * stock["price"]
 
-        # Update the stock info in the db
-        # if user_stocks:
-        #     db.execute("UPDATE stocks SET price = ? WHERE user_id = ? AND symbol = ?",
-        #            stock["price"], user_id, stock["symbol"])
-
-        # Append the stock dict to the stocks list
         stocks.append(stock)
 
     # Cash balance
@@ -126,19 +120,39 @@ def buy():
         if (user_cash) < (total_price):
             return apology("Not enough cash to buy stock", 400)
         else:
+            # Check if the user already owns shares of this stock
+            existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+
+            if existing_shares:
+                # User already owns shares, update the existing entry
+                updated_shares = existing_shares[0]["shares"] + int(shares)
+                db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", updated_shares, session["user_id"], symbol)
+            else:
+                # User doesn't own shares, insert a new entry
+                db.execute("INSERT INTO stocks (user_id, symbol, shares, price) VALUES (?,?,?,?)", session["user_id"], symbol, shares, stock_price)
+
             # Deduct the cost of the purchased stock from the user's cash
             new_cash = user_cash - total_price
 
             # Update cash in db
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
-            # Update stocks table
-            db.execute("""
-            INSERT INTO stocks (user_id, symbol, shares, price)
-            VALUES (?,?,?,?)""", session["user_id"], symbol, shares, stock_price)
-
             # Return to the main page
             return redirect("/")
+
+            # Deduct the cost of the purchased stock from the user's cash
+            # new_cash = user_cash - total_price
+
+            # # Update cash in db
+            # db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
+
+            # # Update stocks table
+            # db.execute("""
+            # INSERT INTO stocks (user_id, symbol, shares, price)
+            # VALUES (?,?,?,?)""", session["user_id"], symbol, shares, stock_price)
+
+            # # Return to the main page
+            # return redirect("/")
 
     else:
         return render_template("buy.html")
@@ -219,13 +233,15 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-
-    username = request.form.get("username")
-    password = request.form.get("password")
-    verifypassword = request.form.get("verifypassword")
+    # Forget any userid
+    session.clear()
 
     # If user is submitting something
     if request.method == "POST":
+
+        username = request.form.get("username")
+        password = request.form.get("password")
+        verifypassword = request.form.get("verifypassword")
         # Ensure username was submitted
         if not username:
             return apology("must provide username", 403)
@@ -254,8 +270,11 @@ def register():
             generate_password_hash(password),
         )
 
+        # Retrieve the userid after inserting into the database
+        user_id = db.execute("SELECT id FROM users WHERE username = ?", username)
+
         # Once registeration is done, keep track of the user
-        session["user_id"] = "id"
+        session["user_id"] = user_id[0]["id"]
 
         # Redirect user to home page
         return redirect("/")
