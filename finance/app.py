@@ -21,7 +21,8 @@ Session(app)
 # Configure CS50 Library to use SQLite database. Use db.execute to execute a SQL statement
 db = SQL("sqlite:///finance.db")
 
-CREATE TABLE IF NOT EXISTS transactions ("""
+db.execute("""
+CREATE TABLE IF NOT EXISTS transactions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     symbol TEXT NOT NULL,
@@ -30,8 +31,9 @@ CREATE TABLE IF NOT EXISTS transactions ("""
     shares INTEGER NOT NULL,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (symbol) REFERENCES stocks(symbol)) """
-);
+    FOREIGN KEY (symbol) REFERENCES stocks(symbol)
+)
+""")
 
 
 @app.after_request
@@ -332,6 +334,11 @@ def sell():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
             # Update shares in the db
             db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
+            # Insert into transactions table for sell
+            db.execute("""
+            INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp)
+            VALUES (?,?,?,?,?,datetime('now'))""", user_id, symbol, 'sell', price, int(shares))
+
 
         return redirect("/")
 
