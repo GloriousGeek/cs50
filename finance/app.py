@@ -84,6 +84,7 @@ def buy():
 
     if request.method=="POST":
         symbol = request.form.get("symbol")
+        # Lookup func will give us all the info the user has
         look_symbol = lookup(symbol)
         if look_symbol is None:
             return apology("Invalid entry", 400)
