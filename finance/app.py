@@ -288,6 +288,8 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    user_id = session["user_id"]
+
     if request.method == "POST":
         shares = request.form.get("shares")
         symbol = request.form.get("symbol")
@@ -296,6 +298,10 @@ def sell():
             return apology("No stock selected", 400)
         elif not shares:
             return apology("No shares to sell", 400)
+
+        # Get user's stocks
+        user_stocks = db.execute("SELECT shares FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
+        if user_stocks:
 
     else:
         return render_template("sell.html")
