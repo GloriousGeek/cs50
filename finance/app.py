@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS transactions (
     shares INTEGER NOT NULL,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (symbol) REFERENCES stocks(symbol)
 )
 """)
 
