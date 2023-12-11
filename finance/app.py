@@ -346,8 +346,8 @@ def sell():
             db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
             # Insert into transactions table for sell
             db.execute("""
-            INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp)
-            VALUES (?,?,?,?,?,datetime('now'))""", user_id, symbol, 'sell', price, int(shares))
+                        INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp)
+                        VALUES (?,?,?,?,?,datetime('now'))""", user_id, symbol, 'sell', price, int(shares))
 
 
         return redirect("/")
