@@ -36,6 +36,8 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    stocks = []
+
     user_id = session["user_id"]
 
     # Get user's stocks
@@ -44,6 +46,7 @@ def index():
 
     # Calculate total value of each stock
     for stock in user_stocks:
+        
         stock["total"] = stock["shares"] * stock["price"]
 
     # Cash balance
