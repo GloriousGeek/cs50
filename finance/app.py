@@ -290,6 +290,9 @@ def sell():
     """Sell shares of stock"""
     user_id = session["user_id"]
 
+    # Empty list to be used in .html as well
+    symbols = []
+
     if request.method == "POST":
         shares = request.form.get("shares")
         symbol = request.form.get("symbol")
