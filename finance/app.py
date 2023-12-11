@@ -302,17 +302,21 @@ def sell():
             # Get user's existing shares
             existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?", user_id, symbol)
 
+            # Get the stock's current price
+            stock_info = lookup(symbol)
+            price = stock_info["price"]
+
             # Update shares
             if shares in existing_shares:
-                new_shares = existing_shares - shares
+                new_shares = existing_shares[0]["shares"] - int(shares)
                 # Query db for cash
                 existing_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
                 # Add to cash
-                new_cash = existing_cash + shares["price"]
+                new_cash = existing_cash[0]["cash"] + (int(shares) * price)
                 # Update db with cash
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
                 # Update shares in the db
-                db.execute("UPDATE stocks SET shares = ? WHERE id = ?", new_shares, user_id)
+                db.execute("UPDATE stocks SET shares = ? WHERE id = ? AND symbol = ?", new_shares, user_id, symbol)
 
         return redirect("/")
 
