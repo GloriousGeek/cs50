@@ -56,7 +56,7 @@ def index():
         stocks.append(stock)
 
     # Cash balance
-    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    user_cash = db.execute("SELECT cash FROM users WHERE user_id = ?", user_id)
     if not user_cash:
         return apology("User not found", 400)
     elif len(user_cash) > 1:
