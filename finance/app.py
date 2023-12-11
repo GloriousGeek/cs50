@@ -306,9 +306,9 @@ def sell():
             stock_info = lookup(symbol)
             price = stock_info["price"]
 
-            # Check if user has enough shares to sell
-            if not existing_shares or int(shares) > existing_shares[0]["shares"]:
-                return apology("Not enough shares to sell", 400)
+            # # Check if user has enough shares to sell
+            # if not existing_shares or int(shares) > existing_shares[0]["shares"]:
+            #     return apology("Not enough shares to sell", 400)
 
             # Update shares
             if shares in existing_shares:
