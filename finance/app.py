@@ -22,17 +22,16 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 db.execute("""
-CREATE TABLE IF NOT EXISTS transactions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_id INTEGER NOT NULL,
-    symbol TEXT NOT NULL,
-    transaction_type TEXT NOT NULL,
-    price NUMERIC NOT NULL,
-    shares INTEGER NOT NULL,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-)
-""")
+            CREATE TABLE IF NOT EXISTS transactions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                symbol TEXT NOT NULL,
+                transaction_type TEXT NOT NULL,
+                price NUMERIC NOT NULL,
+                shares INTEGER NOT NULL,
+                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (user_id) REFERENCES users(id))
+            """)
 
 
 @app.after_request
