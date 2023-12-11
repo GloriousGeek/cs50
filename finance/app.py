@@ -57,9 +57,9 @@ def index():
         stocks.append(stock)
 
     if user_stocks:
-        db.execute("UPDATE )
+        db.execute("UPDATE stocks SET name = ?)
 
-        
+
     # Cash balance
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     if not user_cash:
