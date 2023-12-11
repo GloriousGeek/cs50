@@ -300,8 +300,9 @@ def sell():
             return apology("No shares to sell", 400)
         else:
             # Get user's stocks
-            user_stocks = db.execute("SELECT shares FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
-            if shares in user_stocks:
+            existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
+
+            if shares in existing_shares:
                 new_shares = db.execute(")
 
 
