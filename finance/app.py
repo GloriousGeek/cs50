@@ -66,9 +66,9 @@ def index():
         user_cash = user_cash[0]["cash"]
 
     # Total portfolio value
-    total_value = user_cash + sum(stock["total"] for stock in user_stocks)
+    total_value = user_cash + sum(stock["total"] for stock in stocks)
 
-    return render_template("index.html", stocks=user_stocks, user_cash=user_cash, total_value=total_value)
+    return render_template("index.html", stocks=stocks, user_cash=user_cash, total_value=total_value)
 
 
 
