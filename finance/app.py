@@ -289,8 +289,8 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-
+        shares = request.form.get("shares")
+        
 
     else:
-        
-    return apology("TODO")
+        return render_template("sell.html")
