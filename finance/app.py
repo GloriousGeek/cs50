@@ -301,7 +301,8 @@ def sell():
 
         # Get user's stocks
         user_stocks = db.execute("SELECT shares FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
-        if user_stocks:
+        if shares in user_stocks:
+            
 
     else:
         return render_template("sell.html")
