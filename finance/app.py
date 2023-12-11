@@ -111,7 +111,7 @@ def buy():
         # Lookup how much cash user has
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         if not user_cash:
-            return apology("User not found", 400)
+            return apology("User not found", 403)
         elif len(user_cash) > 1:
             return apology("Multiple users found with the same ID")
         else:
