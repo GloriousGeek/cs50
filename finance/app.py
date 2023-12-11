@@ -290,6 +290,7 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         shares = request.form.get("shares")
+        symbol = request.form.get("symbol")
         
 
     else:
