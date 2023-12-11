@@ -310,7 +310,7 @@ def sell():
                 # Add to cash
                 new_cash = existing_cash + shares["price"]
                 # Update db with cash
-                
+                db.execute("UPDATE cash )
 
     else:
         return render_template("sell.html")
