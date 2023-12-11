@@ -46,7 +46,8 @@ def index():
 
     # Calculate total value of each stock
     for stock in user_stocks:
-        
+        lookup_stock = lookup(stock["symbol"])
+        stock["name"] = 
         stock["total"] = stock["shares"] * stock["price"]
 
     # Cash balance
