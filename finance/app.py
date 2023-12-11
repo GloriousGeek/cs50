@@ -87,7 +87,6 @@ def buy():
             shares INTEGER NOT NULL,
             price NUMERIC NOT NULL,
             total NUMERIC NOT NULL,
-            date_purchased DATETIME DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (user_id) REFERENCES users(id)
         )
     """)
