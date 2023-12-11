@@ -306,7 +306,7 @@ def sell():
             if shares in existing_shares:
                 new_shares = existing_shares - shares
                 # Query db for cash
-                existing_cash = db.execute("SELECT cash FROM users WHERE id = ? AND symbol = ?", user_id, symbol)
+                existing_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
                 # Add to cash
                 new_cash = existing_cash + shares["price"]
                 # Update db with cash
