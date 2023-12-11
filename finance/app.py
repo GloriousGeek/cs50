@@ -53,13 +53,13 @@ def index():
         stock["symbol"] = lookup_stock["symbol"]
         stock["total"] = stock["shares"] * stock["price"]
 
+        # Update the stock info in the db
+        # if user_stocks:
+        #     db.execute("UPDATE stocks SET price = ? WHERE user_id = ? AND symbol = ?",
+        #            stock["price"], user_id, stock["symbol"])
+
         # Append the stock dict to the stocks list
         stocks.append(stock)
-
-    if user_stocks:
-        db.execute("UPDATE stocks SET name = ?, price = ?, total = ? WHERE user_id = ? AND symbol = ?",
-                   stock["name"], stock["price"], stock["total"], user_id, stock["symbol"])
-
 
     # Cash balance
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
