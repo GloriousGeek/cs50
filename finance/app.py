@@ -327,7 +327,7 @@ def sell():
             # Update db with cash
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
             # Update shares in the db
-            db.execute("UPDATE stocks SET shares = ? WHERE id = ? AND symbol = ?", new_shares, user_id, symbol)
+            db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
 
         return redirect("/")
 
