@@ -52,6 +52,9 @@ def index():
         stock["symbol"] = lookup_stock["symbol"]
         stock["total"] = stock["shares"] * stock["price"]
 
+        # Append the stock dict to the stocks list
+        stocks.append(stock)
+
     # Cash balance
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     if not user_cash:
