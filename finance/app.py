@@ -21,6 +21,7 @@ Session(app)
 # Configure CS50 Library to use SQLite database. Use db.execute to execute a SQL statement
 db = SQL("sqlite:///finance.db")
 
+# Create transactions table for timestamp and specifically history func
 db.execute("""
             CREATE TABLE IF NOT EXISTS transactions (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
