@@ -6,6 +6,6 @@
 
 {% block main %}
     <p>
-        A share of {{ symbol["symbol"] }} ({{ symbol["name"] }}) costs ${{ symbol["price"] }}.
+        A share of {{ symbol["symbol"] }} ({{ symbol["name"] }}) costs {{ symbol["price"] | usd}}.
     </p>
 {% endblock %}
