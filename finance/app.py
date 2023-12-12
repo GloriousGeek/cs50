@@ -76,10 +76,10 @@ def index():
         return apology("Multiple users found with the same ID")
     else:
         # [0] first element of the list as the user logged in is the only one and ["cash"] is the key
-        user_cash = user_cash[0]["cash"]
+        user_cash = usd(user_cash[0]["cash"])
 
     # Total portfolio value
-    total_value = user_cash + sum(stock["total"] for stock in stocks)
+    total_value = usd(user_cash + sum(stock["total"] for stock in stocks))
 
     return render_template("index.html", stocks=stocks, user_cash=user_cash, total_value=total_value)
 
