@@ -64,7 +64,8 @@ def index():
         stock["name"] = lookup_stock["name"]
         stock["price"] = lookup_stock["price"]
         stock["symbol"] = lookup_stock["symbol"]
-        stock["total"] = stock["shares"] * stock["price"]
+        stock["shares"] = float(stock["shares"])
+        stock["total"] = float(stock["shares"] * stock["price"])
 
         stocks.append(stock)
 
