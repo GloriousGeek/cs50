@@ -236,7 +236,12 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         look_symbol = lookup(symbol)
+
+        if look_symbol is None:
+            return apology("Invalid ticker symbol", 400)
+
         return render_template("quoted.html", symbol=look_symbol)
+
 
     else:
         return render_template("quote.html")
