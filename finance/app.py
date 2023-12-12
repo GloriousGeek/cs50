@@ -334,25 +334,25 @@ def sell():
             # Get user's existing shares
             existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?", user_id, symbol)
 
-        # Get the stock's current price
-        stock_info = lookup(symbol)
-        price = stock_info["price"]
+            # Get the stock's current price
+            stock_info = lookup(symbol)
+            price = stock_info["price"]
 
-        # Check if user has enough shares to sell
-        if not existing_shares or int(shares) > existing_shares[0]["shares"]:
-            return apology("Not enough shares to sell", 400)
+            # Check if user has enough shares to sell
+            if not existing_shares or int(shares) > existing_shares[0]["shares"]:
+                return apology("Not enough shares to sell", 400)
 
-        new_shares = existing_shares[0]["shares"] - int(shares)
-        # Query db for cash
-        existing_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        # Add to cash
-        new_cash = existing_cash[0]["cash"] + (int(shares) * price)
-        # Update db with cash
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
-        # Update shares in the db
-        db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
-        # Insert into transactions table for sell
-        db.execute("INSERT INTO transactions (user_id, symbol, transaction_type, price, shares) VALUES (?,?,'sell',?,?)", user_id, symbol, price, int(shares))
+            new_shares = existing_shares[0]["shares"] - int(shares)
+            # Query db for cash
+            existing_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+            # Add to cash
+            new_cash = existing_cash[0]["cash"] + (int(shares) * price)
+            # Update db with cash
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
+            # Update shares in the db
+            db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
+            # Insert into transactions table for sell
+            db.execute("INSERT INTO transactions (user_id, symbol, transaction_type, price, shares) VALUES (?,?,'sell',?,?)", user_id, symbol, price, int(shares))
 
 
         return redirect("/")
