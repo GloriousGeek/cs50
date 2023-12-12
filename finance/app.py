@@ -158,7 +158,7 @@ def buy():
             return redirect("/")
 
     else:
-        return render_template("buy.html", total_price=total_price)
+        return render_template("buy.html")
 
 
 @app.route("/history")
@@ -245,7 +245,7 @@ def quote():
             return apology("Ticker symbol cannot be blank", 400)
 
 
-        return render_template("quoted.html", symbol=look_symbol, symbol=look_symbol["price"])
+        return render_template("quoted.html", symbol=look_symbol)
 
 
     else:
