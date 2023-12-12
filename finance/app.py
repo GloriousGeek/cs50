@@ -254,7 +254,7 @@ def register():
 
         username = request.form.get("username")
         password = request.form.get("password")
-        verifypassword = request.form.get("verifypassword")
+        confirmation = request.form.get("confirmation")
         # Ensure username was submitted
         if not username:
             return apology("must provide username", 403)
@@ -269,11 +269,11 @@ def register():
         elif not password:
             return apology("must provide password", 403)
 
-        elif not verifypassword:
+        elif not confirmation:
             return apology("must verify password", 403)
 
         # When passwords don't match
-        elif password != verifypassword:
+        elif password != confirmation:
             return apology("password does not match", 403)
 
         # If all good, add to database (users table)
