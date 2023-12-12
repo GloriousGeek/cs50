@@ -151,9 +151,7 @@ def buy():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
             # recording transactions
-            db.execute("
-                        INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp)
-                        VALUES (?,?,'buy',?,?,datetime('now'))", session["user_id"], symbol, stock_price, shares)
+            db.execute("INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp) VALUES (?,?,'buy',?,?,datetime('now'))", session["user_id"], symbol, stock_price, shares)
 
 
             # Return to the main page
