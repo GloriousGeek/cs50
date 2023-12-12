@@ -151,9 +151,9 @@ def buy():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
             # recording transactions
-            db.execute("""
+            db.execute("
                         INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp)
-                        VALUES (?,?,?,?,?,datetime('now'))""", session["user_id"], symbol, 'buy', stock_price, shares)
+                        VALUES (?,?,'buy',?,?,datetime('now'))", session["user_id"], symbol, stock_price, shares)
 
 
             # Return to the main page
@@ -344,9 +344,9 @@ def sell():
             # Update shares in the db
             db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
             # Insert into transactions table for sell
-            db.execute("""
+            db.execute("
                         INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp)
-                        VALUES (?,?,?,?,?,datetime('now'))""", user_id, symbol, 'sell', price, int(shares))
+                        VALUES (?,?,'sell',?,?,datetime('now'))", user_id, symbol, price, int(shares))
 
 
         return redirect("/")
