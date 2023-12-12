@@ -76,3 +76,10 @@ def lookup(symbol):
 def usd(value):
     """Format value as USD."""
     return f"${value:,.2f}"
+
+def is_valid_password(password):
+    """Validate password according to the policy."""
+    # Example: at least 5 characters with at least one letter, one number, and one symbol
+    if len(password) < 5 or not any(c.isalpha() for c in password) or not any(c.isdigit() for c in password) or not any(c.isalnum() for c in password):
+        return False
+    return True
