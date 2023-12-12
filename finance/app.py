@@ -22,7 +22,8 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 # Create transactions table for timestamp and specifically history func
-db.execute("""
+db.execute(
+    """
             CREATE TABLE IF NOT EXISTS transactions (
                 id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 user_id INTEGER NOT NULL,
@@ -32,7 +33,8 @@ db.execute("""
                 shares NUMERIC NOT NULL,
                 transaction_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_id) REFERENCES users(id))
-            """)
+            """
+)
 
 
 @app.after_request
@@ -55,8 +57,9 @@ def index():
     user_id = session["user_id"]
 
     # Get user's stocks
-    user_stocks = db.execute("SELECT * FROM stocks WHERE user_id = ? GROUP BY symbol", user_id)
-
+    user_stocks = db.execute(
+        "SELECT * FROM stocks WHERE user_id = ? GROUP BY symbol", user_id
+    )
 
     # Calculate total value of each stock
     for stock in user_stocks:
@@ -82,8 +85,9 @@ def index():
     total_value = user_cash + sum(stock["total"] for stock in stocks)
     total_value = total_value
 
-    return render_template("index.html", stocks=stocks, user_cash=user_cash, total_value=total_value)
-
+    return render_template(
+        "index.html", stocks=stocks, user_cash=user_cash, total_value=total_value
+    )
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -92,7 +96,8 @@ def buy():
     """Buy shares of stock"""
 
     # Create a new table (stocks) in finance.db
-    db.execute("""
+    db.execute(
+        """
         CREATE TABLE IF NOT EXISTS stocks (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             user_id INTEGER NOT NULL,
@@ -102,9 +107,10 @@ def buy():
             total NUMERIC NOT NULL,
             FOREIGN KEY (user_id) REFERENCES users(id)
         )
-    """)
+    """
+    )
 
-    if request.method=="POST":
+    if request.method == "POST":
         symbol = request.form.get("symbol").upper()
         # Lookup func will give us all the info the user has
         look_symbol = lookup(symbol)
@@ -122,7 +128,9 @@ def buy():
         total_price = int(shares) * stock_price
 
         # Lookup how much cash user has
-        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        user_cash = db.execute(
+            "SELECT cash FROM users WHERE id = ?", session["user_id"]
+        )
         if not user_cash:
             return apology("User not found", 403)
         elif len(user_cash) > 1:
@@ -135,25 +143,47 @@ def buy():
             return apology("Not enough cash to buy stock", 400)
         else:
             # Check if the user already owns shares of this stock
-            existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+            existing_shares = db.execute(
+                "SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?",
+                session["user_id"],
+                symbol,
+            )
 
             if existing_shares:
                 # User already owns shares, update the existing entry
                 updated_shares = existing_shares[0]["shares"] + int(shares)
-                db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", updated_shares, session["user_id"], symbol)
+                db.execute(
+                    "UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?",
+                    updated_shares,
+                    session["user_id"],
+                    symbol,
+                )
             else:
                 # User doesn't own shares, insert a new entry
-                db.execute("INSERT INTO stocks (user_id, symbol, shares, price) VALUES (?,?,?,?)", session["user_id"], symbol, shares, stock_price)
+                db.execute(
+                    "INSERT INTO stocks (user_id, symbol, shares, price) VALUES (?,?,?,?)",
+                    session["user_id"],
+                    symbol,
+                    shares,
+                    stock_price,
+                )
 
             # Deduct the cost of the purchased stock from the user's cash
             new_cash = user_cash - total_price
 
             # Update cash in db
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
+            db.execute(
+                "UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"]
+            )
 
             # recording transactions
-            db.execute("INSERT INTO transactions (user_id, symbol, transaction_type, price, shares) VALUES (?,?,'buy',?,?)", session["user_id"], symbol, stock_price, shares)
-
+            db.execute(
+                "INSERT INTO transactions (user_id, symbol, transaction_type, price, shares) VALUES (?,?,'buy',?,?)",
+                session["user_id"],
+                symbol,
+                stock_price,
+                shares,
+            )
 
             # Return to the main page
             return redirect("/")
@@ -169,14 +199,16 @@ def history():
     user_id = session["user_id"]
 
     # Get user's transaction history
-    transactions = db.execute("""
+    transactions = db.execute(
+        """
         SELECT * FROM transactions
         WHERE user_id = ?
         ORDER BY transaction_time DESC
-    """, user_id)
+    """,
+        user_id,
+    )
 
     return render_template("history.html", transactions=transactions)
-
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -253,7 +285,6 @@ def quote():
         return render_template("quote.html")
 
 
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
@@ -262,7 +293,6 @@ def register():
 
     # If user is submitting something
     if request.method == "POST":
-
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
@@ -318,7 +348,9 @@ def sell():
     symbols = []
 
     # Get user's stocks
-    user_stocks = db.execute("SELECT DISTINCT symbol FROM stocks WHERE user_id = ?", user_id)
+    user_stocks = db.execute(
+        "SELECT DISTINCT symbol FROM stocks WHERE user_id = ?", user_id
+    )
 
     for stock in user_stocks:
         symbols.append(stock["symbol"])
@@ -333,7 +365,11 @@ def sell():
             return apology("No shares to sell", 400)
         else:
             # Get user's existing shares
-            existing_shares = db.execute("SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?", user_id, symbol)
+            existing_shares = db.execute(
+                "SELECT shares FROM stocks WHERE user_id = ? AND symbol = ?",
+                user_id,
+                symbol,
+            )
 
             # Get the stock's current price
             stock_info = lookup(symbol)
@@ -351,10 +387,20 @@ def sell():
             # Update db with cash
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
             # Update shares in the db
-            db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
+            db.execute(
+                "UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?",
+                new_shares,
+                user_id,
+                symbol,
+            )
             # Insert into transactions table for sell
-            db.execute("INSERT INTO transactions (user_id, symbol, transaction_type, price, shares) VALUES (?,?,'sell',?,?)", user_id, symbol, price, int(shares))
-
+            db.execute(
+                "INSERT INTO transactions (user_id, symbol, transaction_type, price, shares) VALUES (?,?,'sell',?,?)",
+                user_id,
+                symbol,
+                price,
+                int(shares),
+            )
 
         return redirect("/")
 
