@@ -5,7 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from helpers import apology, login_required, lookup, usd
+from helpers import apology, login_required, lookup, usd, is_valid_password
 
 # Configure application
 app = Flask(__name__)
@@ -309,6 +309,9 @@ def register():
         # Ensure password was submitted
         elif not password:
             return apology("must provide password", 400)
+
+        elif not is_valid_password(password):
+            return apology("Password should include number of letters, numbers, and/or symbols", 400)
 
         elif not confirmation:
             return apology("must verify password", 400)
