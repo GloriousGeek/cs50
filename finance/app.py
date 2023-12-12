@@ -244,6 +244,8 @@ def quote():
         elif not symbol:
             return apology("Ticker symbol cannot be blank", 400)
 
+        # Printing to understand
+        print(look_symbol)
         return render_template("quoted.html", symbol=look_symbol)
 
     else:
