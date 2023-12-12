@@ -311,7 +311,10 @@ def register():
             return apology("must provide password", 400)
 
         elif not is_valid_password(password):
-            return apology("Password should include number of letters, numbers, and/or symbols", 400)
+            return apology(
+                "Password should include number of letters, numbers, and/or symbols",
+                400,
+            )
 
         elif not confirmation:
             return apology("must verify password", 400)

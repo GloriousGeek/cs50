@@ -5,28 +5,28 @@
 {% endblock %}
 
 {% block main %}
-<div class="container">
-    <table class="table table-striped mx auto">
-        <thead>
-            <tr>
-                <th class="text-start">Symbol</th>
-                <th class="text-start">Name</th>
-                <th class="text-end">Shares</th>
-                <th class="text-end">Price</th>
-                <th class="text-end">Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- For Loop -->
-            {% for stock in stocks %}
+    <div class="container">
+        <table class="table table-striped mx auto">
+            <thead>
                 <tr>
-                    <td class="text-start">{{ stock.symbol }}</td>
-                    <td class="text-start">{{ stock.name }}</td>
-                    <td class="text-end">{{ stock.shares }}</td>
-                    <td class="text-end">{{ stock.price | usd }}</td>
-                    <td class="text-end">{{ stock.total | usd }}</td>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-start">Name</th>
+                    <th class="text-end">Shares</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">Total</th>
                 </tr>
-            {% endfor %}
+            </thead>
+            <tbody>
+            <!-- For Loop -->
+                {% for stock in stocks %}
+                    <tr>
+                        <td class="text-start">{{ stock.symbol }}</td>
+                        <td class="text-start">{{ stock.name }}</td>
+                        <td class="text-end">{{ stock.shares }}</td>
+                        <td class="text-end">{{ stock.price | usd }}</td>
+                        <td class="text-end">{{ stock.total | usd }}</td>
+                    </tr>
+                {% endfor %}
             </tbody>
             <tfoot>
                 <tr>
