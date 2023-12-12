@@ -23,7 +23,7 @@
                 {% for transaction in transactions %}
                     <tr>
                         <td>{{ transaction.transaction_time }}</td>
-                        <td>{{ "Buy" if transaction.type == "buy" else "Sell" }}</td>
+                        <td>{{ transaction.transaction_type }}</td>
                         <td>{{ transaction.symbol }}</td>
                         <td>{{ transaction.shares }}</td>
                         <td>{{ transaction.price | usd }}</td>
