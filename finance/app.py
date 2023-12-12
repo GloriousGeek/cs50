@@ -30,7 +30,7 @@ db.execute("""
                 transaction_type TEXT NOT NULL,
                 price DECIMAL (10,2) NOT NULL,
                 shares NUMERIC NOT NULL,
-                transaction_time TIMESTAMP  DEFAULT CURRENT_TIMESTAMP,
+                transaction_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_id) REFERENCES users(id))
             """)
 
@@ -342,9 +342,7 @@ def sell():
             # Update shares in the db
             db.execute("UPDATE stocks SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, user_id, symbol)
             # Insert into transactions table for sell
-            db.execute("
-                        INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp)
-                        VALUES (?,?,'sell',?,?,datetime('now'))", user_id, symbol, price, int(shares))
+            db.execute("INSERT INTO transactions (user_id, symbol, transaction_type, price, shares, timestamp) VALUES (?,?,'sell',?,?,datetime('now'))", user_id, symbol, price, int(shares))
 
 
         return redirect("/")
