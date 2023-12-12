@@ -24,12 +24,12 @@ db = SQL("sqlite:///finance.db")
 # Create transactions table for timestamp and specifically history func
 db.execute("""
             CREATE TABLE IF NOT EXISTS transactions (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 user_id INTEGER NOT NULL,
                 symbol TEXT NOT NULL,
                 transaction_type TEXT NOT NULL,
-                price NUMERIC NOT NULL,
-                shares INTEGER NOT NULL,
+                price DECIMAL (10,2) NOT NULL,
+                shares NUMERIC NOT NULL,
                 timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_id) REFERENCES users(id))
             """)
