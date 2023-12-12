@@ -173,7 +173,7 @@ def history():
     transactions = db.execute("""
         SELECT * FROM transactions
         WHERE user_id = ?
-        ORDER BY timestamp DESC
+        ORDER BY transaction_time DESC
     """, user_id)
 
     return render_template("history.html", transactions=transactions)
