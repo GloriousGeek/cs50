@@ -30,7 +30,7 @@ db.execute("""
                 transaction_type TEXT NOT NULL,
                 price DECIMAL (10,2) NOT NULL,
                 shares NUMERIC NOT NULL,
-                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                transaction_time TIMESTAMP  DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_id) REFERENCES users(id))
             """)
 
