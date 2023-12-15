@@ -1,2 +1,2 @@
-# Final Project
+# Data Explorer and Visualization Dashboard
 
