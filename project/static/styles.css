@@ -40,7 +40,7 @@ nav .navbar-brand .green {
 
 /* Style for the input fields */
 .form-control {
-    width: 80%;
+    width: 100%;
     /* Adjust the width as needed */
     margin: 10px 0;
     /* background-color: lightblue; Light blue background */
@@ -51,7 +51,7 @@ nav .navbar-brand .green {
 
 /* Style for the buttons */
 .btn-primary {
-    width: 80%;
+    width: 100%;
     /* Adjust the width as needed */
     margin: 10px 0;
     background-color: darkblue;
