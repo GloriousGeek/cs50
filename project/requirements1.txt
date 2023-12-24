@@ -1,5 +1,6 @@
-flask
-requests
 os
-flask_session
+Flask-Session
 cs50
+Flask==3.0.0
+requests==2.31.0
+cs50==9.3.0
