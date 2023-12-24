@@ -1,6 +1,6 @@
 # Weatherly
 
-#### Video Demo: [Insert URL Here]
+#### Video Demo: [https://youtu.be/ArTsj71Rks0]
 
 #### Description:
 Weatherly is a weather application that provides users with the ability to authenticate, search for weather information, and manage their favorite cities.
@@ -75,5 +75,6 @@ Weatherly is a weather application that provides users with the ability to authe
   - [functools module](https://docs.python.org/3/library/functools.html) (used for functional programming)
 
 ## License
+This project is licensed under the [MIT License](LICENSE).
 
 
