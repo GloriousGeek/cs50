@@ -1,5 +1,3 @@
-import os
-
 # Importing function and dict from api.py
 from api import get_weather, get_favt_weather
 
