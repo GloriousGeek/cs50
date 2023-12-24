@@ -6,6 +6,7 @@ A decorator is a special type of function that can be applied to other functions
 to modify their behavior. It is designed to be used with Flask routes
 """
 
+
 def login_required(f):
     """
     Decorate routes to require login.
